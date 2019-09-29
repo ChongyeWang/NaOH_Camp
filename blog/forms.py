@@ -1,17 +1,27 @@
 from django import forms
 
 class CommentForm(forms.Form):
-    author = forms.CharField(
-        max_length=60,
+
+    body = forms.CharField(widget=forms.Textarea(
+        attrs={
+            "class": "form-control",
+            "placeholder": "Leave a comment!"
+        })
+    )
+
+
+class PostForm(forms.Form):
+    title = forms.CharField(
+        max_length=100,
         widget=forms.TextInput(attrs={
             "class": "form-control",
-            "placeholder": "Your Name"
+            "placeholder": "主题"
         })
     )
     
     body = forms.CharField(widget=forms.Textarea(
         attrs={
             "class": "form-control",
-            "placeholder": "Leave a comment!"
+            "placeholder": "内容"
         })
     )

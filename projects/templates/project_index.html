@@ -1,22 +1,41 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<h1>Projects</h1>
-<div class="row">
-{% for project in projects %}
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static project.image %}">
-            <div class="card-body">
-                <h5 class="card-title">{{ project.title }}</h5>
-                <p class="card-text">{{ project.description }}</p>
-                <a href="{% url 'project_detail' project.pk %}"
-                   class="btn btn-primary">
-                    Read More
-                </a>
+
+<html>
+<style>
+#p_1 {
+    width: 22vw;
+    height: 30vh;
+}
+
+#p_2 {
+  height: 22vh;
+}
+</style>
+
+
+<body>
+
+<div id="base">
+    <div class="row">
+    {% for project in projects %}
+        <div class="col-md-4">
+            <div id = "p_1" style="border:1px solid black;" class="card mb-2">
+                <img id = "p_2" class="card-img-top" src="{% static project.image %}">
+                <div align="center" class="card-body">
+                    
+                    <a href="{% url 'project_detail' project.pk %}"
+                       class="btn btn-primary">
+                        {{project.title}}
+                    </a>
+                </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
 </div>
+
+</body>
+</html>
 {% endblock %}

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'projects',
-    "blog",
+    'blog',
+    'accounts',
+    'info',
+    'data',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +123,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LANGUAGES = (
+    ('zh-cn', u'简体中文'), # instead of 'zh-CN'
+    ('zh-tw', u'繁體中文'), # instead of 'zh-TW'
+)
+
+LOGIN_REDIRECT_URL = '/projects/'

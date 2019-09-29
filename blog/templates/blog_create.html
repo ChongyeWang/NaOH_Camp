@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<div class="col-md-8 offset-md-2">
+
+    <form action="/blog/{{ category }}/new/" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            {{ form.body }}
+        </div>
+        <button type="submit" class="btn btn-primary">提交</button>
+    </form>
+
+    <a style="font-weight: bold; font-size: 25px;" href="{% url 'blog_category' category %}">
+            返回
+        </a>&nbsp;
+
+</div>
+
+
+
+{% endblock %}
