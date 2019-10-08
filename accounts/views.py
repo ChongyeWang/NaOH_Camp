@@ -14,7 +14,7 @@ def register_request(request):
 			raw_password = form.cleaned_data.get('password1')
 			user = authenticate(username=username, password=raw_password)
 			login(request, user)
-			return redirect('project_index')
+			return redirect('home')
 	else:
 		form = UserCreationForm()
 	return render(request, 'signup.html', {'form': form})
@@ -22,4 +22,4 @@ def register_request(request):
 
 def logout_request(request):
      logout(request)
-     return redirect('project_index')
+     return redirect('home')

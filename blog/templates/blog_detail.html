@@ -13,27 +13,33 @@
         {% endfor %}
     </small>
     <p>{{ post.body | linebreaks }}</p>
-    <h3>Leave a comment:</h3>
+
+    {% ifequal finished False %}
+
+    {% else %}
+    <a style="font-weight: bold; font-size: 25px;" href="{% url 'blog_category' post.categories.all.0.name %}">
+            返回
+        </a>&nbsp;
+    
+    {% endifequal %}
+    
+    <h3>评论:</h3>
+    {% for comment in comments %}
+    <p>
+        On {{ comment.created_on.date }}&nbsp;
+        <b>{{ comment.author }}</b>
+    </p>
+    <p>{{ comment.body }}</p>
+    <hr>
+    {% endfor %}
+
+    <h3>发表评论:</h3>
     <form action="/blog/{{ post.pk }}/" method="post">
         {% csrf_token %}
         <div class="form-group">
             {{ form.body }}
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">提交</button>
     </form>
-
-    <a style="font-weight: bold; font-size: 25px;" href="{% url 'blog_index' %}">
-            返回
-        </a>&nbsp;
-
-    <h3>Comments:</h3>
-    {% for comment in comments %}
-    <p>
-        On {{comment.created_on.date }}&nbsp;
-        <b>{{ comment.author }}</b> wrote:
-    </p>
-    <p>{{ comment.body }}</p>
-    <hr>
-    {% endfor %}
 </div>
 {% endblock %}

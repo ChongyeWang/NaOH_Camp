@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<style>
+
+#main, #main2{
+
+    width: 250px;
+    height: 160px;
+}
+
+#main3 {
+	width: 250px;
+    height: 150px;
+}
+
+#main4 {
+	width: 250px;
+    height: 190px;
+}
+
+</style>
+
+<body>
+
+    
+<table>
+  <tr>
+	<td><img id="main" src="{% static "img/s1.png" %}"></td>
+  </tr>
+
+  <tr>
+	<td><img id="main2" src="{% static "img/s2.png" %}"></td>
+  </tr>
+
+  <tr>
+  	<td><img id="main3" src="{% static "img/s3.png" %}"></td>
+  </tr>
+
+  <tr>
+	<td><img id="main4" src="{% static "img/s4.png" %}"></td>
+  </tr>
+</table>
+
+
+</body>
+
+{% endblock %}

@@ -7,9 +7,47 @@
     
 </head>
 <body>
-<h1>该板块尚未开放，敬请期待</h1>
+<br>
+<h3>&nbsp;&nbsp;请回答以下问题：</h3>
+<br>
+
+	{% ifequal finished False %}
+    <form action="/data/predict/" method="post">
+        {% csrf_token %}
+        <div class="form-group col-md-6">
+            {{ form.q1 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q2 }}
+        </div><div class="form-group col-md-6">
+            {{ form.q3 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q4 }}
+        </div>
+
+       &nbsp;&nbsp;
+       <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {% else %}
+    <p>{{ contents.q1 }}</p>
+    <p>{{ contents.q2 }}</p>
+    <p>{{ contents.q3 }}</p>
+    <p>{{ contents.q4 }}</p>
+
+    <a style="font-weight: bold; font-size: 25px;" href="{% url 'data_predict' %}">
+            重新评估
+        </a>
+
+    {% endifequal %}
+
+
+
+
 <br/>
 <br/>
+
+<div style="width: 1000px;">
 
 <i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:30px"></i>
 <i class="fa fa-qq" style="font-size:48px;color:black;margin-right:30px"></i>
@@ -18,6 +56,8 @@
 <i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:30px"></i>
 
 <i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:30px"></i>
+
+<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:30px"></i>
 
 <i class='fa fa-apple' style="font-size:48px;color:black;margin-right:30px"></i>
 
@@ -31,7 +71,17 @@
 
 <i class='fa fa-imdb' style="font-size:48px;color:#CCCC00;margin-right:30px"></i>
 
-<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;"></i>
+
+<i class='fa fa-internet-explorer' style="font-size:48px;color:#3492db;"></i>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 </body>
 </html>
 {% endblock %}

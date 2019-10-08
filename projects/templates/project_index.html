@@ -2,26 +2,41 @@
 {% load static %}
 {% block page_content %}
 
-<html>
 <style>
+
 #p_1 {
-    width: 22vw;
-    height: 30vh;
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 #p_2 {
-  height: 22vh;
+    width: 300px;
+    height: 220px;
 }
+
+#base2 {
+
+    width: 980px;
+    margin: auto;
+}
+
+
+
 </style>
 
+<html>
 
 <body>
 
+<br>
+
 <div id="base">
-    <div class="row">
+    <div id="base2" class="row">
     {% for project in projects %}
-        <div class="col-md-4">
-            <div id = "p_1" style="border:1px solid black;" class="card mb-2">
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static project.image %}">
                 <div align="center" class="card-body">
                     
@@ -38,4 +53,6 @@
 
 </body>
 </html>
+
 {% endblock %}
+

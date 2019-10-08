@@ -1,16 +1,39 @@
 {% extends "base.html" %}
 {% block page_content %}
 
-<div class="col-md-8 offset-md-2">
-    <h1>论坛</h1>
+<div style="min-width: 800px;" class="col-md-8 offset-md-2">
+
+	<div class="row">
+		&nbsp;&nbsp;&nbsp;
+		<h2 style="margin-right: 345px;">论坛</h2>
+		<h2>当前人数：{{user_num}}</h2>
+	</div>
 
     <hr>
-        
-        {% for category in categories %}
+
+     <div class="row">
+      
+	  <div class="column1">
+	  	        
+        {% for category in categories1 %}
+
+        <h2 style="padding:0 120px 0 15px;"><a href="{% url 'blog_category' category.name %}">
+        {{ category.name }}
+        </a>&nbsp;<h2>
+        {% endfor %}
+	  </div>
+	  <div class="column2">
+	  	        
+        {% for category in categories2 %}
+
         <h2><a href="{% url 'blog_category' category.name %}">
         {{ category.name }}
         </a>&nbsp;<h2>
         {% endfor %}
+	  </div>
+	</div> 
+
+
         
 </div>
 

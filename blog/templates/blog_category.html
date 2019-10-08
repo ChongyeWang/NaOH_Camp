@@ -5,14 +5,38 @@
 
     <h1>{{ category | title }}</h1>
 
+    {% if order == "inorder" %}
+        <form action="" method="post">
+        {% csrf_token %}
+
+        <select name="selection">
+          <option value="inorder">正序</option>
+          <option value="reverseorder">倒叙</option>
+        </select> 
+        <input type="submit" value="选择">
+        </form>
+    {% else %}
+        <form action="" method="post">
+        {% csrf_token %}
+
+        <select name="selection">
+          <option value="reverseorder">倒叙</option>
+          <option value="inorder">正序</option>
+        </select> 
+        <input type="submit" value="选择">
+        </form>
+    {% endif %}
+    
+
     <hr>
 
     {% if user.is_authenticated %}
         <a class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
     {% else %}
-        <h4>登录发帖</h4>
-
+        <a class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
     {% endif %}
+    <br>
+    <br>
 
     {% for post in posts %}
         <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>

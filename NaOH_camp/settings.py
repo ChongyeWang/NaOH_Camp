@@ -67,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.request',
             ],
         },
     },
@@ -129,4 +130,4 @@ LANGUAGES = (
     ('zh-tw', u'繁體中文'), # instead of 'zh-TW'
 )
 
-LOGIN_REDIRECT_URL = '/projects/'
+LOGIN_REDIRECT_URL = '/'

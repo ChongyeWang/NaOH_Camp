@@ -2,6 +2,30 @@ from django.shortcuts import render
 
 from projects.models import Project
 
+def home(request):
+
+    language = 'English'
+    if request.user.is_authenticated:
+        if request.session.get(request.user.username, None) == None:
+            request.session[request.user.username] = 'Chinese'
+        language = request.session[request.user.username]
+        
+    context = {
+        'language': language
+    }
+    
+    return render(request, 'home.html', context)
+
+def setting(request):
+
+    if request.method == 'POST':
+        selection = request.POST['selection']
+        request.session[request.user.username] = selection
+
+    context = {
+        'language': request.session[request.user.username]
+    }
+    return render(request, 'setting.html', context)
 
 def project_index(request):
     Project.objects.all().delete()
@@ -160,15 +184,29 @@ def project_index(request):
     # p3.save()
     
     projects = Project.objects.all()
+
+    language = 'English'
+    if request.user.is_authenticated:
+        if request.session.get(request.user.username, None) == None:
+            request.session[request.user.username] = 'Chinese'
+        language = request.session[request.user.username]
+        
     context = {
-        'projects': projects
+        'projects': projects,
+        'language': language
     }
     return render(request, 'project_index.html', context)
 
 
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
+    language = 'English'
+    if request.user.is_authenticated:
+        if request.session.get(request.user.username, None) == None:
+            request.session[request.user.username] = 'Chinese'
+        language = request.session[request.user.username]
     context = {
-        'project': project
+        'project': project,
+        'language': language
     }
     return render(request, 'project_detail.html', context)
