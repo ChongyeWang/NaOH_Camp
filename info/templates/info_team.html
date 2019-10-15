@@ -1,152 +1,119 @@
 {% extends "base.html" %}
 {% block page_content %}
 {% load static %}
-<html lang="zh">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<head>
-    <meta charset="utf-8" />
+
     <style>
 
-    .rt, .nsp, .cr, .t18, .yg, .heiying, .huanying, .st1, .white{
-        width: 120px;
-        height: 120px;
+
+    #p_1 {
+        width: 250px;
+        height: 500px;
+        margin-right: 10px;
+        margin-bottom: 20px;
     }
 
-    #r{
-        width: 1000px;
+    #p_2 {
+        width: 248px;
+        height: 248px;
     }
 
-    #c1{
-
-        margin: auto;
+    #main {
+        margin-left: 8vw;
     }
+     </style>
 
-    </style>
-</head>
+<html lang="zh">
+
+
+
 <body>
 <br/>
 
-
-<br/>
-
-<div id="r" class="row">
-  <div id = "c1" class="column">
-    <img class="rt" align="left" src="{% static "img/rt.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RT战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="heiying" align="left" src="{% static "img/heiying.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;黑鹰战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="huanying" align="left" src="{% static "img/huanying.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;幻影战队
-    </h5>
-    </br>
-    </br>
-
-  </div>
-
-  <div id = "c1" class="column">
-
-    <img class="cr" align="left" src="{% static "img/cr.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CR战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="nsp" align="left" src="{% static "img/white.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NSP战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="yg" align="left" src="{% static "img/yg.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阳光战队
-    </h5>
-    </br>
-    </br>
-
-  </div>
-
-  <div id = "c1" class="column">
-
-    <img class="t18" align="left" src="{% static "img/t18.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T18战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="white" align="left" src="{% static "img/white.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;白色战队
-    </h5>
-    </br>
-    </br>
-
-    <img class="st1" align="left" src="{% static "img/st1.jpg" %}">
-    </br>
-    <h5>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ST1战队
-    </h5>
-    </br>
-    </br>
-
-  </div>
-</div> 
-
-
-
-<br/>
-<br/>
-
-<div style="width: 1000px;">
-
-<i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:30px"></i>
-<i class="fa fa-qq" style="font-size:48px;color:black;margin-right:30px"></i>
-<i class="fa fa-facebook-official" style="font-size:48px;color:blue;margin-right:30px"></i>
-
-<i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:30px"></i>
-
-<i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:30px"></i>
-
-<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:30px"></i>
-
-<i class='fa fa-apple' style="font-size:48px;color:black;margin-right:30px"></i>
-
-<i class='fa fa-instagram' style="font-size:48px;color:purple;margin-right:30px"></i>
-
-<i class='fa fa-google' style="font-size:48px;color:blue;margin-right:30px"></i>
-
-<i class='fa fa-snapchat' style="font-size:48px;color:#FFFF00;margin-right:30px"></i>
-
-<i class='fa fa-git-square' style="font-size:48px;color:black;margin-right:30px"></i>
-
-<i class='fa fa-imdb' style="font-size:48px;color:#CCCC00;margin-right:30px"></i>
-
-
-<i class='fa fa-internet-explorer' style="font-size:48px;color:#3492db;"></i>
-
+<div align="center">
+<div id= "main" class="row">
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="rt" align="left" src="{% static "img/rt.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
 </div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="t18" align="left" src="{% static "img/t18.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="cr" align="left" src="{% static "img/cr.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="nsp" align="left" src="{% static "img/white.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="huanying" align="left" src="{% static "img/huanying.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="heiying" align="left" src="{% static "img/heiying.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="yg" align="left" src="{% static "img/yg.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="white" align="left" src="{% static "img/white.png" %}">
+    <div  class="card-body">
+        <h5>
+        白色战队
+        </h5>
+    </div>
+</div>
+
+<div id = "p_1" style="border:1px solid black;" >
+    <img id = "p_2" class="st1" align="left" src="{% static "img/st1.jpg" %}">
+    <div  class="card-body">
+        <h5>
+        RT战队
+        </h5>
+    </div>
+</div>
+</div>
+</div>
+
+
+<br/>
+<br/>
+
+
+
 <br>
 <br>
 <br>

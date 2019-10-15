@@ -19,20 +19,20 @@
 
     body {
       background: 
-        url("{% static "img/green.jpg" %}") no-repeat center center;
+        url("{% static "img/green.jpg" %}") no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
     }
 
-    #base {
-        margin-left: 0px;
-        margin-right: auto;
+
+    a {
+        font-family: 'Libre Baskerville', serif;
     }
 
-
     </style>
+    
 </head>
 
 <body>
@@ -41,6 +41,7 @@
 {% if user.is_authenticated %}
 
 {% if language == "Chinese" %}
+
 <nav id="base" class="navbar navbar-expand-lg navbar-light">
     <div class="container">
         <img class="logo" src="{% static "img/NaOH.png" %}">
@@ -123,7 +124,7 @@
               <a class="navbar-brand" href="{% url 'info_team' %}">Team</a>
             </li>
             <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_index' %}">NaOH Camp</a>
+              <a class="navbar-brand" href="{% url 'info_index' %}">NaOH Group</a>
             </li>
             <li class="nav-item">
               <a class="navbar-brand" href="{% url 'author_index' %}">About us</a>

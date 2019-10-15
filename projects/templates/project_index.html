@@ -5,21 +5,20 @@
 <style>
 
 #p_1 {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
 #p_2 {
-    width: 300px;
-    height: 220px;
+    width: 248px;
+    height: 180px;
 }
 
 #base2 {
+    margin-left: 8vw;
 
-    width: 980px;
-    margin: auto;
 }
 
 
@@ -32,22 +31,118 @@
 
 <br>
 
-<div id="base">
-    <div id="base2" class="row">
-    {% for project in projects %}
+<div id="base" align="center">
+    <div id="base2" class="row" >
+    
         <div>
             <div id = "p_1" style="border:1px solid black;" >
-                <img id = "p_2" class="card-img-top" src="{% static project.image %}">
+                <img id = "p_2" class="card-img-top" src="{% static 'img/background.png' %}">
                 <div align="center" class="card-body">
-                    
-                    <a href="{% url 'project_detail' project.pk %}"
+                    <a href="{% url 'background' %}"
                        class="btn btn-primary">
-                        {{project.title}}
-                    </a>
+                        temp
+                    </a> 
                 </div>
             </div>
         </div>
-        {% endfor %}
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/a2.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'game_setting' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/project1.png' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'download' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/a5.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/heckfreeze.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/a1.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/history.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/mod.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/c2.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'project_index' %}"
+                       class="btn btn-primary">
+                        temp
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        
     </div>
 </div>
 

@@ -7,5 +7,7 @@ urlpatterns = [
 	path("", views.home, name="home"),
     path("resource/", views.project_index, name="project_index"),
     path("setting/", views.setting, name="setting"),
-    path("<int:pk>/", views.project_detail, name="project_detail"),
+    path("resource/background", views.background, name="background"),
+    path("resource/setting", views.game_setting, name="game_setting"),
+    path("resource/download", views.download, name="download"),
 ]

@@ -1,42 +1,131 @@
 {% extends "base.html" %}
 {% block page_content %}
 
-<div class="col-md-8 offset-md-2">
 
-    <h1>{{ category | title }}</h1>
-
-    {% if order == "inorder" %}
-        <form action="" method="post">
-        {% csrf_token %}
-
-        <select name="selection">
-          <option value="inorder">正序</option>
-          <option value="reverseorder">倒叙</option>
-        </select> 
-        <input type="submit" value="选择">
-        </form>
-    {% else %}
-        <form action="" method="post">
-        {% csrf_token %}
-
-        <select name="selection">
-          <option value="reverseorder">倒叙</option>
-          <option value="inorder">正序</option>
-        </select> 
-        <input type="submit" value="选择">
-        </form>
-    {% endif %}
+<style type="text/css">
     
+    /* The container must be positioned relative: */
+.custom-select {
+  
+  width: 80px;
+  font-family: Arial;
+}
 
-    <hr>
+.custom-select select {
+  display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+} 
+
+input[type=submit] {
+    border-radius: 5px;
+    border: 0;
+    width: 60px;
+    height: 32px;
+
+    font-family: Tahoma;
+    background: #f4f4f4;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+    /* IE6-9 */
+}
+</style>
+<div class="col-md-8 offset-md-2">
+    <div class="row">
+    <h1 style="margin-right: 10vw; margin-left: 12px;">{{ category | title }}</h1>
+
 
     {% if user.is_authenticated %}
         <a class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
     {% else %}
         <a class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
     {% endif %}
-    <br>
-    <br>
+
+    {% if order == "inorder" %}
+        <form action="" method="post">
+        {% csrf_token %}
+
+        <select class="custom-select" name="selection">
+          <option value="inorder">正序</option>
+          <option value="reverseorder">倒序</option>
+        </select> 
+        <input type="submit" value="选择">
+        </form>
+    {% else %}
+        <form action="" method="post">
+        {% csrf_token %}
+
+        <select class="custom-select" name="selection">
+          <option value="reverseorder">倒序</option>
+          <option value="inorder">正序</option>
+        </select> 
+        <input type="submit" value="选择">
+        </form>
+    {% endif %}
+    </div>
+
+    <hr>
+
 
     {% for post in posts %}
         <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
