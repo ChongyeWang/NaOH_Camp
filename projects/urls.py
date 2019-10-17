@@ -10,4 +10,5 @@ urlpatterns = [
     path("resource/background", views.background, name="background"),
     path("resource/setting", views.game_setting, name="game_setting"),
     path("resource/download", views.download, name="download"),
+    path("resource/map", views.map, name="map"),
 ]

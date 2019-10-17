@@ -17,7 +17,7 @@
 	  	        
         {% for category in categories1 %}
 
-        <h2 style="padding:0 120px 0 15px;"><a href="{% url 'blog_category' category.name %}">
+        <h2 style="padding:0 120px 0 15px;"><a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
         {{ category.name }}
         </a>&nbsp;<h2>
         {% endfor %}
@@ -26,7 +26,7 @@
 	  	        
         {% for category in categories2 %}
 
-        <h2><a href="{% url 'blog_category' category.name %}">
+        <h2><a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
         {{ category.name }}
         </a>&nbsp;<h2>
         {% endfor %}

@@ -6,8 +6,9 @@
     
     /* The container must be positioned relative: */
 .custom-select {
-  
-  width: 80px;
+  margin-top: 6px;
+  width: 75px;
+  height: 38px;
   font-family: Arial;
 }
 
@@ -66,10 +67,13 @@
 } 
 
 input[type=submit] {
-    border-radius: 5px;
+
+    border-radius: 3px;
     border: 0;
-    width: 60px;
-    height: 32px;
+    width: 27px;
+    height: 27px;
+
+    margin-right: 10vw;
 
     font-family: Tahoma;
     background: #f4f4f4;
@@ -92,14 +96,7 @@ input[type=submit] {
 </style>
 <div class="col-md-8 offset-md-2">
     <div class="row">
-    <h1 style="margin-right: 10vw; margin-left: 12px;">{{ category | title }}</h1>
-
-
-    {% if user.is_authenticated %}
-        <a class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
-    {% else %}
-        <a class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
-    {% endif %}
+    <h1 style="margin-right: 5vw; margin-left: 12px;">{{ category | title }}</h1>
 
     {% if order == "inorder" %}
         <form action="" method="post">
@@ -109,7 +106,7 @@ input[type=submit] {
           <option value="inorder">正序</option>
           <option value="reverseorder">倒序</option>
         </select> 
-        <input type="submit" value="选择">
+        <input type="submit" value="&check;">
         </form>
     {% else %}
         <form action="" method="post">
@@ -119,22 +116,29 @@ input[type=submit] {
           <option value="reverseorder">倒序</option>
           <option value="inorder">正序</option>
         </select> 
-        <input type="submit" value="选择">
+        <input type="submit" value="&check;">
         </form>
     {% endif %}
+
+    {% if user.is_authenticated %}
+        <a style="color: #0000FF;" class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
+    {% else %}
+        <a style="color: #0000FF;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
+    {% endif %}
+
     </div>
 
     <hr>
 
 
     {% for post in posts %}
-        <h2><a href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+        <h2><a style="color: #00008B;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
         <small>
             {{ post.author }} |&nbsp;
             {{ post.created_on.date }} |&nbsp;
             Categories:&nbsp;
             {% for category in post.categories.all %}
-            <a href="{% url 'blog_category' category.name %}">
+            <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
                 {{ category.name }}
             </a>&nbsp;
             {% endfor %}

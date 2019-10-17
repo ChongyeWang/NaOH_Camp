@@ -8,10 +8,11 @@
 </head>
 <body>
 <br>
-<h3>&nbsp;&nbsp;请回答以下问题：</h3>
 <br>
 
 	{% ifequal finished False %}
+    <h3>&nbsp;&nbsp;请回答以下问题：</h3>
+
     <form action="/data/predict/" method="post">
         {% csrf_token %}
         <div class="form-group col-md-6">
@@ -25,27 +26,73 @@
         <div class="form-group col-md-6">
             {{ form.q4 }}
         </div>
+        <div class="form-group col-md-6">
+            {{ form.q5 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q6 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q7 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q8 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q9 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q10 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q11 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q12 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q13 }}
+        </div>
+        <div class="form-group col-md-6">
+            {{ form.q14 }}
+        </div>
 
        &nbsp;&nbsp;
-       <button type="submit" class="btn btn-primary">Submit</button>
+       <button type="submit" class="btn btn-primary">提交</button>
     </form>
     {% else %}
-    <p>{{ contents.q1 }}</p>
-    <p>{{ contents.q2 }}</p>
-    <p>{{ contents.q3 }}</p>
-    <p>{{ contents.q4 }}</p>
+    <h4>您的等级预测结果：{{level}}</h4>
+    <br><br>
+    <h4>您的回答：</h4>
+    <br>
+    <p>{{question.0}} {{ contents.q1 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.0}}</b> </p>
+    <p>{{question.1}} {{ contents.q2 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.1}}</b></p>
+    <p>{{question.2}} {{ contents.q3 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.2}}</b></p>
+    <p>{{question.3}} {{ contents.q4 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.3}}</b></p>
+    <p>{{question.4}} {{ contents.q5 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.4}}</b></p>
+    <p>{{question.5}} {{ contents.q6 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.5}}</b></p>
+    <p>{{question.6}} {{ contents.q7 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.6}}</b></p>
+    <p>{{question.7}} {{ contents.q8 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.7}}</b></p>
+    <p>{{question.8}} {{ contents.q9 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.8}}</b></p>
+    <p>{{question.9}} {{ contents.q10 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.9}}</b></p>
+    <p>{{question.10}} {{ contents.q11 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.10}}</b></p>
+    <p>{{question.11}} {{ contents.q12 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.11}}</b></p>
+    <p>{{question.12}} {{ contents.q13 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.12}}</b></p>
+    <p>{{question.13}} {{ contents.q14 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.13}}</b></p>
 
-    <a style="font-weight: bold; font-size: 25px;" href="{% url 'data_predict' %}">
+    <br>
+    <a style="font-weight: bold; font-size: 25px; color: #00008B;" href="{% url 'data_predict' %}">
             重新评估
         </a>
 
     {% endifequal %}
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <hr>
 
-
-
-<br/>
-<br/>
 
 <div style="width: 1000px;">
 

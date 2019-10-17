@@ -7,7 +7,7 @@
         {{ post.created_on.date }} |&nbsp;
         Categories:&nbsp;
         {% for category in post.categories.all %}
-        <a href="{% url 'blog_category' category.name %}">
+        <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
             {{ category.name }}
         </a>&nbsp;
         {% endfor %}

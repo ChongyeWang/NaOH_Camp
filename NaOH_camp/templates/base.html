@@ -53,7 +53,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">大厅</a>
+              <a class="navbar-brand" href="{% url 'project_index' %}">档案馆</a>
             </li>
             <li class="nav-item">
               <a class="navbar-brand" href="{% url 'blog_index' %}">论坛</a>
@@ -83,11 +83,11 @@
           </ul>
         </div>
         {% if not user.is_authenticated %}
-            <a id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
-            <a id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
+            <a style="color: #0000FF;" id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
+            <a style="color: #0000FF;" id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
         {% else %}
             <a class="navbar-brand">{{user}}</a>
-            <a id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
+            <a style="color: #0000FF;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
         {% endif %}
 
     </div>
@@ -106,7 +106,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">Center</a>
+              <a class="navbar-brand" href="{% url 'project_index' %}">Archive</a>
             </li>
             <li class="nav-item">
               <a class="navbar-brand" href="{% url 'blog_index' %}">Forum</a>
@@ -136,11 +136,11 @@
           </ul>
         </div>
         {% if not user.is_authenticated %}
-            <a id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
-            <a id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
+            <a style="color: #0000FF;" id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
+            <a style="color: #0000FF;" id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
         {% else %}
             <a class="navbar-brand">{{user}}</a>
-            <a id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
+            <a style="color: #0000FF;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
         {% endif %}
 
     </div>
@@ -161,7 +161,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">大厅</a>
+              <a class="navbar-brand" href="{% url 'project_index' %}">档案馆</a>
             </li>
             <li class="nav-item">
               <a class="navbar-brand" href="{% url 'blog_index' %}">论坛</a>
@@ -187,11 +187,11 @@
           </ul>
         </div>
         {% if not user.is_authenticated %}
-            <a id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
-            <a id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
+            <a style="color: #0000FF;" id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
+            <a style="color: #0000FF;" id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
         {% else %}
             <a class="navbar-brand">{{user}}</a>
-            <a id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
+            <a style="color: #0000FF;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
         {% endif %}
 
     </div>
