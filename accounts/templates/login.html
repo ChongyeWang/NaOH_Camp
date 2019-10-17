@@ -2,6 +2,35 @@
 
 {% block page_content %}
 
+<style type="text/css">
+    
+    input[type=submit] {
+
+    border-radius: 3px;
+    border: 0;
+    width: 60px;
+    height: 26px;
+
+    font-family: Tahoma;
+    background: #f4f4f4;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
+    /* IE6-9 */
+}
+</style>
+
 {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
@@ -30,6 +59,8 @@
 
 <input type="submit" value="login">
 <input type="hidden" name="next" value="{{ next }}">
+
+<a style="color: #00008B; margin-left: 60px;" id = "a1" class="navbar-brand" href="{% url 'register' %}">New User?</a>
 </form>
 
 
