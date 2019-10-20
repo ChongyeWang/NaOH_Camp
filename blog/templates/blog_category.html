@@ -121,9 +121,9 @@ input[type=submit] {
     {% endif %}
 
     {% if user.is_authenticated %}
-        <a style="color: #0000FF;" class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
+        <a style="color: #00008B;" class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
     {% else %}
-        <a style="color: #0000FF;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
+        <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
     {% endif %}
 
     </div>

@@ -6,13 +6,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <head>
     <meta charset="utf-8" />
-
     <style>
 
     img
     {
-        width: 100%; 
-      
+        width: 100%;
+    }
+
+    #start {
+        border-collapse: separate;
+        border-spacing: 2px 2px;
+    }
+
+    a {
+      color: #00008B;
+    }
+
+    td {
+      width: 12% ;
     }
 
     </style>
@@ -22,29 +33,163 @@
   <body>
     </br>
     <div class="container" align="justify">
-    
-    <div>
-      
-    <table>
-      <h1>常用地图</h1>
+
+      <div class="row">
+        <div>
+
+        </div>
+      </div>
+
+      <table id="start">
       <tr>
-        <td><img align="left" src="{% static "img/map/bingtianxuedi.png" %}">
+      <td><h5><a href="#bt">冰天雪地</a></h5></td>
+      <td><h5><a href="#aiji">埃及之旅</a></h5></td>
+      <td><h5><a href="#zhichi">咫尺天涯</a></h5></td>
+      <td><h5><a href="#b2">正式锦标赛地图B</a></h5></td>
+      <td><h5><a href="#beiji">北极圈</a></h5></td>
+      <td><h5><a href="#daoyu2">岛屿之战</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#chengshituji">城市突击战</a></h5></td>
+      <td><h5><a href="#jinyao">紧要关头</a></h5></td>
+      <td><h5><a href="#huangjinguo">黄金国</a></h5></td>
+      <td><h5><a href="#huoxian">火线冲突</a></h5></td>
+      <td><h5><a href="#lengzhan">冷战</a></h5></td>
+      <td><h5><a href="#daoyu3">岛屿战争</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#nantaipingyang">南太平洋</a></h5></td>
+      <td><h5><a href="#meiguoxiaozhen">美国小镇</a></h5></td>
+      <td><h5><a href="#xinzang">心脏地带</a></h5></td>
+      <td><h5><a href="#buliezi">不列兹然湖</a></h5></td>
+      <td><h5><a href="#mengdana">蒙大拿非军事区</a></h5></td>
+      <td><h5><a href="#jiazhou">加州高速公路</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#xuegu">雪谷</a></h5></td>
+      <td><h5><a href="#xuedishengji">雪地生机</a></h5></td>
+      <td><h5><a href="#zhengmian">正面冲突</a></h5></td>
+      <td><h5><a href="#chongfanbali">重返巴黎</a></h5></td>
+      <td><h5><a href="#tequbaodong">特区暴动</a></h5></td>
+      <td><h5><a href="#malibu">马里布悬崖</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#kuangye">狂野战区</a></h5></td>
+      <td><h5><a href="#fangweiqu">防卫区争夺</a></h5></td>
+      <td><h5><a href="#xiboliya">西伯利亚荒原</a></h5></td>
+      <td><h5><a href="#changzheng">长征</a></h5></td>
+      <td><h5><a href="#a2">正式锦标赛地图A</a></h5></td>
+      <td><h5><a href="#c4">正式锦标赛地图</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#bailinghaixia">白令海峡</a></h5></td>
+      <td><h5><a href="#zhengjiuxingdong">拯救行动</a></h5></td>
+      <td><h5><a href="#baofengtian">暴风天</a></h5></td>
+      <td><h5><a href="#jingjichang">竞技场</a></h5></td>
+      <td><h5><a href="#baimuda">百慕大三角州</a></h5></td>
+      <td><h5><a href="#taotuo">逃脱</a></h5></td>
+
+      </tr>
+      <tr>
+      <td><h5><a href="#lanzhaungji">缆桩脊</a></h5></td>
+      <td><h5><a href="#weixianchangsuo">危险场所</a></h5></td>
+      <td><h5><a href="#zainanbianyuan">灾难边缘</a></h5></td>
+      <td><h5><a href="#huangchen">黄尘地带</a></h5></td>
+      <td><h5><a href="#weigongzhidu">围攻之都</a></h5></td>
+      <td><h5><a href="#wushuikeng">污水坑</a></h5></td>
+      </tr>
+
+      <tr>
+      <td><h5><a href="#qiansulian">君王大陆</a></h5></td>
+      <td><h5><a href="#xiangcun">乡村乐</a></h5></td>
+      <td><h5><a href="#qimatiantang">骑马天堂</a></h5></td>
+      <td><h5><a href="#shengsidou">生死斗</a></h5></td>
+      <td><h5><a href="#wanfumaliya">万福玛丽亚</a></h5></td>
+      <td><h5><a href="#shanquiduijue">山丘对决</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#qinlue">侵略消息获得证实</a></h5></td>
+      <td><h5><a href="#shenshuizhadan">深水炸弹</a></h5></td>
+      <td><h5><a href="#alasijia">阿拉斯加油井</a></h5></td>
+      <td><h5><a href="#eastbest">当东方遇上最佳</a></h5></td>
+      <td><h5><a href="#zhuluowan">猪猡湾</a></h5></td>
+      <td><h5><a href="#kongbudao">恐怖岛屿</a></h5></td>
+
+      </tr>
+
+      <tr>
+      <td><h5><a href="#jinggongyufangyu">进攻与防御</a></h5></td>
+      <td><h5><a href="#shiluozhihu">失落之湖</a></h5></td>
+      <td><h5><a href="#jiniangu">纪念谷</a></h5></td>
+      <td><h5><a href="#kureganhan">酷热干旱</a></h5></td>
+      <td><h5><a href="#shaqiuxunli">沙丘巡礼</a></h5></td>
+      <td><h5><a href="#mimishangu">秘密山谷</a></h5></td>
+      </tr>
+
+      <tr>
+      <td><h5><a href="#jueduidianfeng">绝对巅峰</a></h5></td>
+      <td><h5><a href="#austin">德州奥斯汀</a></h5></td>
+      <td><h5><a href="#girl">死亡谷之女</a></h5></td>
+      <td><h5><a href="#shanduona">山多纳海峡</a></h5></td>
+      <td><h5><a href="#chengshizairen">成事在人</a></h5></td>
+      <td><h5><a href="#zhongrushenshan">重入深山</a></h5></td>
+      </tr>
+
+      <tr>
+      <td><h5><a href="#shichou">世仇</a></h5></td>
+      <td><h5><a href="#haixiao">海啸</a></h5></td>
+      <td><h5><a href="#lunpan">俄国轮盘</a></h5></td>
+      <td><h5><a href="#tanya">谭雅的训练场</a></h5></td>
+      <td><h5><a href="#baoliewu">爆裂物</a></h5></td>
+      <td><h5><a href="#sanchalukou">三岔路口</a></h5></td>
+      </tr>
+
+
+      <tr>
+      <td><h5><a href="#mingwanbuling">冥顽不灵</a></h5></td>
+      <td><h5><a href="#eliewusheng">恶劣无剩</a></h5></td>
+      <td><h5><a href="#boduomake">波多马克之师</a></h5></td>
+      <td><h5><a href="#monstermovie">怪兽电影</a></h5></td>
+      <td><h5><a href="#jianshoulingtu">坚守领土</a></h5></td>
+      <td><h5><a href="#tuochewu">拖车屋停驻场</a></h5></td>
+      </tr>
+
+    </table>
+
+
+    <table>
+
+      <h1><br>经典官方地图</h1>
+      <tr>
+        <td id="bt"><img align="left" src="{% static "img/map/bingtianxuedi.png" %}">
         </td>
       </tr>
       <tr>
         <td><br><h5 align="justify">冰天雪地（2-8）：红色警戒国内第一地图，无论是单挑还是混战，出镜率都极高。国内每年都会有冰天雪地的比赛，玩家们称为冰天王。该地图资源丰富，地图广阔，对玩家的综合能力如分兵，探路，运营等能力要求较高。地图共有8个位置，每个位置均有不同的打法。<br><br>
 
-        冰天雪地战术介绍 (作者：亡魂)：<br><br>原地发展：兵营后出3条狗，有的人喜欢出2条和4条，2条的人感觉自己探路比较有信心，想把钱用在战斗上，出4条的人用2条探路，2条守俩个路口，我建议还是出3条狗，3个方向探开，这样即使被对方咬到1条也还有机会探开对手，探路的时候要注意的是特别中间的那条狗到路口时一定要停下来试探对方有没有守主路口，可以小步前进，重工后出1，2蜘蛛2，3矿车我建议出3个矿车，这样攻防具备，而且对后面的发展不会卡钱，然后一直出坦克，矿厂再出2个，然后就可以出第2个重工6牛2重，6牛的时候一定要出第2个重工，不要等到有7牛才出第2重，那样坦克会比对手少，7牛3重这样一直推理下去，当然有的人会说5牛可以2重，这样也可以但是你经济必须控制好，前期随时指挥矿车倒矿，避免卡钱，一般有5，6个矿车的时候就开始分矿区了，如果你在的位置可以延伸就延伸建筑，如果不可以延伸就拉基地到另个矿区发展，拉2.3个矿车过去，一个矿区只应许2，3个矿车采矿，多了矿车会挤经济会卡，一般正常的都是3个矿区5重左右基本是可以结束战斗了，感觉不好还是打不下来继续拉基地发展其他矿区，再拉牛过去采新矿区，前期和中期金钱在1000的时候就可以开始手动指挥他倒矿了，不能卡钱，后期的话你在没有指挥坦克剩余的时间就看着矿车跑远了就必须指挥他采离矿厂最近的矿，记住6牛2重可以带狗，如果你5牛就出2个重工还带狗那样就会卡钱的，一般都是8，9牛5，6重这样的话基本是可以结束战斗了，没必要发展了，有的人喜欢4，5牛2重工拉中，如果看到对手这样的战术你直接6牛3重拉基地到中间出大兵和他对抗，或者是6牛4重卖基地，爆狗和大兵压到中部，也可以分几个坦克打他的后方。
+        冰天雪地战术介绍 (作者：亡魂)：<br><br>原地发展：兵营后出3条狗，有的人喜欢出2条和4条，2条的人感觉自己探路比较有信心，想把钱用在战斗上，出4条的人用2条探路，2条守俩个路口，我建议还是出3条狗，3个方向探开，这样即使被对方咬到1条也还有机会探开对手，探路的时候要注意的是特别中间的那条狗到路口时一定要停下来试探对方有没有守主路口，可以小步前进，重工后出1，2蜘蛛2，3矿车我建议出3个矿车，这样攻防具备，而且对后面的发展不会卡钱，然后一直出坦克，矿厂再出2个，然后就可以出第2个重工6牛2重，6牛的时候一定要出第2个重工，不要等到有7牛才出第2重，那样坦克会比对手少，7牛3重这样一直推理下去，当然有的人会说5牛可以2重，这样也可以但是你经济必须控制好，前期随时指挥矿车倒矿，避免卡钱，一般有5，6个矿车的时候就开始分矿区了，如果你在的位置可以延伸就延伸建筑，如果不可以延伸就拉基地到另个矿区发展，拉2，3个矿车过去，一个矿区只应许2，3个矿车采矿，多了矿车会挤经济会卡，一般正常的都是3个矿区5重左右基本是可以结束战斗了，感觉不好还是打不下来继续拉基地发展其他矿区，再拉牛过去采新矿区，前期和中期金钱在1000的时候就可以开始手动指挥他倒矿了，不能卡钱，后期的话你在没有指挥坦克剩余的时间就看着矿车跑远了就必须指挥他采离矿厂最近的矿，记住6牛2重可以带狗，如果你5牛就出2个重工还带狗那样就会卡钱的，一般都是8，9牛5，6重这样的话基本是可以结束战斗了，没必要发展了，有的人喜欢4，5牛2重工拉中，如果看到对手这样的战术你直接6牛3重拉基地到中间出大兵和他对抗，或者是6牛4重卖基地，爆狗和大兵压到中部，也可以分几个坦克打他的后方。
         <br><br>伊破伊拉中：1.一牛二重破中：狗探开对手后看到他拉中后，立即改变你2边探路的狗回来守住他要往你家探路的路口，如果你中间那只狗被他干掉了，你可以再出个狗继续守住中间，如果对方探不开路，那他是很蛋疼的，你重工后看他地堡多不多如果地堡和大兵多，可以使用1个防空车里放一个蜘蛛，蜘蛛路径进他的矿车，防空车拉到他的矿车旁边用防空车吸引身边所有火力，立刻把蜘蛛放出来他自动进对方的矿车，如果不用防空车装蜘蛛也可以先出一个坦克和一个蜘蛛，用坦克吸引对方火力，蜘蛛上他的矿车，然后哪个坦克直接点打矿车，然后一直出坦克，出第2个重工，卖基地，比如上方位置我建议拉基地到第2层出第2个重工在第3层再卖基地，把卖的大兵全部拉到中部配合坦克攻击，工程师可以饶到对手的后方偷他的建筑。 2.一牛一重破中：重工后出1蜘蛛，然后一直出坦克，基地立即拉中，看下合适的话蜘蛛上牛车，上不了也没事，坦克一直路径到中部，基地在中间打开，出个兵营在中间出一个地堡在兵营前面，然后中间的兵营爆大兵然后卖基地，中间的大兵配合坦克攻击，这个破法说实话不是那么实在，如果双方实力都相同，想破中确实有点困难。3.三牛一重破中：重工后一直不断的出坦克，再出2个矿厂就有3牛了，然后拉基地到中间打开，在拉中时坦克要保护好基地被对方的蜘蛛上，到中间后，坦克一直路径到中部，基地打开出兵营，爆大兵出1，2个地堡在前面，这里要注意的是你在爆大兵的时候可能会卡钱，你可以先停止出坦克10秒左右先爆兵，再出坦克，这样的话兵多了少出1，2个坦克也没事，如果对方卖基地你也卖，他不卖你继续出2，3个地堡控制矿区，然后再卖基地，你坦克不断的骚扰吸引他的大兵过来干掉消耗他或者打掉矿区的金钱，机会好时点他露头的坦克，一直这样消耗找机会，感觉合适的机会就可以点他的坦克，点矿车，打到最后如果还是僵持，那他中间也没什么矿了，基本矿都被坦克打掉的，这个战术其实最主要的是要防好对手的蜘蛛，你卡钱也手动倒下矿，而且需要坦克的操作相当的高，不过这也是我个人看到很多高手中最为好的破中战术。<br><br></h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/aijizhilv.png" %}">
+        <td id="aiji"><img align="left" src="{% static "img/map/aijizhilv.png" %}">
         </td>
       </tr>
       <tr>
         <td><br><h5 align="justify">埃及之旅（2-6）：经典3v3团队配合地图，在尤里复仇中出镜率极高。该地图共有6个位置，每个位置都有相应的团队配合战术。<br><br>
-        埃及之旅3v3战术介绍 (作者：Dogking, Beefcat)：<br><br>
+        埃及之旅3v3战术介绍 (作者：Dogking, Beefcat)：
         3vs3是多人游戏，队友之间要相互配合，最好把游戏分辨率调到显示器允许的最大分辨率，这样对观察是有很大帮助的。多观察局势，对方的坦克离家就去偷袭，不要送坦克，队友受攻击要去帮忙。这是最基本的内容
         3.埃及这个地图，本身矿产资源有限，不要多出矿车和重工，这些东西在采完矿之后全会变成废物。重工有一个就行，牛车，建议不要超过4个。 33的重点在于高科，在于铁幕，而不是比谁的坦克多。
         4.正常的情况，3vs3是要速高科的。可以二牛高科，三牛高科，四牛高科。 不推荐新手使用二牛高科。三牛和四牛，我会在下面具体说。
@@ -54,7 +199,7 @@
         把第二矿场得到的牛（矿车）和重工出来的矿车全拉去采富矿。用犀牛打掉山上的三格金矿，就可以把第三矿场放在山上了。注：2vs2时1号位要上山，而3vs3一号位是不上山的，因为较之1号位，二号位上山要更快捷一些。二号位：这个位置是比较穷的位置。现在主流的发展方式是 第一个矿车去一号位采一车富矿，然后到前面的矿区采贫矿。再强调一遍，不属于自己   的矿不要乱动。
         Q：为什么不多采几车富矿呢
         A：多采几车富矿一号位就会卡钱，出铁幕会慢的。三号位：3vs3时3号位的矿区和2vs2基本相同：一片富矿，一片前线的金矿和一片后方的贫矿。
-        我这里用的是3牛铁幕，出了核电后补一个矿场。 
+        我这里用的是3牛铁幕，出了核电后补一个矿场。
         同2vs2，第二矿场前置还是后置，要依据对面的强弱，自己的操作和意识而决定。四号位：重工可以放在金字塔的右上方。
         优点是可以尽快摆放前置矿场；缺点是容易受到V3攻击，如果技术不好，此重工也有可能遭到偷袭，被打爆。五号位：5号也是比较穷的，且牛车容易被偷袭。先采前矿还是先采家里的矿，依个人水平而定。
         其他注意事项基本与2号相似。给盟军金字塔进兵，注意看好牛车，没钱不要造铁幕。六号位：6号位可以选择三牛铁幕或4牛铁幕。 前面提到，如果你对经济控制比较差，就重后连造两个矿场。如果你对经济有一定把握，可以先出高科铁幕，然后矿场上山。 另：如果觉得有一定防守压力，可以在路口处放个碉堡，对于防守很有帮助。
@@ -65,464 +210,684 @@
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/zhichitianya.png" %}">
+        <td id="zhichi"><img align="left" src="{% static "img/map/zhichitianya.png" %}">
         </td>
       </tr>
       <tr>
 
-        <td><br><h5>咫尺天涯（2-8）:
+        <td><br><h5 align="justify">咫尺天涯（2-8）:
         国内4v4玩家所钟爱的一个地图。该地图共有8个位置，以河为界，分成两个阵营，随即国家开箱子使得该地图具有很强的随机性及趣味性。<br><br>
 
         咫尺天涯4v4随机简介(作者：Mckaikai)：4v4随机早在很久之前就已经出现，这种模式并不太正规，它的关键就在于它的随机性，它提供的更多是多人组队的乐趣。队友国家位置和箱子的随机使对战丰富多彩，减少局势严重偏向性的问题，毕竟玩家水平参差不齐，而随机可以弥补上来使游戏更加公平。44随机主要进行后期对战，但仍不影响其他方法进行前期或中期的战斗。咫尺天涯这张地图虽没有高度差的地形，但核心就在他的桥和水面以及桥边的房子，断桥即是远隔天涯，修桥即是近如咫尺。<br><br></h5></td>
       </tr>
 
-      <tr>
-        <td><img align="left" src="{% static "img/map/zhuluowan.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>猪猡湾（2-6）</h4></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/b2.png" %}">
+        <td id="b2"><img align="left" src="{% static "img/map/b2.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>正式锦标赛地图B（2）</h4></td>
+        <td><br><h5 align="justify">正式锦标赛地图B（2）：正式锦标赛地图B经常出现于各大赛事中，上下对称，包含海陆，附带油井。地图整体较小，资源却不差，战术也较为丰富，很考验玩家的综合能力。<br><br>
+        B2战术简介(作者：Fledgling)：
+
+        1.双重工-三矿厂战术 开局建筑顺序：电场-兵营-矿厂-重工-矿厂(卖)-重工-矿厂-电场
+        后期看情况出雷达或者发展海军。个人建议是，此类小地图，如果你不打算出辐射兵或者发展高科技的话，那么还是省下钱出坦克，雷达真的没有必要出。
+        2.双重工，双矿厂战术 开局建筑顺序：电场-兵营-矿厂-重工-矿产(卖)-重工-造狗和动员兵，卖基地推过去。优势在于你的大量辅助兵种，如果运用的好，可以凭借辅助兵种的优势重创对方;如果前期推不掉，那么随着时间的推移，情况会对你越来越不利。
+        3.三重工，三矿厂战术 开局建筑顺序:电场-兵营-矿厂-重工-矿厂-重工-矿厂-电场-重工-卖基地.优势在于相同时间内可以积累更多的坦克,凭借陆地优势击溃对方。
+        4.①开局拉基地a战术 开局迅速判断己方位置，如果在下方，直接拉基地去对方的富矿处，出碉堡和小兵强攻，霸占富矿;如果基地车在上方，因为要拉动的话，还需要调个头，一般情况下不推荐拉基地 ②开局拉基地b战术 开局迅速判断位置，拉动基地去对方基地后侧，出工程师占领对方建筑，然后出碉堡和小兵强攻。这种战术隐蔽性很好，一般对手都有固定思维习惯，总把注意力放在狗的探路和工程师占油井那里，而对自己的后方往往一无所知，我们如果充分利用对手思维上的漏洞，可以达到出其不意，攻其不备的效果! 5.攀高科技打法 开局建筑顺序电场-兵营-矿厂-重工-雷达-船场-电场-高科技-电场-同时出无畏。<br><br></h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/beijiquan.png" %}">
+        <td id="beiji"><img align="left" src="{% static "img/map/beijiquan.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>北极圈（2-8）</h4></td>
-      </tr>
-   
-
-      <tr>
-        <td><h1>官方地图列表</h1></td>
-      </tr>
-      
-      <tr>
-        <td><img align="left" src="{% static "img/map/daoyuzhizhan.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>岛屿之战（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/chengshitujizhan.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>城市突击战（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/jingyaoguantou.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>紧要关头（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/huangjinguo.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>黄金国（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/huoxianchongtu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>火线冲突（2）</h4></td>
+        <td><br><h5 align="justify">北极圈（2-8）：红色警戒经典大型地图，有大量的资源和油井，并拥有大量桥梁，很多玩家是从北极圈的1打7冷酷电脑开始接触红色警戒，北极圈也因此被称为经典虐电图。该地图有8个位置，地图广阔，水陆混合，对玩家的观察能力及海陆空配合能力要求较高。
+        <br><br>
+        北极圈原版11思路简述（作者：烧饼）：
+        从前有一个噬天，他与我一同入坑红警对战，他曾在腾讯对战平台和浩方对战平台与我度过了无数的日日夜夜，可惜啊，自从2017年以后，他就不怎么玩红警了，后来偶尔也会找咱联机，但是他已经打不过咱了。
+        记得当年和他打11，打的第二多的就是这个北极圈。当时我俩的理解还有很大的问题，打的也是乱七八糟，我还记得当年英勇的烧饼用铁幕基洛夫大破SB噬天的巨炮阵…跑题了，我们还是言归正传。
+        今天我的女仆和惹不起烧碱想要让咱写地图介绍，那咱就写一写，这张充满了回忆的地图——北极圈。
+        开局简介：这图最好讲的就是开局惹。因为有油井的缘故，本图经济较好，故兵营可以多出几只狗，把守好狭窄的桥梁防止敌人探开地图，必要的话可以起一个碉堡，开图的同时记得用狗守住距离你基地最近的那个油井，同时用工程师占领这个油井，把重工放到这个油井旁边。前期尽量占领这至少一个油井（能占领两个以上当然是更好），否则后面拓展基地会比较困难。
+        重工造好后，立刻出一个兵营，苏军的重工要造一个履带和蜘蛛，盟军则要出2IFV同时空指部出蚊子。苏军不建议太早出运兵船去抢两侧的油井，先把中间的油井抢了再说。
+        而盟军可以将2IFV换成1夜莺，然后抢海上的4个油井和机场，但是至少要保住开局占领的那个油井。
+        按理来说苏军抢油井是比盟军厉害的，但是无论如何，苏军都抢不了海上那四个油井，所以尽快占据陆地才是主要任务，本图易守难攻，爆重常常无法打穿敌人，建议苏军速铁幕。
+        盟军的话，超时空就好了，非法国阵营玩的不多所以不好说，但是法国有巨炮的情况下是可以稳稳守住大陆的，合理利用超时空传送进行攻击，同时确保自己不会被铁幕一波打穿。城市化也不错，反正这个图没超武法国就基本无敌了。
+        后期：
+        伊拉克/古巴：铁幕一波打不赢还可以出核弹，如果核弹不能炸崩敌人请酌情GG。
+        法国：巨炮满地，注意防空。
+        其他阵营：玩的少，不好评价。
+        后期的打法就不固定了，但是一定要尽早出超武，并且保护好超武，否则很难打破僵局。
+        关于阵营选择：
+        这图法国绝对是最强的，因为桥梁的缘故，巨炮基本上能够守住一切地面单位了，而超时空传送则是进攻利器，再加上盟军的海军本身也挺强，所以选法国吧。<br><br></h5></td>
       </tr>
 
 
       <tr>
-        <td><img align="left" src="{% static "img/map/lengzhan.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>冷战（2-3）</h4></td>
+        <td><h1>官方地图汇总</h1></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/daoyuzhanzheng.png" %}">
+        <td id="daoyu2"><img align="left" src="{% static "img/map/daoyuzhizhan.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>岛屿战争（3）</h4></td>
-      </tr>
-
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/nantaipingyang.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>南太平洋（2-4）</h4></td>
+        <td><h5>岛屿之战（2）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/meiguoxiaozhen.png" %}">
+        <td id="chengshituji"><img align="left" src="{% static "img/map/chengshitujizhan.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>美国小镇（2-4）</h4></td>
+        <td><h5>城市突击战（2）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/xinzangdidai.png" %}">
+        <td id="jinyao"><img align="left" src="{% static "img/map/jingyaoguantou.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>心脏地带（2-4）</h4></td>
-      </tr>
-  
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/bulieziranhu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>不列兹然湖（2-4）</h4></td>
-      </tr>
-  
-      <tr>
-        <td><img align="left" src="{% static "img/map/mengdana.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>蒙大拿非军事区（2-4）</h4></td>
+        <td><h5>紧要关头（2）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/jiazhougaosu.png" %}">
+        <td id="huangjinguo"><img align="left" src="{% static "img/map/huangjinguo.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>加州高速公路（2-4）</h4></td>
+        <td><h5>黄金国（2）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/xuegu.png" %}">
+        <td id="huoxian"><img align="left" src="{% static "img/map/huoxianchongtu.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>雪谷（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/xuedishengji.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>雪地生机（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/zhengmianchongtu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>正面冲突（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/chongfanbali.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>重返巴黎（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/tequbaodong.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>特区暴动（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/malibu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>马里布悬崖（2-6）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/kuangyezhanqu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>狂野战区（2-6）</h4></td>
-      </tr>
-  
-      <tr>
-        <td><img align="left" src="{% static "img/map/fangweiqu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>防卫区争夺（2-6）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/xiboliya.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>西伯利亚荒原（2-6）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/changzheng.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>长征（2-8）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/a2.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>正式锦标赛地图A（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/c4.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>正式锦标赛地图（4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/bailinghaixia.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>白令海峡（2-6）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/zhengjiuxingdong.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>拯救行动（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/baofengtian.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>暴风天（2-4）</h4></td>
-      </tr>
-  
-      <tr>
-        <td><img align="left" src="{% static "img/map/jingjichang.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>竞技场（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/baimuda.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>百慕大三角州（2-6）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/taotuo.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>逃脱（2-3）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/lanzhaungji.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>缆桩脊（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/weixianchangsuo.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>危险场所（2-8）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/zainanbianyuan.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>灾难边缘（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/huangchen.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>黄尘地带（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/weigongzhidu.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>围攻之都（2-4）</h4></td>
-      </tr>
-  
-      <tr>
-        <td><img align="left" src="{% static "img/map/wushuikeng.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>污水坑（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/qiansulian.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>前苏联大陆（2）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/xiangcun.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>乡村乐（2-4）</h4></td>
-      </tr>
-
-      <tr>
-        <td><img align="left" src="{% static "img/map/qimatiantang.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>骑马天堂（2-4）</h4></td>
+        <td><h5>火线冲突（2）</h5></td>
       </tr>
 
 
       <tr>
-        <td><img align="left" src="{% static "img/map/shengsidou.png" %}">
+        <td id="lengzhan"><img align="left" src="{% static "img/map/lengzhan.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>生死斗（2）</h4></td>
+        <td><h5>冷战（2-3）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/wanfumaliya.png" %}">
+        <td id="daoyu3"><img align="left" src="{% static "img/map/daoyuzhanzheng.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>万福玛丽亚（2）</h4></td>
+        <td><h5>岛屿战争（3）</h5></td>
+      </tr>
+
+
+      <tr>
+        <td id="nantaipingyang"><img align="left" src="{% static "img/map/nantaipingyang.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>南太平洋（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/shanquiduijue.png" %}">
+        <td id="meiguoxiaozhen"><img align="left" src="{% static "img/map/meiguoxiaozhen.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>山丘对决（2-4）</h4></td>
-      </tr>
-      
-      <tr>
-        <td><img align="left" src="{% static "img/map/qinlue.png" %}">
-        </td>
-      </tr>
-      <tr>
-        <td><h4>侵略消息获得证实（2-4）</h4></td>
+        <td><h5>美国小镇（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/shenshuizhadan.png" %}">
+        <td id="xinzang"><img align="left" src="{% static "img/map/xinzangdidai.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>深水炸弹（2-4）</h4></td>
+        <td><h5>心脏地带（2-4）</h5></td>
       </tr>
 
+
       <tr>
-        <td><img align="left" src="{% static "img/map/alasijia.png" %}">
+        <td id="buliezi"><img align="left" src="{% static "img/map/bulieziranhu.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>阿拉斯加油井（2）</h4></td>
+        <td><h5>不列兹然湖（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/eastbest.png" %}">
+        <td id="mengdana"><img align="left" src="{% static "img/map/mengdana.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>当东方遇上最佳（2-6）</h4></td>
+        <td><h5>蒙大拿非军事区（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/kongbudao.png" %}">
+        <td id="jiazhou"><img align="left" src="{% static "img/map/jiazhougaosu.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>恐怖岛屿（2-4）</h4></td>
+        <td><h5>加州高速公路（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/jinggongyufangyu.png" %}">
+        <td id="xuegu"><img align="left" src="{% static "img/map/xuegu.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>进攻与防御（2-4）</h4></td>
+        <td><h5>雪谷（2-4）</h5></td>
       </tr>
 
       <tr>
-        <td><img align="left" src="{% static "img/map/shiluozhihu.png" %}">
+        <td id="xuedishengji"><img align="left" src="{% static "img/map/xuedishengji.png" %}">
         </td>
       </tr>
       <tr>
-        <td><h4>失落之湖（2-4）</h4></td>
+        <td><h5>雪地生机（2-4）</h5></td>
       </tr>
-  
-  
-  
-  
 
-      
+      <tr>
+        <td id="zhengmian"><img align="left" src="{% static "img/map/zhengmianchongtu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>正面冲突（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="chongfanbali"><img align="left" src="{% static "img/map/chongfanbali.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>重返巴黎（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="tequbaodong"><img align="left" src="{% static "img/map/tequbaodong.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>特区暴动（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="malibu"><img align="left" src="{% static "img/map/malibu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>马里布悬崖（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="kuangye"><img align="left" src="{% static "img/map/kuangyezhanqu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>狂野战区（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="fangweiqu"><img align="left" src="{% static "img/map/fangweiqu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>防卫区争夺（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="xiboliya"><img align="left" src="{% static "img/map/xiboliya.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>西伯利亚荒原（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="changzheng"><img align="left" src="{% static "img/map/changzheng.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>长征（2-8）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="a2"><img align="left" src="{% static "img/map/a2.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>正式锦标赛地图A（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="c4"><img align="left" src="{% static "img/map/c4.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><h5 align="justify">正式锦标赛地图（4）：标准对战地图。地图有油井，中间有宝石和机场，资源较为充足。该地图相对公平，常出现于比赛之中。
+        <br><br>
+
+        战术简介（来源：红警之家）：开局先用鼠标确定基地车方位：基地车会分布在左上，左下，右上，右下四个位置中的一个随机位置。1v1时一旦己方基地车位置确定，那么对方基地车的位置也随之确定：在地图对角线位置。
+
+        电场后置是为了使矿厂更接近矿区，从而缩短矿车采矿距离，提高效率。而由于地理位置的特殊性，我们把兵营前置，这样做是为了使狗尽快到达中间机场，占据有利位置，获得先机！
+        所谓矿场前置，也就是把矿场往前摆，摆到路口位置，然后手控矿车采中间富矿，这样做的好处是：
+        ①工程师在武装采矿车的保护下前去占领机场，保险系数更大。
+        ②武装采矿车可以乘机消灭对方在桥上、桥下探路的狗
+        ③抢先采集富矿，获得前期经济优势
+        顺利抢占机场后，接着将第2矿场摆在机场旁，2矿车采富矿，同时坦克前压保护，经济上一帆风顺。
+        矿场前置战术的优点在于：原地发展时往往需要出矿车，否则经济容易断，而此战术直接将矿车手动到中间采富矿，结合第2矿车的资源补给优势，经济上十分顺利。
+        缺点是必须确保工程师顺利占到机场，一旦失手，没有富矿的接济，经济上会很被动。
+        矿场前置战术适用于基地车位置在左下或右上的时候，此时抢占机场后可以直接放置矿场，如果位置在左上或右下，矿场无法放置在机场旁，此战术无法发挥出最大功效。<br><br></h5></td>
+      </tr>
+
+      <tr>
+        <td id="bailinghaixia"><img align="left" src="{% static "img/map/bailinghaixia.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><h5 align="justify">白令海峡（2-6）：该地图共六个位置，常出现于混战之中，中间小岛有油井，并且桥梁较多，需要水陆空同时配合。<br><br>
+
+        白令海峡战术简介（来源：红警之家）：该地图选择美国可谓先机占尽，主要是美国的免费伞兵了，初期发展大家都差不多，就是：兵营（1、2狗探路，2工程师，并开始准备防空炮）－矿厂－重工，接着直接一架直升机，速度要快载上工程师去占中间油井，稳妥了，就直接在岛上出一兵营，一来可以直接出工程师占另两油田，而来可以防御对手来抢油田，当然你也可以将直升机返回接两个工程师过来。如果对方建筑也没抢到，那就守好地图，然后不停的出矿车和飞兵，用飞行兵海（不要以为用飞兵海就是菜鸟和弱智行为，在守好地图的情况下，偶尔用一次还是很管用的），拼掉对方基地，让他出不了海军，你陆地充分利用地形和伞兵守好，用海军取胜。或者打掉桥（关于守桥，可用谭亚mm），不停的发展经济（出矿车、转移基地分矿），并第一时间出海军，控制海域，陆地上尽量利用地形和伞兵＋g光能坦克防守好，取胜还是要靠海军的。本图的开局讲的就是速度，速度跟不上自然就不可能抢到中间的油田了，如果抢到立马上放下防空炮，接着做一个地堡，放在几个油井中间的位置，以免被反占，同时也可以保护几个未被占的油井。如果你和对手各抢占两两油井，那接下来将是一场恶战，这时除了地堡还要利用上直升机，尽最大的努力干掉对方的工程师，还有地堡。如果你的夜鹰到达中间岛屿上空时，发现油井已被对方占领，那就只能投机了。夜鹰回飞，迷惑对方，以为你回家了，再马上绕到对方基地后，抢建筑吧。这时对方一般都是忙着加固中间岛屿的防守，很少顾及老家，抢建筑是比较容易的，抢到后，就应该拼命放地堡，扫啊扫，让他气绝身亡。如果对方建筑也没抢到，那就守好地图，然后不停的出矿车和飞兵，用飞行兵海（不要以为用飞兵海就是菜鸟和弱智行为，在守好地图的情况下，偶尔用一次还是很管用的），拼掉对方基地，让他出不了海军，你陆地充分利用地形和伞兵守好，用海军取胜。或者打掉桥（关于守桥，可用谭亚mm），不停的发展经济（出矿车、转移基地分矿），并第一时间出海军，控制海域，陆地上尽量利用地形和伞兵＋g光能坦克防守好，取胜还是要靠海军的。<br><br></h5></td>
+      </tr>
+
+      <tr>
+        <td id="zhengjiuxingdong"><img align="left" src="{% static "img/map/zhengjiuxingdong.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>拯救行动（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="baofengtian"><img align="left" src="{% static "img/map/baofengtian.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>暴风天（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="jingjichang"><img align="left" src="{% static "img/map/jingjichang.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>竞技场（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="baimuda"><img align="left" src="{% static "img/map/baimuda.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>百慕大三角州（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="taotuo"><img align="left" src="{% static "img/map/taotuo.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>逃脱（2-3）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="lanzhaungji"><img align="left" src="{% static "img/map/lanzhaungji.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>缆桩脊（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="weixianchangsuo"><img align="left" src="{% static "img/map/weixianchangsuo.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>危险场所（2-8）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="zainanbianyuan"><img align="left" src="{% static "img/map/zainanbianyuan.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>灾难边缘（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="huangchen"><img align="left" src="{% static "img/map/huangchen.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>黄尘地带（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="weigongzhidu"><img align="left" src="{% static "img/map/weigongzhidu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>围攻之都（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="wushuikeng"><img align="left" src="{% static "img/map/wushuikeng.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><h5>污水坑（2-4）：地图自带天然大面积辐射。<br><br>
+        污水坑战术简介（作者：烧碱）：由于污水坑自带辐射并且中间有宝石，可以选择法国开局将基地拉到中间，地图自带的辐射对法国是天然的防守，不过也会带来无法用大兵防守，无法工程师抢修基地，无法出火箭飞行兵的弊端。伊拉克则可以采用高科技出铁幕的方式，不过可能会因为法国的延伸而无法控制矿区，资源会出现卡钱的情况。
+        <br><br></h5></td>
+
+        
+      </tr>
+
+      <tr>
+        <td id="qiansulian"><img align="left" src="{% static "img/map/qiansulian.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>君王大陆（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="xiangcun"><img align="left" src="{% static "img/map/xiangcun.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>乡村乐（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="qimatiantang"><img align="left" src="{% static "img/map/qimatiantang.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>骑马天堂（2-4）</h5></td>
+      </tr>
+
+
+      <tr>
+        <td id="shengsidou"><img align="left" src="{% static "img/map/shengsidou.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>生死斗（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="wanfumaliya"><img align="left" src="{% static "img/map/wanfumaliya.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>万福玛丽亚（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shanquiduijue"><img align="left" src="{% static "img/map/shanquiduijue.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>山丘对决（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="qinlue"><img align="left" src="{% static "img/map/qinlue.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>侵略消息获得证实（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shenshuizhadan"><img align="left" src="{% static "img/map/shenshuizhadan.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>深水炸弹（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="alasijia"><img align="left" src="{% static "img/map/alasijia.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>阿拉斯加油井（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="eastbest"><img align="left" src="{% static "img/map/eastbest.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>当东方遇上最佳（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="zhuluowan"><img align="left" src="{% static "img/map/zhuluowan.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>猪猡湾（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="kongbudao"><img align="left" src="{% static "img/map/kongbudao.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>恐怖岛屿（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="jinggongyufangyu"><img align="left" src="{% static "img/map/jinggongyufangyu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>进攻与防御（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shiluozhihu"><img align="left" src="{% static "img/map/shiluozhihu.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>失落之湖（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="jiniangu"><img align="left" src="{% static "img/map/jiniangu.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>纪念谷（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="kureganhan"><img align="left" src="{% static "img/map/kureganhan.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>酷热干旱（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shaqiuxunli"><img align="left" src="{% static "img/map/shaqiuxunli.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>沙丘巡礼（2）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="mimishangu"><img align="left" src="{% static "img/map/mimishangu.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><h5 align="justify">秘密山谷（2）：秘密山谷是尤里复仇于红色警戒原版的一张热门小图，出生地都设在山体旁边，进攻路线只有一个峡谷。每个出生地有两个油井一个坦克修理厂一个医院，周围有较为丰富但唯一的一片平矿，对玩家运营的把握和理解程度要求较高。
+        <br><br>
+        秘密山谷尤里复仇11思路简述（作者：猥琐）：此图在当前版本为尤里优势图，其次为苏军，盟军最弱（法国除外）但是尤里主要依靠强大的微操与随机应变能力取胜，对于新手与普通选手上手较难容错率低，这里不做讲解。主要是学习苏军的打法：1.猥琐打法，电兵（三狗三工程师，医院随意）矿重工二牛（后一直出犀牛）补一矿，雷达后出辐射出高科（两个武直）大电铁幕工业工厂，武直去对方上山坐下，可以打到很多东西，出两个是因为对方有可能会出，所以越多越好。对面被逼出防空车和防空炮时，可以趁机补牛补一个矿车，等铁幕好用铁幕zz去打。僵持情况下出核弹，之后需要操作和意识来打。2.封视野爆重，前期出狗封住视野，可以直接出四个重工，重工里面出三牛，补二矿，但是出的时候要把握时间，不然会卡钱，注意手牛，如果顺利运营，基本可以一波了。3.占医院爆兵，占掉医院出前线兵营，然后重工出一牛补二矿雷达爆兵，需要微操和意识。最容易的是第一种，有详细的运营，不需要特别的操作，还强。实战使用最多，所以第一种打法是最好的最有用的。<br><br></h5></td>
+      </tr>
+
+      <tr>
+        <td id="jueduidianfeng"><img align="left" src="{% static "img/map/jueduidianfeng.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>绝对巅峰（2-3）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="austin"><img align="left" src="{% static "img/map/austin.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>德州奥斯汀（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="girl"><img align="left" src="{% static "img/map/girl.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>死亡谷之女（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shanduona"><img align="left" src="{% static "img/map/sedona.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>山多纳海峡（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="chengshizairen"><img align="left" src="{% static "img/map/chengshizairen.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>成事在人（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="zhongrushenshan"><img align="left" src="{% static "img/map/zhongrushenshan.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>重入深山（2-5）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="shichou"><img align="left" src="{% static "img/map/shichou.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><br><h5 align="justify">世仇（2）：尤里复仇热门小图，此图为苏军大优势图，此图矿稀少。都为平矿，所以拖后期是不妥当的，需要速战速决。矿场分布于出生地的左下和右上，还有两片较远的矿。对玩家操作和意识要求高。<br><br>
+
+        世仇11简介（作者：猥琐）：1.辐射带兵，此战术打非伊拉克与（盟军英国除外）都十分无敌，运营方法为，电兵（二狗，观察对方有无爆兵，对方爆你也爆，同等爆）矿重（一牛一直出坦克）雷达出辐射，卖本，如果前期没有爆兵，可以过一会出一个二矿，然后一直出兵➕辐射进攻。进攻多考验操作。【辐射操作，不要绿自己，不要走最前方，走在兵里面。给兵辐射编号，打地堡时兵去打辐射后拉，注意躲zz。辐射很肉，小规模坦克交火是点坦克和第一轮炮，这里辐射可以吸引对方第一轮炮和炮管旋转，给自己坦克提供大量的操作时间。这种局打建筑先打电厂再打牛，重工可以放在后面打。之后就是意识了。2.重工二连，出了矿场直接坦克出二重，卖本，靠操作。
+
+        <br><br></h5></td>
+      </tr>
+
+      <tr>
+        <td id="haixiao"><img align="left" src="{% static "img/map/haixiao.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>海啸（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="lunpan"><img align="left" src="{% static "img/map/lunpan.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>俄国轮盘（2-8）</h5></td>
+      </tr>
+
+
+      <tr>
+        <td id="tanya"><img align="left" src="{% static "img/map/tanya.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>谭雅的训练场（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="baoliewu"><img align="left" src="{% static "img/map/baoliewu.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>爆裂物（2-8）</h5></td>
+      </tr>
+
+       <tr>
+        <td id="sanchalukou"><img align="left" src="{% static "img/map/sanchalukou.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>三岔路口（2-6）</h5></td>
+      </tr>
+
+
+      <tr>
+        <td id="mingwanbuling"><img align="left" src="{% static "img/map/mingwanbuling.png" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>冥顽不灵（2-6）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="eliewusheng"><img align="left" src="{% static "img/map/eliewusheng.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>恶劣无剩（2-4）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="boduomake"><img align="left" src="{% static "img/map/boduomake.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>波多马克之师（2-6）</h5></td>
+      </tr>
+
+
+
+      <tr>
+        <td id="monstermovie"><img align="left" src="{% static "img/map/monstermovie.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>怪兽电影（2-8）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="jianshoulingtu"><img align="left" src="{% static "img/map/jianshoulingtu.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>坚守领土（2-8）</h5></td>
+      </tr>
+
+      <tr>
+        <td id="tuochewu"><img align="left" src="{% static "img/map/tuochewu.jpg" %}">
+        </td>
+      </tr>
+      <tr>
+        <td><h5>拖车屋停驻场（2-8）</h5></td>
+      </tr>
+
     </table>
 
-      
-
     </div>
-    
-    </div>
-    
-
 
   </body>
 

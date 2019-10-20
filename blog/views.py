@@ -3,6 +3,7 @@ from django.db import models
 from blog.forms import CommentForm, PostForm
 from blog.models import Post, Comment, Category
 from django.contrib.auth.models import User
+from projects.models import Personal_info
 
 def select_language(request):
     language = 'English'
@@ -113,6 +114,24 @@ def create_blog(request, category):
             post.categories.add(curr_category)
 
             finished = True
+
+            try:
+                user = Personal_info.objects.get(name=request.user.username)
+            except:
+                user = None
+            
+            if user == None:
+                user = Personal_info(
+                    name = request.user.username,
+                    level = 0,
+                    experience = 0
+                )
+                user.save()
+
+            user = Personal_info.objects.get(name=request.user.username)
+            user.experience += 100
+            user.level = int(user.experience / 500)
+            user.save()
 
     comments = Comment.objects.filter(post=post)
     language = select_language(request)

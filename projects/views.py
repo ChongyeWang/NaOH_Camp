@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from projects.models import Project
+from projects.models import Personal_info
 
 
 def select_language(request):
@@ -33,9 +33,29 @@ def setting(request):
         selection = request.POST['selection']
         request.session[request.user.username] = selection
 
+    try:
+        user = Personal_info.objects.get(name=request.user.username)
+    except:
+        user = None
+    
+    if user == None:
+        user = Personal_info(
+            name = request.user.username,
+            level = 0,
+            experience = 0
+        )
+        user.save()
+
+    level = user.level
+    experience = user.experience
+
+
     context = {
-        'language': request.session[request.user.username]
+        'language': request.session[request.user.username],
+        'level': level,
+        'experience': experience
     }
+
     return render(request, 'setting.html', context)
 
 def project_index(request):
@@ -82,6 +102,14 @@ def map(request):
         'language': language
     }
     return render(request, 'map.html', context)
+
+def mod(request):
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+    return render(request, 'mod.html', context)
 
 # def project_detail(request, pk):
 #     project = Project.objects.get(pk=pk)
