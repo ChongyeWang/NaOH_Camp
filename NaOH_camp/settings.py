@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'info',
     'data',
+    'essays'
 ]
 
 MIDDLEWARE = [
@@ -131,3 +132,6 @@ LANGUAGES = (
 )
 
 LOGIN_REDIRECT_URL = '/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
+MEDIA_URL = "/media/"

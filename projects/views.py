@@ -2,6 +2,10 @@ from django.shortcuts import render
 
 from projects.models import Personal_info
 
+from blog.models import Post
+
+from essays.models import Post as Column
+
 
 def select_language(request):
     language = 'English'
@@ -57,6 +61,42 @@ def setting(request):
     }
 
     return render(request, 'setting.html', context)
+
+
+def my_post(request):
+    posts = Post.objects.filter(
+        author=request.user.username
+    ).order_by(
+        '-created_on'
+    )
+
+    language = select_language(request)
+
+    context = {
+        'language': language,
+        "posts": posts
+    }
+
+    return render(request, "my_post.html", context)
+
+
+def my_column(request):
+    posts = Column.objects.filter(
+        user=request.user
+    ).order_by(
+        '-created_on'
+    )
+
+    language = select_language(request)
+
+    context = {
+        'language': language,
+        "posts": posts
+    }
+
+    return render(request, "my_column.html", context)
+
+
 
 def project_index(request):
 

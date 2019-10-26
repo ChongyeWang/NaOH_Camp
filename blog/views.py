@@ -147,5 +147,32 @@ def create_blog(request, category):
     return render(request, "blog_create.html", context)
 
 
+def blog_search(request):
+
+    search_result = request.GET['search_result']
+    print(search_result)
+
+    empty = False
+    if not search_result:
+        empty = True
+
+    posts = Post.objects.filter(
+        body__contains=search_result
+    ).order_by(
+        '-created_on'
+    )
+
+    if len(posts) == 0:
+        empty = True
+
+    language = select_language(request)
+
+    context = {
+        "empty": empty,
+        "posts": posts,
+        "language": language
+    }
+
+    return render(request, "search_result.html", context)
 
 

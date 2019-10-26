@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<br>
+{% for post in posts %}
+    <h2><a style="color: #00008B;" href="{% url 'essay_details' post.pk%}">{{ post.title }}</a></h2>
+    <small>
+        {{ post.user }} |&nbsp;
+        {{ post.created_on.date }}
+    </small>
+    <br>
+    
+{% endfor %}
+
+{% endblock %}

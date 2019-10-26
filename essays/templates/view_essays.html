@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+<br>
+<div class="col-md-8 offset-md-2">
+
+    <div class="row">
+        <h1 style="margin-right: 5vw; margin-left: 12px;">专栏</h1>
+
+        {% if user.is_authenticated %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_essay' %}">新建文章</a>
+        {% else %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+{% for post in posts %}
+    <h2><a style="color: #00008B;" href="{% url 'essay_details' post.pk%}">{{ post.title }}</a></h2>
+    <small>
+        {{ post.user }} |&nbsp;
+        {{ post.created_on.date }}
+    </small>
+    <br>
+    
+{% endfor %}
+
+</div>
+
+{% endblock %}

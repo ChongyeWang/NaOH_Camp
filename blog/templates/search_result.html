@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<br>
+{% ifequal empty True %}
+	<h1>无搜索结果</h1>
+{% else %}
+
+{% for post in posts %}
+    <h2><a style="color: #00008B;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+    <small>
+        {{ post.author }} |&nbsp;
+        {{ post.created_on.date }} |&nbsp;
+        Categories:&nbsp;
+        {% for category in post.categories.all %}
+        <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
+            {{ category.name }}
+        </a>&nbsp;
+        {% endfor %}
+    </small>
+    <p>{{ post.body | slice:":400" }}...</p>
+{% endfor %}
+
+{% endifequal %}
+
+    <a style="font-weight: bold; font-size: 25px; color: blue;" href="{% url 'blog_index' %}">
+            返回
+        </a>
+
+{% endblock %}
