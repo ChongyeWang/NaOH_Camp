@@ -23,6 +23,7 @@ def essays(request):
     ImageFormSet = modelformset_factory(Images,
                                         form=ImageForm, extra=3)
     #'extra' means the number of photos that you can upload   ^
+    language = select_language(request)
     if request.method == 'POST':
 
         postForm = PostForm(request.POST)
@@ -45,11 +46,12 @@ def essays(request):
                              "Success!")
             return HttpResponseRedirect("/essays/view")
         else:
-            print(postForm.errors, formset.errors)
+            messages.error(request, 'Invalid Input')
+            
     else:
         postForm = PostForm()
         formset = ImageFormSet(queryset=Images.objects.none())
-        language = select_language(request)
+        
     return render(request, 'essays.html',
                   {'postForm': postForm, 'formset': formset, 'language': language})
 
@@ -68,6 +70,10 @@ def view_essays(request):
 def essay_details(request, pk):
     post = Post.objects.get(pk=pk)
     images = Images.objects.filter(post=post)
+
+    post.count += 1
+    post.save()
+
     language = select_language(request)
     context = {
        'post': post,
@@ -76,5 +82,77 @@ def essay_details(request, pk):
     }
 
     return render(request, "essay_details.html", context)
+
+
+def one_star(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.rate_total += 1.0
+    post.rate_num += 1
+    post.rate = round(post.rate_total / post.rate_num, 1)
+    post.save()
+    language = select_language(request)
+    context = {
+       'post': post,
+       'language': language
+    }
+    return render(request, "one_star.html", context)
+
+
+def two_star(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.rate_total += 2.0
+    post.rate_num += 1
+    post.rate = round(post.rate_total / post.rate_num, 1)
+    post.save()
+    language = select_language(request)
+    context = {
+       'post': post,
+       'language': language
+    }
+    return render(request, "two_star.html", context)
+
+
+def three_star(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.rate_total += 3.0
+    post.rate_num += 1
+    post.rate = round(post.rate_total / post.rate_num, 1)
+    post.save()
+    language = select_language(request)
+    context = {
+       'post': post,
+       'language': language
+    }
+    return render(request, "three_star.html", context)
+
+
+def four_star(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.rate_total += 4.0
+    post.rate_num += 1
+    post.rate = round(post.rate_total / post.rate_num, 1)
+    post.save()
+    language = select_language(request)
+    context = {
+       'post': post,
+       'language': language
+    }
+    return render(request, "four_star.html", context)
+
+
+def five_star(request, pk):
+    post = Post.objects.get(pk=pk)
+    post.rate_total += 5.0
+    post.rate_num += 1
+    post.rate = round(post.rate_total / post.rate_num, 1)
+    post.save()
+    language = select_language(request)
+    context = {
+       'post': post,
+       'language': language
+    }
+    return render(request, "five_star.html", context)
+
+
 
 

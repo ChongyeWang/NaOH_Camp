@@ -35,27 +35,95 @@
 
 </style>
 
-<form id="post_form" method="post" action="" enctype="multipart/form-data">
+{% if user.is_authenticated %}
 
-    <br />
+  {% if language == "Chinese" %}
+      <form id="post_form" method="post" action="" enctype="multipart/form-data">
 
-    {% csrf_token %}
-    {% for hidden in postForm.hidden_fields %}
-        {{ hidden }}
-    {% endfor %}
-    <h3>标题</h3>
-    {% for field in postForm %}
-        {{ field }} <br /><br />
-    {% endfor %}
-    <h3>最多上传3张图片：</h3>
+        <br />
 
-    {{ formset.management_form }}
-    {% for form in formset %}
-        {{ form }} <br />
-    {% endfor %}
-    <br />
+        {% csrf_token %}
+        {% for hidden in postForm.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+        <h3>标题</h3>
+        {% for field in postForm %}
+            {{ field }} <br /><br />
+        {% endfor %}
+        <h3>最多上传3张图片：</h3>
 
-    <input type="submit" name="submit" value="提交" />
-</form>
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form }} <br />
+        {% endfor %}
+        <br />
+
+        <input type="submit" name="submit" value="提交" />
+      </form>
+
+  {% else %}
+    <form id="post_form" method="post" action="" enctype="multipart/form-data">
+
+        <br />
+
+        {% csrf_token %}
+        {% for hidden in postForm.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+        <h3>Title</h3>
+        {% for field in postForm %}
+            {{ field }} <br /><br />
+        {% endfor %}
+        <h3>Maximum 3 pictures：</h3>
+
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form }} <br />
+        {% endfor %}
+        <br />
+
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+
+  {% endif %}
+
+{% else %}
+    <form id="post_form" method="post" action="" enctype="multipart/form-data">
+        <br />
+
+        {% csrf_token %}
+        {% for hidden in postForm.hidden_fields %}
+            {{ hidden }}
+        {% endfor %}
+        <h3>Title</h3>
+        {% for field in postForm %}
+            {{ field }} <br /><br />
+        {% endfor %}
+        <h3>Maximum 3 pictures：</h3>
+
+        {{ formset.management_form }}
+        {% for form in formset %}
+            {{ form }} <br />
+        {% endfor %}
+        <br />
+
+        <input type="submit" name="submit" value="Submit" />
+
+    </form>
+
+{% endif %}
+
+
+{% for message in messages %}
+
+    <div class="alert alert-success">
+        <a class="close" href="#" data-dismiss="alert">×</a>
+
+        {{ message }}
+
+    </div>
+
+{% endfor %}
+
 
 {% endblock %}

@@ -5,9 +5,41 @@
     img {
         width: 100%;
     }
+
+    .btn-group button {
+      background-color: #EDF5E1; /* Green background */
+
+      color: black; 
+      padding: 3px 8px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+
+    .btn-group button:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #3e8e41;
+    }
+
+    .rate a {
+        background-color: #EDF5E1;
+        color: black; 
+        padding: 3px 8px;
+    }
 </style>
 
 <div class="col-md-8 offset-md-2">
+
     <h1>{{ post.title }}</h1>
 
     <small>
@@ -21,5 +53,25 @@
         <img src="{{ image.image.url }}">   
     {% endfor %}
 
+    <br><br><br>
+    <div align="center">
+        <h3>Rate this Article</h3>
+        <br>
+        <div class="rate">
+            <a href="{% url 'one_star' post.pk%}" class="btn btn-default">&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'two_star' post.pk%}" class="btn btn-default">&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'three_star' post.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'four_star' post.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'five_star' post.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;&#9734;&#9734;</a>
+          
+        </div>
+
+    </div>
+
+    <br><br><br>
+
 </div>
+
+
+
 {% endblock %}

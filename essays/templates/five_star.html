@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+<style type="text/css">
+    #return a {
+        color: #00008B;
+    }
+</style>
+<br>
+
+<h1 align="center">Thanks for your feedback!</h1>
+
+<h1 align="center">Your Rating:</h2>
+
+<h1 align="center">&#9734;&#9734;&#9734;&#9734;&#9734;</h1>
+
+
+<br>
+
+<h4 align="center">Number of Ratings: {{post.rate_num}}</h4>
+<h4 align="center">Score: {{post.rate}} / 5</h4>
+
+<br>
+
+<h3 id="return" align="center"><a href="{% url 'view_essays'%}" >Go Back</a></h3>
+
+{% endblock %}

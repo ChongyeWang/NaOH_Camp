@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+<style type="text/css">
+    #p_1 {
+        margin-left: 15px;
+
+    }
+
+    #base2, .row {
+        margin-left: 7vw;
+        margin-right: 7vw;
+    }
+
+    #main {
+        min-width: 650px;
+    }
+
+</style>
+
+<br>
+
+<div id="main">
+
+{% if user.is_authenticated %}
+
+  {% if language == "Chinese" %}
+    <div class="row">
+        <h1 style="margin-right: 5vw; margin-left: 12px;">分享你的游戏体验!</h1>
+
+        {% if user.is_authenticated %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_video' %}">投稿</a>
+        {% else %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">登录投稿</a>
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+  {% else %}
+    <div class="row">
+        <h1 style="margin-right: 5vw; margin-left: 12px;">Share your story!</h1>
+
+        {% if user.is_authenticated %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_video' %}">Upload</a>
+        {% else %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">Login First</a>
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+  {% endif %}
+
+{% else %}
+
+    <div class="row">
+        <h1 style="margin-right: 5vw; margin-left: 12px;">Share your story!</h1>
+
+        {% if user.is_authenticated %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_video' %}">Upload</a>
+        {% else %}
+            <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">Login First</a>
+        {% endif %}
+
+    </div>
+
+    <hr>
+
+{% endif %}
+
+
+<div id="base" >
+<div id="base2" class="row" >
+
+    {% for item in posts %}
+
+    <div id = "p_1">
+        
+        <video width="250" height="210" controls>
+          <source src="{{item.1.video.url}}" >
+          
+        </video>
+        <div style="width:250px;" align="center">
+            <h5>{{ item.0.title }} </h5>
+        </div>
+
+        <div align="center" >
+            <h6>{{ item.0.user }} |&nbsp;{{ item.0.created_on.date }}</h6>
+        </div>
+    </div>
+    <br>
+
+         
+        
+    {% endfor %}
+
+</div>
+
+</div>
+
+</div>
+
+
+{% endblock %}

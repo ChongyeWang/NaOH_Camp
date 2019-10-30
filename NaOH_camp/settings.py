@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'accounts',
     'info',
     'data',
-    'essays'
+    'essays',
+    'videos'
 ]
 
 MIDDLEWARE = [

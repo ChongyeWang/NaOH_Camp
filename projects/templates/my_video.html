@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+
+<style type="text/css">
+    #video {
+        margin-right: 50px;
+    }
+
+    #des{
+        max-width: 400px;
+
+    }
+
+    #p_1 {
+        min-width: 750px;
+    }
+</style>
+
+<br>
+
+<div>
+
+{% for item in posts %}
+
+<div id = "p_1">
+    <div class="row">
+        <div>
+            <video id="video" width="250" height="210" controls>
+              <source src="{{item.1.video.url}}" >
+            </video>
+        </div>
+
+        <div>
+            <div id="des">
+                
+                <hr>
+                <div class="row">
+                    <h4>{{ item.0.title }}&nbsp;&nbsp;-&nbsp;&nbsp;{{ item.0.created_on.date }}</h4>
+                    
+                </div>
+
+            </div>
+           
+        </div>
+
+    </div>
+
+</div>
+<br>
+ 
+    
+{% endfor %}
+
+</div>
+
+{% endblock %}

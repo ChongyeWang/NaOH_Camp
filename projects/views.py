@@ -1,10 +1,9 @@
 from django.shortcuts import render
-
 from projects.models import Personal_info
-
 from blog.models import Post
-
 from essays.models import Post as Column
+from videos.models import Post as Video
+from videos.models import Videos
 
 
 def select_language(request):
@@ -19,11 +18,7 @@ def select_language(request):
 
 def home(request):
 
-    language = 'English'
-    if request.user.is_authenticated:
-        if request.session.get(request.user.username, None) == None:
-            request.session[request.user.username] = 'Chinese'
-        language = request.session[request.user.username]
+    language = select_language(request)
         
     context = {
         'language': language
@@ -97,6 +92,27 @@ def my_column(request):
     return render(request, "my_column.html", context)
 
 
+def my_video(request):
+    language = select_language(request)
+
+    posts = Video.objects.filter(
+        user=request.user
+    ).order_by(
+        '-created_on'
+    )
+
+    result = []
+    for post in posts:
+        videos = Videos.objects.filter(post=post).get()
+        result.append((post, videos))
+
+    context = {
+        'language': language,
+        "posts": result
+    }
+
+    return render(request, "my_video.html", context)
+
 
 def project_index(request):
 
@@ -143,6 +159,7 @@ def map(request):
     }
     return render(request, 'map.html', context)
 
+
 def mod(request):
     language = select_language(request)
         
@@ -151,15 +168,16 @@ def mod(request):
     }
     return render(request, 'mod.html', context)
 
-# def project_detail(request, pk):
-#     project = Project.objects.get(pk=pk)
-#     language = 'English'
-#     if request.user.is_authenticated:
-#         if request.session.get(request.user.username, None) == None:
-#             request.session[request.user.username] = 'Chinese'
-#         language = request.session[request.user.username]
-#     context = {
-#         'project': project,
-#         'language': language
-#     }
-#     return render(request, 'project_detail.html', context)
+
+def history(request):
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'history.html', context)
+
+
+
+

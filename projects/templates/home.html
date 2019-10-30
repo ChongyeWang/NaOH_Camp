@@ -5,38 +5,13 @@
 
 <style>
 
-#main, #main2{
-
-    width: 250px;
-    height: 160px;
-}
-
-#main3 {
-	width: 250px;
-    height: 150px;
-}
-
-#main4 {
-	width: 250px;
-  height: 190px;
-}
-
-
-
 * {box-sizing:border-box}
-
 /* Slideshow container */
-.slideshow-container {
-  width: 400px;
-  height: 250px;
-
-}
 
 /* Hide the images by default */
 .mySlides {
   display: none;
 }
-
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
@@ -52,18 +27,15 @@
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
-
 /* Caption text */
 .text {
   color: #f2f2f2;
@@ -74,7 +46,6 @@
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
@@ -83,7 +54,6 @@
   position: absolute;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
@@ -95,163 +65,432 @@
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
-
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 4.9s;
   animation-name: fade;
   animation-duration: 4.9s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 p {
   font-size:13px;
 }
 
 
-
 </style>
+
+
+<head>
+    
+    <meta charset="utf-8">
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href={%static "css/open-iconic-bootstrap.min.css" %}>
+    <link rel="stylesheet" href={%static "css/animate.css" %}>
+
+    <link rel="stylesheet" href={%static "css/owl.carousel.min.css" %}>
+    <link rel="stylesheet" href={%static "css/owl.theme.default.min.css" %}>
+    <link rel="stylesheet" href={%static "css/magnific-popup.css" %}>
+
+    <link rel="stylesheet" href={%static "css/aos.css" %}>
+
+    <link rel="stylesheet" href={%static "css/ionicons.min.css" %}>
+
+    <link rel="stylesheet" href={%static "css/bootstrap-datepicker.css" %}>
+    <link rel="stylesheet" href={%static "css/jquery.timepicker.css">
+
+
+    <link rel="stylesheet" href={%static "css/flaticon.css" %}>
+    <link rel="stylesheet" href={%static "css/icomoon.css" %}>
+
+</head>
+
 
 <body>
 
-<br>
-<br>
 
-<div style="min-width: 800px;" class="row">
- <!-- Slideshow container -->
-<div style="margin-left: 3vw; width: 40%;" class="slideshow-container">
-
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a0.png" %}" style="width:100%">
-      <h4 align="center">Battle Fortress</h4>
-      <p align="justify">The Battle Fortress was known for its ability to dominate an area by providing mobile heavy fire support, using the immense firepower of the infantry garrisoned within. GIs and Guardian GIs were able to fire their heavier weapons (M60 machine gun and Javelin missile launcher, respectively) while inside the Battle Fortress. The strength of multiple Guardian GIs, combined with the ability of the Battle Fortress to fire on the move, meant that the Battle Fortress could used as a heavy anti-tank and anti-aircraft weapon. A single garrisoned Tanya, Boris or Navy SEAL could eliminate all infantry threats to the Battle Fortress. Garrisoned Snipers or Yuri Viruses could also eliminate them from a significant distance.</p>
-  </div>
+    <section class="ftco-section ftco-no-pt ftco-no-pb ftco-volunteer">
+      <div class="container-fluid px-md-0">
+        <div class="row no-gutters" style="background-color: lightyellow;">
 
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a4.png" %}" style="width:100%">
-        <h4 align="center">Tesla Tank</h4>
-        <p align="justify">The tanks are particularly effective en masse as, although lightly armored, their attack was quite strong and had a very short reload time, meaning it can make short work of most vehicles, especially Grizzly tanks and IFVs. Like other tanks, it can also crush enemy infantry by simply running over them. They however have trouble breaking through prism towers and other heavy defenses, due to the short range of their Tesla weapon. The Tesla tank is a country specific unit: in order to build it in skirmish, one needs to play as the Russia country. Another method of building the tank lies in capturing a Tech Secret Lab which may give the plans for this tank, allowing it to be constructed even from non-Soviet war factories. In skirmishes, crates may contain this "short circuit on wheels." Tesla tanks are quite capable of acting as distracting units like Apocalypse tanks; they have less than half of the health as an Apocalypse tank, move faster, cheaper and more effective damage against all ground targets.</p>
-  </div>
+          <div class="col-md-6">
+            <div style="margin-left: 20px; margin-right: 20px;">
+              <br>
+              <h4 style="font-weight: bold;">NaOH Group 烧碱教派 <br></h4>
+              <h5 align="justify" style="color: #484848"><br><strong>Founded in 2019, NaOH Group is an organization dedicating to providing a platform for Red Alert players to communicate with each other and promoting the spread of Red Alert all over the world. Meanwhile, we apply digital business transformation to the game, providing customer solutions for various users. We are all composed of Red Alert players and are welcome more players to join us! We love Red Alert and we are people with dreams!<br><br>
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a8.png" %}" style="width:100%">
-        <h4 align="center">Terror Drone</h4>
-        <p align="justify">Designed to be small, fast, and above all, cheap, the terror drone was made to seek out and destroy enemy vehicles and destroy them before they entered combat. For their time, terror drones were the cutting edge of the world's robotic technology, being even more advanced than the Allied robot tank, due to their individual, self-sufficient AI systems. In terms of design, terror drones were a large sphere with cutting and ripping tools attached to four legs, capable of latching onto, and eventually destroying, land vehicles. As they were lightly armoured, they were very quick, easily able to outrun almost any vehicle at full speed. Once a drone latched onto a vehicle, it burrowed inside and slowly tore it apart from the inside, eventually destroying it unless the drone was somehow neutralized. </p>
-  </div>
+              烧碱教派成立于2019年8月，由红警爱好者自由组成，成员分布于各个战队，致力于为广大玩家提供一个技术交流及交友的平台。帮助玩家解决问题的同时，我们也将数字技术应用在红色警戒中，为用户提供个性化服务。烧碱教派秉承着和谐友爱的精神，致力于红色警戒的推广以及提升用户体验。我们热爱红警，我们是一群有理想的有志青年。
+
+              <br><br>
+
+              <a style="color: #00008B;" id = "learnmore" class="navbar-brand" href="{% url 'info_index' %}">Read More</a>
+
+            </strong></h5>
+              
+              
+            </div>
+          </div>
 
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a10.png" %}" style="width:100%">
-      <h4 align="center">Kirov Airship</h4>
-      <p align="justify">By far the heaviest and most destructive weapon in the Soviet arsenal, the Kirov can take down even the hardiest land units with just a few bombs. It is also the slowest vehicle in the USSR's employ. Thus, while it can take down an entire base on its own, it can be destroyed, as its low speed allows opponents to effectively target it with anti-aircraft weaponry against which the Kirov can't defend itself fast enough. The Kirov can self-repair. Any effective assault using Kirovs should bear in mind that while these airships have extremely tough armor, they are not invincible. When attacking, do NOT bunch them up together; they'll take massive damage and splash damage from Flak Tracks, Flak Troopers, and Sea Scorpions. The units mentioned inflict area of effect attacks on all air targets. </p>
-  </div>
+          <div class="col-md-6"style=" height: 780px;">
+
+             
+            <div class="slideshow-container" style="margin-right: 20px; margin-left: 20px;">
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a0.png" %}" style="width:100%">
+                  <h4 align="center">Battle Fortress</h4>
+                  <p align="justify">The Battle Fortress was known for its ability to dominate an area by providing mobile heavy fire support, using the immense firepower of the infantry garrisoned within. GIs and Guardian GIs were able to fire their heavier weapons (M60 machine gun and Javelin missile launcher, respectively) while inside the Battle Fortress. The strength of multiple Guardian GIs, combined with the ability of the Battle Fortress to fire on the move, meant that the Battle Fortress could used as a heavy anti-tank and anti-aircraft weapon. A single garrisoned Tanya, Boris or Navy SEAL could eliminate all infantry threats to the Battle Fortress. Garrisoned Snipers or Yuri Viruses could also eliminate them from a significant distance.</p>
+              </div>
+
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a4.png" %}" style="width:100%">
+                    <h4 align="center">Tesla Tank</h4>
+                    <p align="justify">The tanks are particularly effective en masse as, although lightly armored, their attack was quite strong and had a very short reload time, meaning it can make short work of most vehicles, especially Grizzly tanks and IFVs. Like other tanks, it can also crush enemy infantry by simply running over them. They however have trouble breaking through prism towers and other heavy defenses, due to the short range of their Tesla weapon. The Tesla tank is a country specific unit: in order to build it in skirmish, one needs to play as the Russia country. Another method of building the tank lies in capturing a Tech Secret Lab which may give the plans for this tank, allowing it to be constructed even from non-Soviet war factories. In skirmishes, crates may contain this "short circuit on wheels." Tesla tanks are quite capable of acting as distracting units like Apocalypse tanks; they have less than half of the health as an Apocalypse tank, move faster, cheaper and more effective damage against all ground targets.</p>
+              </div>
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a8.png" %}" style="width:100%">
+                    <h4 align="center">Terror Drone</h4>
+                    <p align="justify">Designed to be small, fast, and above all, cheap, the terror drone was made to seek out and destroy enemy vehicles and destroy them before they entered combat. For their time, terror drones were the cutting edge of the world's robotic technology, being even more advanced than the Allied robot tank, due to their individual, self-sufficient AI systems. In terms of design, terror drones were a large sphere with cutting and ripping tools attached to four legs, capable of latching onto, and eventually destroying, land vehicles. As they were lightly armoured, they were very quick, easily able to outrun almost any vehicle at full speed. Once a drone latched onto a vehicle, it burrowed inside and slowly tore it apart from the inside, eventually destroying it unless the drone was somehow neutralized. </p>
+              </div>
+
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a10.png" %}" style="width:100%">
+                  <h4 align="center">Kirov Airship</h4>
+                  <p align="justify">By far the heaviest and most destructive weapon in the Soviet arsenal, the Kirov can take down even the hardiest land units with just a few bombs. It is also the slowest vehicle in the USSR's employ. Thus, while it can take down an entire base on its own, it can be destroyed, as its low speed allows opponents to effectively target it with anti-aircraft weaponry against which the Kirov can't defend itself fast enough. The Kirov can self-repair. Any effective assault using Kirovs should bear in mind that while these airships have extremely tough armor, they are not invincible. When attacking, do NOT bunch them up together; they'll take massive damage and splash damage from Flak Tracks, Flak Troopers, and Sea Scorpions. The units mentioned inflict area of effect attacks on all air targets. </p>
+              </div>
+                
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a9.png" %}" style="width:100%">
+                    <h4 align="center">Cloning vat</h4>
+                    <p align="justify">Only one vat may be built by a player at a time. When any infantry unit finishes training at a conventional barracks a duplicate emerges from the vats for no additional cost. Infantry units could be sent into the Soviet cloning vats to be "recycled", giving credits to the owner. The only exceptions were engineers and teleporting units (such as chrono legionnaires). This function was not present in Yuri's vats, since he developed dedicated facilities for this role. Also, a cloning vat cannot be captured. </p>
+              </div>
+
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/s2.png" %}" style="width:100%">
+                <h4 align="center">Typhoon Attack Submarine</h4>
+                    <p align="justify">The Typhoon is the first naval combat unit available to Soviet commanders, and requires only a naval yard to construct them. They are invisible while submerged and will only surface if they are under attack or a naval unit has come too close to them. Only boomers, destroyers, dolphins and giant squids can detect them while they are submerged. Typhoons are, in turn, also capable of detecting and firing on other submerged units. While the submarines themselves are invisible, the torpedoes are not, which allows an observant player to more or less guess the location of the submarines even if the player can't see the submarines.
+                    </p>
+              </div>
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/s3.png" %}" style="width:100%">
+                <h4 align="center">Iron Curtain</h4>
+                <p align="justify">The basic tactics surrounding the new Iron Curtain changed little from Second World War to Third World War. Commanders would target friendly units and render them invincible long enough to fight without fear of damage by their enemies. However with its new attributes the Curtain could also defend buildings, making it possible to render valuable buildings invulnerable in a pinch. This was something that was very appreciated by the Red Army when it was used in combination with a base energy shield, especially during a super weapon assault. Also, the Curtain's infantry crushing capability was occasionally used practically, destroying large swathes of enemy soldiers in a single blow. One rather unexpected benefit of the Curtain's protection was that it rendered units invulnerable to Psychic Control, allowing Soviet armor to overcome Yuri's many mind control tricks easily. </p>
+              </div>
+
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a1.png" %}" style="width:100%">
+                  <h4 align="center">V3 Rocket Launcher</h4>
+                  <p align="justify">Of all the main siege units, the V3 launcher has by far the longest range and damage per shot. An elite V3 can obliterate most structures in one to four shots, and mass groups of them can overwhelm all but the most overtly reinforced base defenses, especially since they are the only primary land based siege unit capable of firing upon the Grand Cannon from outside its range. V3 launchers have no problem shooting targets at different elevations (higher or lower ground). It is unable to protect itself at close range, and can be destroyed very quickly by pretty much anything that can fire on it. Due to improvements in targeting technology (and lack of speed produced by rocket booster) by the time of the Third World War, it was possible for the rockets to be shot down mid-flight.</p>
+              </div>
+
+              
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a2.png" %}" style="width:100%">
+                <h4 align="center">Chronosphere</h4>
+                  <p align="justify">Both the Soviets and the Allies were impressed by the Chronosphere and its powers, but due to the various drawbacks it had (chrono vortex, loss of personnel in transport vehicles) Einstein decided to recreate it from scratch to make it even more powerful and remove the errors that made it almost a "danger" to be used during the preceding war. The Chronosphere may move any ground and/or sea units in a 3x3 square area. While it is somewhat tricky to target the teleporting effect, it is still possible to teleport the maximum of 9 units to a clear location. Unlike the Iron Curtain device, the Chronosphere is a powerful offensive weapon as well: teleporting a sea unit onto land (or vice versa) destroys the unit at the destination, unless the unit is amphibious.</p>
+              </div>
+
+             
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a3.png" %}" style="width:100%">
+                <h4 align="center">Apocalypse Tank</h4>
+                  <p align="justify">The tank itself was much larger and slower than the Grizzly and Rhino tanks, but also much more powerful, doing more than twice the damage of the Rhino with its twin cannons. In addition to its cannons, the Apocalypse also featured a pair of anti-air missile launchers. Although these missile launchers were slow to fire, they were significantly more powerful than other anti-air missiles such as those found on IFVs. This allowed the Apocalypse tank to defend itself reasonably well against aerial threats, especially in conjunction with its advanced heavy armour. Its armour was only equalled by the Battle Fortress and Kirov airship. An on-board self-repair system allowed the Apocalypse to repair itself when damaged. When elite, they become very powerful, becoming strong against infantry, vehicles, buildings, and even aircraft.</p>
+              </div>
+
+              
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a6.png" %}" style="width:100%">
+                  <h4 align="center">War miner</h4>
+                  <p align="justify">Soviet military analysts saw a major problem with the ore truck used during Second World War. It was easy for the Allies to overwhelm them with small groups of infantry wielding anti-tank weapons. Other than trying to run them down, which was not often successful if they were spread out, it had no defensive capabilities. To counter this, the new war miner was equipped with a machine gun to fight off enemy infantry and rogue terror drones. However, it still did not have a decent defense against vehicles and aircraft. Only requiring the placement of a machine gun, the war miner has lots of allotted space to stow ore. This difference benefits the Soviets, as their war miner can carry up to 1000 credits (or up to 2000 if assigned to a gem field). However, it is much slower than its Allied counterpart, the chrono miner. </p>
+              </div>
+
+              <div class="mySlides fade">
+                <img src="{% static "img/sketch/a7.png" %}" style="width:100%">
+                <h4 align="center">Mastermind</h4>
+                  <p align="justify">The Mastermind is particularly deadly when deployed in the middle of enemy forces where they can cause mayhem in the enemy ranks. This ability makes it potentially devastating to an otherwise unstoppable armoured column before they make their mark on the battlefield. One major weakness with this weapon system however, is its lack of self-defensive armament. This makes it completely helpless against units immune to psychic control such as Terror drones, Robot tanks and air units when airborne. As mentioned above however, its greatest weakness is that it is prone to burning out when it has too many units under its control. This led to the tactic of rushing the Mastermind with many cheap and fast units such as conscripts, flak tracks or IFVs. Paratrooper conscripts are ideal for this task as they are both free and plentiful. Yuri's Masterminds can control up to 3 units each without going into overdrive. </p>
+              </div>
+
+            </div>
+          
+          </div>
+
+          
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-10 heading-section text-center ">
+            <h2 class="mb-4">Our Service</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="blog-entry align-self-stretch ">
+              <a href="{% url 'background' %}" class="block-20 img" style="background-image: url({% static 'img/background.png' %});">
+              </a>
+              <div class="text text-2 bg-light">
+                <h3 class="heading mb-2"><a href="{% url 'background' %}">Background</a></h3>
+                <div class="meta mb-2">
+                  <div><a href="#">Sept. 04, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="blog-entry align-self-stretch d-md-flex bg-light p-3 align-items-center d-flex ">
+              <a href="{% url 'map' %}" class="block-20 thumb" style="background-image: url({% static 'img/heckfreeze.jpg' %});">
+              </a>
+              <div class="text text-thumb d-block pl-2 pl-md-4">
+                <h3 class="heading mb-2"><a href="{% url 'map' %}">Guide for 96 Official Maps</a></h3>
+                <div class="meta">
+                  <div><a href="#">Sept. 04, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-entry align-self-stretch d-md-flex bg-light p-3 align-items-center d-flex ">
+              <a href="{% url 'mod' %}" class="block-20 thumb" style="background-image: url({% static 'img/mod.jpg' %});">
+              </a>
+              <div class="text text-thumb d-block pl-2 pl-md-4">
+                <h3 class="heading mb-2"><a href="{% url 'mod' %}">Recommendation of 22 Mods</a></h3>
+                <div class="meta">
+                  <div><a href="#">Sept. 04, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-entry align-self-stretch d-md-flex bg-light p-3 align-items-center d-flex ">
+              <a href="{% url 'history' %}" class="block-20 thumb" style="background-image: url({% static 'img/history.jpg' %});">
+              </a>
+              <div class="text text-thumb d-block pl-2 pl-md-4">
+                <h3 class="heading mb-2"><a href="{% url 'history' %}">Command & Conquer Series</a></h3>
+                <div class="meta">
+                  <div><a href="#">Sept. 04, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center intro pt-4 pt-md-5">
+          <div class="col-md-8 text-center">
+            <h1 class="heading">Sponsorship <span>Scheme,</span> <span>Individual</span> and Corporate Entities Undertake</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="background-color: lightyellow;" class="ftco-section ftco-causes">
+      
+        <div class="row justify-content-center pb-3">
+          <div class="col-md-7 heading-section text-center">
+            <h1 class="mb-4">NaOH Group</h1>
+            <h2 class="mb-4">Let's Rock & Roll!</h2>
+            
+          </div>
+        </div>
+    
+    </section>
     
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a9.png" %}" style="width:100%">
-        <h4 align="center">Cloning vat</h4>
-        <p align="justify">Only one vat may be built by a player at a time. When any infantry unit finishes training at a conventional barracks a duplicate emerges from the vats for no additional cost. Infantry units could be sent into the Soviet cloning vats to be "recycled", giving credits to the owner. The only exceptions were engineers and teleporting units (such as chrono legionnaires). This function was not present in Yuri's vats, since he developed dedicated facilities for this role. Also, a cloning vat cannot be captured. </p>
-  </div>
+
+    <section class="services-section py-5 py-md-0">
+      
+        <div class="row no-gutters d-flex">
+          <div class="col-md-6 " style="background-color: lightblue;">
+            <div class="media block-6 text-center services d-block">
+              <div class="icon"><span class="flaticon-charity"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Support</h3>
+                <p> I want to be around people that do things...</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 " style="background-color: #8EE4AF;">
+            <div class="media block-6 text-center services  d-block">
+              <div class="icon"><span class="flaticon-adoption"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Friendship</h3>
+                <p>A real friend is one who walks in when the rest of the world walks out...</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-6 " style="background-color: #8EE4AF;">
+            <div class="media block-6 text-center services d-block">
+              <div class="icon"><span class="flaticon-volunteer"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Volunteering</h3>
+                <p>You make a living by what you get. You make a life by what you give...</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-6 " style="background-color: lightblue;">
+            <div class="media block-6 text-center services d-block">
+              <div class="icon"><span class="flaticon-open-book"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Knowledge</h3>
+                <p>Any fool can know. The point is to understand...</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      
+    </section>
+    
 
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/s2.png" %}" style="width:100%">
-    <h4 align="center">Typhoon Attack Submarine</h4>
-        <p align="justify">The Typhoon is the first naval combat unit available to Soviet commanders, and requires only a naval yard to construct them. They are invisible while submerged and will only surface if they are under attack or a naval unit has come too close to them. Only boomers, destroyers, dolphins and giant squids can detect them while they are submerged. Typhoons are, in turn, also capable of detecting and firing on other submerged units. While the submarines themselves are invisible, the torpedoes are not, which allows an observant player to more or less guess the location of the submarines even if the player can't see the submarines.
-        </p>
-  </div>
-
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/s3.png" %}" style="width:100%">
-    <h4 align="center">Iron Curtain</h4>
-    <p align="justify">The basic tactics surrounding the new Iron Curtain changed little from Second World War to Third World War. Commanders would target friendly units and render them invincible long enough to fight without fear of damage by their enemies. However with its new attributes the Curtain could also defend buildings, making it possible to render valuable buildings invulnerable in a pinch. This was something that was very appreciated by the Red Army when it was used in combination with a base energy shield, especially during a super weapon assault. Also, the Curtain's infantry crushing capability was occasionally used practically, destroying large swathes of enemy soldiers in a single blow. One rather unexpected benefit of the Curtain's protection was that it rendered units invulnerable to Psychic Control, allowing Soviet armor to overcome Yuri's many mind control tricks easily. </p>
-  </div>
 
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a1.png" %}" style="width:100%">
-      <h4 align="center">V3 Rocket Launcher</h4>
-      <p align="justify">Of all the main siege units, the V3 launcher has by far the longest range and damage per shot. An elite V3 can obliterate most structures in one to four shots, and mass groups of them can overwhelm all but the most overtly reinforced base defenses, especially since they are the only primary land based siege unit capable of firing upon the Grand Cannon from outside its range. V3 launchers have no problem shooting targets at different elevations (higher or lower ground). It is unable to protect itself at close range, and can be destroyed very quickly by pretty much anything that can fire on it. Due to improvements in targeting technology (and lack of speed produced by rocket booster) by the time of the Third World War, it was possible for the rockets to be shot down mid-flight.</p>
-  </div>
+    <section >
+      <div class="container">
+        <br>
+        <h1 align="center"><strong>Design of our members!</strong></h1>
+        <br>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/chuan.jpg' %});"></div>
+              <h1>Dusk Storm</h1>
+              <h2>Designed by Immortal Ship</h2>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/shaobing.jpg' %})"></div>
+              <h1>RBQ Village</h1>
+              <h2>Designed by Small Pancake</h2>
+              
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/xiaochunjie.jpg' %});"></div>
+              <h1>RuaRua City</h1>
+              <h2>Designed by No Dirty</h2>
+              
+            </div>
+          </div>
+        </div>
+        
+    </section>
 
-  
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a2.png" %}" style="width:100%">
-    <h4 align="center">Chronosphere</h4>
-      <p align="justify">Both the Soviets and the Allies were impressed by the Chronosphere and its powers, but due to the various drawbacks it had (chrono vortex, loss of personnel in transport vehicles) Einstein decided to recreate it from scratch to make it even more powerful and remove the errors that made it almost a "danger" to be used during the preceding war. The Chronosphere may move any ground and/or sea units in a 3x3 square area. While it is somewhat tricky to target the teleporting effect, it is still possible to teleport the maximum of 9 units to a clear location. Unlike the Iron Curtain device, the Chronosphere is a powerful offensive weapon as well: teleporting a sea unit onto land (or vice versa) destroys the unit at the destination, unless the unit is amphibious.</p>
-  </div>
 
- 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a3.png" %}" style="width:100%">
-    <h4 align="center">Apocalypse Tank</h4>
-      <p align="justify">The tank itself was much larger and slower than the Grizzly and Rhino tanks, but also much more powerful, doing more than twice the damage of the Rhino with its twin cannons. In addition to its cannons, the Apocalypse also featured a pair of anti-air missile launchers. Although these missile launchers were slow to fire, they were significantly more powerful than other anti-air missiles such as those found on IFVs. This allowed the Apocalypse tank to defend itself reasonably well against aerial threats, especially in conjunction with its advanced heavy armour. Its armour was only equalled by the Battle Fortress and Kirov airship. An on-board self-repair system allowed the Apocalypse to repair itself when damaged. When elite, they become very powerful, becoming strong against infantry, vehicles, buildings, and even aircraft.</p>
-  </div>
 
-  
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a6.png" %}" style="width:100%">
-      <h4 align="center">War miner</h4>
-      <p align="justify">Soviet military analysts saw a major problem with the ore truck used during Second World War. It was easy for the Allies to overwhelm them with small groups of infantry wielding anti-tank weapons. Other than trying to run them down, which was not often successful if they were spread out, it had no defensive capabilities. To counter this, the new war miner was equipped with a machine gun to fight off enemy infantry and rogue terror drones. However, it still did not have a decent defense against vehicles and aircraft. Only requiring the placement of a machine gun, the war miner has lots of allotted space to stow ore. This difference benefits the Soviets, as their war miner can carry up to 1000 credits (or up to 2000 if assigned to a gem field). However, it is much slower than its Allied counterpart, the chrono miner. </p>
-  </div>
 
-  <div class="mySlides fade">
-    <img src="{% static "img/sketch/a7.png" %}" style="width:100%">
-    <h4 align="center">Mastermind</h4>
-      <p align="justify">The Mastermind is particularly deadly when deployed in the middle of enemy forces where they can cause mayhem in the enemy ranks. This ability makes it potentially devastating to an otherwise unstoppable armoured column before they make their mark on the battlefield. One major weakness with this weapon system however, is its lack of self-defensive armament. This makes it completely helpless against units immune to psychic control such as Terror drones, Robot tanks and air units when airborne. As mentioned above however, its greatest weakness is that it is prone to burning out when it has too many units under its control. This led to the tactic of rushing the Mastermind with many cheap and fast units such as conscripts, flak tracks or IFVs. Paratrooper conscripts are ideal for this task as they are both free and plentiful. Yuri's Masterminds can control up to 3 units each without going into overdrive. </p>
-  </div>
 
-  <!-- Next and previous buttons -->
-<!--   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-</div>
+    <footer class=" ftco-sectio" style="background-color: lightyellow;">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <br>
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">NaOH Group</h2>
+              <p align="justify">We dedicate to promoting the spread of Red Alert all over the world. We love Red Alert and we are people with dreams!</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <br>
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'info_index' %}" style="color: #05386B">NaOH Group</a></li>
+                <li><a href="{% url 'author_index' %}" style="color: #05386B">About us</a></li>
+                
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <br>
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="{% url 'home' %}" style="color: #05386B">Home</a></li>
+                <li><a href="{% url 'blog_index' %}" style="color: #05386B">Blog</a></li>
+                <li><a href="{% url 'view_videos' %}" style="color: #05386B">Video</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <br>
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Contact</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <p><span class="icon icon-map-marker"></span><span > San Francisco, California, USA</span></p>
+                  <p><span class="icon icon-phone"></span><span > +1 217-979-2989</span></p>
+                  <p><span class="icon icon-envelope"></span><span > yangcong765@gmail.com</span></p>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p>
+            <script>document.write(new Date().getFullYear());</script> | This website is made by Chongye 
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+
+<br>
 <br>
 
-<!-- The dots/circles -->
-<!-- <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div> 
- -->
-<!-- <embed src="{% static "music/shapeofyou.mp3" %}" autostart="true" loop="true">   -->
-<div style="width: 40%;" class="column">
-<br>
-<h2 style="margin-left: 50px;">NaOH Group 烧碱教派</h2>
-<br>
-<p style="margin-left: 50px; font-size: 17px;" align="justify">
-  烧碱教派成立于2019年8月，由红警爱好者自由组成，成员分布于各个战队。我们致力于为广大玩家提供一个技术交流及交友的平台，同时我们也将数字技术应用在红色警戒中。烧碱教派秉承着和谐友爱的精神，致力于红色警戒的推广以及提升用户体验。我们热爱红警，我们是一群有理想的有志青年。 
-</p>
-<p style="margin-left: 50px; font-size: 17px;" align="justify">
-  Founded in 2019, NaOH Group is an organization dedicating to provide a platform for Red Alert players to communicate with each other and promote the spread of Red Alert all over the world. Meanwhile, we apply digital business transformation to the game, providing customer solutions for various users. We are all composed of Red Alert players and are welcome more players to join us! We love Red Alert and we are people with dreams!
-</p>
-
-<a style="color: #00008B; margin-left: 50px;" id = "learnmore" class="navbar-brand" href="{% url 'info_index' %}">了解更多 》》》</a>
-
-</div>
-
-</div>
 
 </body>
 
+
+
+
 <script type="text/javascript">
   
-
-
 var slideIndex = 0;
 showSlides();
-
 function showSlides() {
   var i;
   var slides = document.getElementsByClassName("mySlides");
@@ -263,7 +502,6 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 5000); // Change image every 2 seconds
 } 
-
 </script>
 
 {% endblock %}
