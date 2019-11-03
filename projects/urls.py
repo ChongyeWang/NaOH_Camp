@@ -15,5 +15,8 @@ urlpatterns = [
     path("resource/setting", views.game_setting, name="game_setting"),
     path("resource/download", views.download, name="download"),
     path("resource/mod", views.mod, name="mod"),
-    path("resource/history", views.history, name="history")
+    path("resource/history", views.history, name="history"),
+    path("resource/allied_mission", views.mission, name="mission"),
+    path("resource/soviet_mission", views.mission2, name="mission2"),
+    path("resource/unit_data", views.unit_data, name="unit_data")
 ]

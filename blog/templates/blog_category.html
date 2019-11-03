@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block page_content %}
+{% load static %}
 
 
 <style type="text/css">
     
     /* The container must be positioned relative: */
 .custom-select {
-  margin-top: 6px;
+  
   width: 75px;
   height: 38px;
   font-family: Arial;
@@ -68,8 +69,8 @@
 
 input[type=submit] {
 
-    border-radius: 3px;
-    border: 0;
+    border-radius: 7px;
+    border: 2;
     width: 27px;
     height: 27px;
 
@@ -93,58 +94,136 @@ input[type=submit] {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
     /* IE6-9 */
 }
+
+            
+.container .box { 
+    width:800px; 
+    
+    display:table; 
+} 
+.container .box .box-row { 
+    display:table-row; 
+} 
+.container .box .box-cell { 
+    display:table-cell; 
+    
+    padding:10px; 
+} 
+.container .box .box-cell.box1 { 
+    background:lightgrey; 
+    background:lightyellow; 
+    text-align:justify; 
+ } 
+.container .box .box-cell.box2 { 
+    background:lightgreen; 
+    text-align:justify 
+} 
+
+
+
 </style>
-<div class="col-md-8 offset-md-2">
-    <div class="row">
-    <h1 style="margin-right: 50px; margin-left: 12px;">{{ category | title }}</h1>
 
-    {% if order == "inorder" %}
-        <form action="" method="post">
-        {% csrf_token %}
 
-        <select class="custom-select" name="selection">
-          <option value="inorder">正序</option>
-          <option value="reverseorder">倒序</option>
-        </select> 
-        <input type="submit" value="&check;">
-        </form>
-    {% else %}
-        <form action="" method="post">
-        {% csrf_token %}
 
-        <select class="custom-select" name="selection">
-          <option value="reverseorder">倒序</option>
-          <option value="inorder">正序</option>
-        </select> 
-        <input type="submit" value="&check;">
-        </form>
-    {% endif %}
 
-    {% if user.is_authenticated %}
-        <a style="color: #00008B;" class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
-    {% else %}
-        <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
-    {% endif %}
+<body>
+
+<div style="width:800px; margin:0 auto;">
+    
+    <div>
+      <br>
+      <h1 style="font-weight: bold;" align="center">{{ category | title }}</h1>
 
     </div>
 
-    <hr>
+
+    <div class="container"> 
+        <div class="box"> 
+            <div class="box-row"> 
+                <div class="box-cell box1" style="width: 500px;"> 
+                    <div style="width: 550px;">
+                    {% for post in posts %}
+                        <h2><a style="color: #00008B;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+                        <small>
+                            {{ post.author }} |&nbsp;
+                            {{ post.created_on.date }} |&nbsp;
+                            Categories:&nbsp;
+                            {% for category in post.categories.all %}
+                            <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
+                                {{ category.name }}
+                            </a>&nbsp;
+                            {% endfor %}
+                        </small>
+                        <p>{{ post.body | slice:":400" }}...</p>
+                        <hr>
+                    {% endfor %}
+                  </div>
+
+                </div> 
+                  
+                <div class="box-cell box2" style="width: 250px;"> 
+                  
+                  <h1>{{name}}</h1>
+                  <h3>Level: {{level}}</h3>
+                  <h3>Experience: {{experience}}</h3>
+                  
+
+                  {% if user.is_authenticated %}
+                      <a style="color: #00008B;" class="navbar-brand" href="{% url 'create_blog' category%}">新建帖子</a>
+                  {% else %}
+                      <a style="color: #00008B;" class="navbar-brand" href="{% url 'login' %}">登录发帖</a>
+                  {% endif %}
+                  <br>
+
+                  {% if order == "inorder" %}
+                      <form action="" method="post">
+                      {% csrf_token %}
+
+                      <select class="custom-select" name="selection">
+                        <option value="inorder">正序</option>
+                        <option value="reverseorder">倒序</option>
+                      </select> 
+                      <input type="submit" value="&check;">
+                      </form>
+                  {% else %}
+                      <form action="" method="post">
+                      {% csrf_token %}
+
+                      <select class="custom-select" name="selection">
+                        <option value="reverseorder">倒序</option>
+                        <option value="inorder">正序</option>
+                      </select> 
+                      <input type="submit" value="&check;">
+                      </form>
+                  {% endif %}
+
+                  <br>
 
 
-    {% for post in posts %}
-        <h2><a style="color: #00008B;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
-        <small>
-            {{ post.author }} |&nbsp;
-            {{ post.created_on.date }} |&nbsp;
-            Categories:&nbsp;
-            {% for category in post.categories.all %}
-            <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
-                {{ category.name }}
-            </a>&nbsp;
-            {% endfor %}
-        </small>
-        <p>{{ post.body | slice:":400" }}...</p>
-    {% endfor %}
+                  {% if user.is_authenticated %}
+                      <img src="{% static "img/signedin.png" %}" style="width: 230px;">
+                      <br><br>
+                      <small align="justify">The Battle Fortress was known for its ability to dominate an area by providing mobile heavy fire support, using the immense firepower of the infantry garrisoned within. GIs and Guardian GIs were able to fire their heavier weapons (M60 machine gun and Javelin missile launcher, respectively) while inside the Battle Fortress. The strength of multiple Guardian GIs, combined with the ability of the Battle Fortress to fire on the move, meant that the Battle Fortress could used as a heavy anti-tank and anti-aircraft weapon. A single garrisoned Tanya, Boris or Navy SEAL could eliminate all infantry threats to the Battle Fortress. Garrisoned Snipers or Yuri Viruses could also eliminate them from a significant distance.</small>
+                  {% else %}
+                      <img src="{% static "img/unsignedin.png" %}" style="width:230px;">
+                      <br><br>
+                      <small align="justify">The Mastermind is particularly deadly when deployed in the middle of enemy forces where they can cause mayhem in the enemy ranks. This ability makes it potentially devastating to an otherwise unstoppable armoured column before they make their mark on the battlefield. One major weakness with this weapon system however, is its lack of self-defensive armament. This makes it completely helpless against units immune to psychic control such as Terror drones, Robot tanks and air units when airborne. As mentioned above however, its greatest weakness is that it is prone to burning out when it has too many units under its control. This led to the tactic of rushing the Mastermind with many cheap and fast units such as conscripts, flak tracks or IFVs. Paratrooper conscripts are ideal for this task as they are both free and plentiful. Yuri's Masterminds can control up to 3 units each without going into overdrive. </small>
+                  {% endif %}
+ 
+
+                 
+                </div> 
+            
+            </div> 
+        </div> 
+    </div> 
+
+
 </div>
+
+</body>
+
+
+
 
 {% endblock %}

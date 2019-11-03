@@ -37,6 +37,37 @@
         #jiangli, #distribution, #version, #technology{
           width: 100%;
         }
+
+        ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22c0e8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
         
     </style>
 
@@ -44,226 +75,368 @@
 
 <body>
 
-<br/>
 
 <div id="main">
-
-<img class="logo2" align="left" src="{% static "img/NaOH.png" %}">
-
-<h1>NaOH Group 烧碱教派</h1>
-<br/>
 <br>
-<h4 align="justify">
-  <p>
-  烧碱教派成立于2019年8月，由红警爱好者自由组成，成员分布于各个战队。我们致力于为广大玩家提供一个技术交流及交友的平台，同时我们也将数字技术应用在红色警戒中，为玩家提供个性化指导。烧碱教派秉承着和谐友爱的精神，致力于红色警戒的推广以及提升用户体验。我们热爱红警，我们是一群有理想的有志青年。
-  </p>
-  <p>
-  Founded in 2019, NaOH Group is an organization dedicating to providing a platform for Red Alert players to communicate with each other and promoting the spread of Red Alert all over the world. Meanwhile, we apply digital business transformation to the game, providing customer solutions for various users. We are all composed of Red Alert players and are welcome more players to join us! We love Red Alert and we are people with dreams!
-  </p>
+
+<div>
+  <img class="logo2" align="left" src="{% static "img/NaOH.png" %}">
+
+  <h1>NaOH Group 烧碱教派</h1>
   <br/>
-  
-</h4>
+  <br>
+  <h4 align="justify">
+    <p>
+    烧碱教派成立于2019年8月，由红警爱好者自由组成，成员分布于各个战队。我们致力于为广大玩家提供一个技术交流及交友的平台，同时我们也将数字技术应用在红色警戒中，为玩家提供个性化指导。烧碱教派秉承着和谐友爱的精神，致力于红色警戒的推广以及提升用户体验。我们热爱红警，我们是一群有理想的有志青年。
+    </p>
+    <p>
+    Founded in 2019, NaOH Group is an organization dedicating to providing a platform for Red Alert players all over the world to communicate with each other and promoting the spread of Red Alert culture. Meanwhile, we apply digital business transformation to the game, providing customer solutions for various users. We are all composed of Red Alert players and are welcome more players to join us! We love Red Alert and we are people with dreams!
+    </p>
+    <br/>
+    
+  </h4>
 
-<h2>业务范围：</h2>
-<br>
-<h4>
-<p>1. 游戏及对战平台的下载及安装指导。</p>
-<p>2. 为新玩家提供单机教学及新手对战教学。</p>
-<p>3. 帮助解决如win10系统兼无法兼容等游戏安装问题。</p>
-<p>4. 根据用户的对战习惯提供1对1的个性化指导。</p>
-<p>5. 为用户提供详细的地图池介绍及相应战术。</p>
-<p>6. 设计创意性的个性化地图。</p>
-<p>7. 提供军衔预测服务。</p>
-<p>8. 根据海量数据分析的结果为用户提供各个地图各阵营的优劣势统计。</p>
-</h4>
-
-<br/><br/>
+</div>
 
 
-<h2>烧碱教派管理流程：</h2>
+
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-12 ">
+      <h2 align="center">烧碱教派大事记</h2>
+      <br>
+      <ul class="timeline">
+        <li>
+          <h4>2019-06-23</h4>
+          <h4>烧碱教派成立。</h4>
+        </li>
+
+        <li>
+          <h4>2019-08-26</h4>
+          <h4>烧碱教派获得数十元的A轮融资。</h4>
+        </li>
+
+        <li>
+          <h4>2019-08-31</h4>
+          <h4>烧碱教派与RT战队建立友好合作关系，多名RT队员加入烧碱教派。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-02</h4>
+          <h4>烧碱教派与卡奇奇势力建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-04</h4>
+          <h4>烧碱教派内阁正式成立。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-07</h4>
+          <h4>烧碱教派与爷势力建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-10</h4>
+          <h4>烧碱教派与白色战队建立友好合作关系，白色战队队长加入烧碱教派。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-21</h4>
+          <h4>烧碱教派与T18战队建立友好合作关系，T18战队多名高手加入烧碱教派。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-24</h4>
+          <h4>烧碱教派与CR战队达建立友好合作关系，CR战队分部部长加入烧碱教派。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-27</h4>
+          <h4>烧碱教派在红色警戒吧进行宣传活动，并获得积极反馈。</h4>
+        </li>
+
+        <li>
+          <h4>2019-09-30</h4>
+          <h4>烧碱教派获得数十元的B轮融资。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-05</h4>
+          <h4>烧碱教派与航船保护组织建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-08</h4>
+          <h4>烧碱教派与红色警戒女装组织建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-11</h4>
+          <h4>烧碱教派与鹰眼战队建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-15</h4>
+          <h4>烧碱教派与幻影战队建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-20</h4>
+          <h4>烧碱教派与完美战队建立友好合作关系。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-23</h4>
+          <h4>烧碱教派体系制度正式出炉。</h4>
+        </li>
+
+        <li>
+          <h4>2019-10-25</h4>
+          <h4>烧碱教派获得数十元的C轮融资。</h4>
+        </li>
+
+         <li>
+          <h4>2019-11-01</h4>
+          <h4>烧碱教派与艺术战队建立友好合作关系。</h4>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div style="background-color: lightyellow;" align="center">
+
+  <br>
+  <h2>业务范围</h2>
+  <br>
+  <h4>
+  <p>游戏及对战平台的下载及安装指导</p>
+  <hr>
+  <p>所有官方任务的教学指导</p>
+  <hr>
+  <p>为新玩家提供单机教学及对战教学</p>
+  <hr>
+  <p>帮助解决如win10系统兼无法兼容等游戏安装问题</p>
+  <hr>
+  <p>根据用户的对战习惯提供1对1的个性化指导</p>
+  <hr>
+  <p>为用户提供详细的地图池介绍及相应战术</p>
+  <hr>
+  <p>设计创意性的个性化地图</p>
+  <hr>
+  <p>设计团队型任务战役</p>
+  <hr>
+  <p>提供军衔预测服务</p>
+  <hr>
+  <p>提供各地图各阵营的数据统计</p>
+  <hr>
+  </h4>
+  <br>
+
+</div>
+
+
+<br/><br/><br>
+
+
+<h2 align="center">烧碱教派管理流程图</h2><br>
 <div>
   <img id="distribution" src="{% static "img/management.png" %}">
 </div>
-<br/><br/>
+<br/><br/><br><br>
 
-<h2>烧碱教派晋升流程：</h2>
+<h2 align="center">烧碱教派晋升流程图</h2><br>
 <div>
   <img id="distribution" src="{% static "img/jiaozhong.png" %}">
 </div>
 <br/><br/>
 
 
-<h2>烧碱教派大事记：</h2>
-<br>
-<h4 align="justify">
-<p>2019-08-23，烧碱教派成立。</p>
 
-<p>2019-08-26，烧碱教派获得数十元的A轮融资。</p>
-
-<p>2019-08-31，烧碱教派与RT战队建立友好合作关系，多名RT队员加入烧碱教派。</p>
-
-<p>2019-09-02，烧碱教派与卡奇奇势力建立友好合作关系。</p>
-
-<p>2019-09-04，烧碱教派内阁正式成立。</p>
-
-<p>2019-09-07，烧碱教派与爷势力建立友好合作关系。</p>
-
-<p>2019-09-10，烧碱教派与白色战队建立友好合作关系，白色战队队长加入烧碱教派。</p>
-
-<p>2019-09-21，烧碱教派与T18战队建立友好合作关系，T18战队多名高手加  入烧碱教派。</p>
-
-<p>2019-09-24，烧碱教派与CR战队达建立友好合作关系，CR战队分部部长加入烧碱教派。</p>
-
-<p>2019-09-27，烧碱教派在红色警戒吧进行宣传活动，并获得积极反馈。</p>
-
-<p>2019-09-30，烧碱教派获得数十元的B轮融资。</p>
-
-<p>2019-10-05，烧碱教派与航船保护组织建立友好合作关系。</p>
-
-<p>2019-10-08，烧碱教派与红色警戒女装组织建立友好合作关系。</p>
-
-<p>2019-10-15，烧碱教派与幻影战队建立友好合作关系。</p>
-
-<p>2019-10-20，烧碱教派与完美战队建立友好合作关系。</p>
-
-<p>2019-10-23，烧碱教派体系制度正式出炉。</p>
-
-<p>2019-10-25，烧碱教派获得数十元的C轮融资。</p>
-
-</h4>
-
-<br/><br/>
+<br/><br/><br>
 
 
-<h2>成员分布：</h2>
+<h2 align="center">成员地理位置分布</h2><br>
 <div>
   <img id="distribution" src="{% static "img/distribution.jpg" %}">
 </div>
-<br/><br/>
+<br/><br/><br><br>
 
-<h2>成员技术水平统计分布：</h2>
+<h2 align="center">成员游戏技术水平统计分布</h2>
+<br>
 <div>
   <img id="distribution" src="{% static "img/shuiping.png" %}">
 </div>
-<br/><br/>
+<br/><br/><br>
 
-<h2>成员技术版本统计分布：</h2>
+<h2 align="center">成员游戏版本统计分布</h2>
+<br>
 <div>
   <img id="version" src="{% static "img/pie.png" %}">
 </div>
-<br/><br/>
+<br/><br/><br><br>
 
-<h2>成员技术阵营统计分布：</h2>
+<h2 align="center">成员游戏阵营统计分布</h2>
+
+<br>
 <div>
   <img id="technology" src="{% static "img/heatmap.png" %}">
 </div>
-<br><br>
+<br><br><br>
 
-<h2>成员作品：</h2>
+
+
+<div style="background-color: lightyellow;" align="center">
+
+  <br>
+  <h2>成员技术范围</h2>
+  <br>
+  <h4>
+  <p>数据分析工程师</p>
+  <hr>
+  <p>Linux工程师</p>
+  <hr>
+  <p>网站开发工程师</p>
+  <hr>
+  <p>计算机安全工程师</p>
+  <hr>
+  <p>游戏开发工程师</p>
+  <hr>
+  <p>服务器维护工程师</p>
+  <hr>
+  <p>Mod设计师</p>
+  <hr>
+  <p>地图设计师</p>
+  
+  <hr>
+  <p>OpenRa开源工程师</p>
+  
+  <hr>
+  </h4>
+  <br>
+
+</div>
+<br>
+<br>
+
+<h2 align="center">成员作品</h2>
+<br>
 <div>
   <div>
     <img id="design_map1" src="{% static "img/map2/chuan.jpg" %}">
-    <h2 align="center">沙暴（作者：东约特兰）</h2>
+    <h3 align="center">沙暴（作者：东约特兰）</h3>
     <br>
   </div>
   <div>
     <img id="design_map2" src="{% static "img/map2/shaobing.jpg" %}">
-    <h2 align="center">惹不起之村（作者：烧饼）</h2>
+    <h3 align="center">惹不起之村（作者：烧饼）</h3>
     <br>
   </div>
   <div>
     <img id="design_map3" src="{% static "img/map2/xiaochunjie.jpg" %}">
-    <h2 align="center">RuaRua之城（作者：小纯洁）</h2>
+    <h3 align="center">RuaRua之城（作者：小纯洁）</h3>
     <br>
   </div>
 </div>
 
 <br>
-<br>
+<br><br>
 
-<h2>成员工作时间统计分布：</h2>
+<h2 align="center">成员工作时间统计分布</h2>
+<br>
 <div>
   <img id="version" src="{% static "img/huoyue.png" %}">
 </div>
+<br/><br/><br>
+
+
+<div style="background-color: lightyellow;">
+  <br>
+  <h2 align="center">成员正餐</h2>
+  <br>
+  <div class="row" align="center">
+    <div class="card-body">
+      <img id="food1" src="{% static "img/food1.png" %}">
+      <h3>丰富</h3>
+    </div>
+    <div class="card-body">
+      <img id="food2" src="{% static "img/food2.png" %}">
+      <h3>健康</h3>
+    </div>
+    <div class="card-body">
+      <img id="food3" src="{% static "img/food3.png" %}">
+      <h3>足量</h3>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <h2 align="center">成员下午茶</h2>
+  <br>
+  <div class="row" align="center">
+    <div class="card-body">
+      <img id="food4" src="{% static "img/food4.png" %}">
+      <h3>绿色</h3>
+    </div>
+    <div class="card-body">
+      <img id="food5" src="{% static "img/food5.jpg" %}">
+      <h3>绿色</h3>
+    </div>
+    <div class="card-body">
+      <img id="food6" src="{% static "img/food6.jpg" %}">
+      <h3>绿色</h3>
+    </div>
+  </div>
+
+  <br>
+
+  <br>
+<!-- 
+  <div>
+    <img id="jiangli" src="{% static "img/jiangli.png" %}">
+  </div>
+
+ -->
+</div>
+
+
+
+
 <br/><br/>
-
-<h2>成员正餐待遇：</h2>
-<div class="row" align="center">
-  <div class="card-body">
-    <img id="food1" src="{% static "img/food1.png" %}">
-    <h3>丰富</h3>
-  </div>
-  <div class="card-body">
-    <img id="food2" src="{% static "img/food2.png" %}">
-    <h3>健康</h3>
-  </div>
-  <div class="card-body">
-    <img id="food3" src="{% static "img/food3.png" %}">
-    <h3>足量</h3>
-  </div>
-</div>
-
-<br>
-<h2>成员下午茶待遇：</h2>
-<div class="row" align="center">
-  <div class="card-body">
-    <img id="food4" src="{% static "img/food4.png" %}">
-    <h3>绿色</h3>
-  </div>
-  <div class="card-body">
-    <img id="food5" src="{% static "img/food5.jpg" %}">
-    <h3>绿色</h3>
-  </div>
-  <div class="card-body">
-    <img id="food6" src="{% static "img/food6.jpg" %}">
-    <h3>绿色</h3>
-  </div>
-</div>
-
-<br>
-
-<h2>成员福利：</h2>
+<br/><br/>
 
 <div>
-  <img id="jiangli" src="{% static "img/jiangli.png" %}">
+  <h4 align="center">  
+
+      商务合作-QQ: 1968985535 &nbsp;&nbsp;&nbsp;&nbsp; 加入我们-QQ群: 818167896 
+
+  </h4>  
+  
+    
 </div>
 
-<br/><br/>
-<br/><br/>
-
-<h4>  
-
-    商务合作-QQ: 1968985535 
-
-    <br/><br/>
-
-    加入我们-QQ群: 818167896 
-</h4>
-
-<br/>
-<br/>
-<br/>
 <br/>
 
-
-<div>
-
-<i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:30px"></i>
-<i class="fa fa-qq" style="font-size:48px;color:black;margin-right:30px"></i>
-<i class="fa fa-facebook-official" style="font-size:48px;color:blue;margin-right:30px"></i>
-
-<i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:30px"></i>
-
-<i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:30px"></i>
-
-<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:30px"></i>
-
-<i class='fa fa-apple' style="font-size:48px;color:black;margin-right:30px"></i>
-
-<i class='fa fa-git-square' style="font-size:48px;color:black;margin-right:30px"></i>
-
+<hr>
 <br>
-<br>
+
+<div align="center">
+
+<i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:15px; margin-left: 15px;"></i>
+<i class="fa fa-qq" style="font-size:48px;color:black;margin-right:15px;margin-left: 15px;"></i>
+<i class="fa fa-facebook-official" style="font-size:48px;color:blue;margin-right:15px;margin-left: 15px;"></i>
+
+<i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:15px;margin-left: 15px;"></i>
+
+<i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:15px;margin-left: 15px;"></i>
+
+<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:15px;margin-left: 15px;"></i>
+
+<i class='fa fa-apple' style="font-size:48px;color:black;margin-right:15px;margin-left: 15px;"></i>
+
 <br>
 <br>
 <br>
@@ -277,4 +450,7 @@
 
 </body>
 </html>
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 {% endblock %}

@@ -7,6 +7,7 @@
 #p_1 {
     width: 250px;
     height: 250px;
+    margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
 }
@@ -17,7 +18,8 @@
 }
 
 #base2 {
-    margin-left: 8vw;
+    width: 820px;
+    margin: 0 auto;
 
 }
 
@@ -31,8 +33,9 @@
 
 <br>
 
-<div id="base" align="center">
-    <div id="base2" class="row" >
+<div id="base">
+
+    <div id="base2" class="row" align="center">
     
         <div>
             <div id = "p_1" style="border:1px solid black;" >
@@ -40,7 +43,7 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'background' %}"
                        class="btn btn-primary">
-                        背景资料
+                        Background
                     </a> 
                 </div>
             </div>
@@ -52,7 +55,7 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'game_setting' %}"
                        class="btn btn-primary">
-                        游戏设定
+                        Unit
                     </a> 
                 </div>
             </div>
@@ -64,49 +67,41 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'mod' %}"
                        class="btn btn-primary">
-                        MOD简介
+                        Mod
                     </a> 
                 </div>
             </div>
         </div>
 
+    </div>
 
-        <div>
+
+    <div id="base2" class="row" align="center">
+
+         <div>
             <div id = "p_1" style="border:1px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/a5.jpg' %}">
                 <div align="center" class="card-body">
-                    <a href="{% url 'project_index' %}"
+                    <a href="{% url 'mission2' %}"
                        class="btn btn-primary">
-                        任务
+                        Soviet Mission
                     </a> 
                 </div>
             </div>
         </div>
 
-        <!-- <div>
+        <div>
             <div id = "p_1" style="border:1px solid black;" >
-                <img id = "p_2" class="card-img-top" src="{% static 'img/heckfreeze.jpg' %}">
+                <img id = "p_2" class="card-img-top" src="{% static 'img/a4.jpg' %}">
                 <div align="center" class="card-body">
-                    <a href="{% url 'map' %}"
+                    <a href="{% url 'mission' %}"
                        class="btn btn-primary">
-                        地图池
+                        Allied Mission
                     </a> 
                 </div>
             </div>
-        </div> -->
-
-        <!-- <div>
-            <div id = "p_1" style="border:1px solid black;" >
-                <img id = "p_2" class="card-img-top" src="{% static 'img/a1.jpg' %}">
-                <div align="center" class="card-body">
-                    <a href="{% url 'project_index' %}"
-                       class="btn btn-primary">
-                        temp
-                    </a> 
-                </div>
-            </div>
-        </div> -->
-
+        </div>
+       
 
         <div>
             <div id = "p_1" style="border:1px solid black;" >
@@ -114,7 +109,24 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'history' %}"
                        class="btn btn-primary">
-                        发展历史
+                        History
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+     <div id="base2" class="row" align="center">
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/unit_details.png' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'unit_data' %}"
+                       class="btn btn-primary">
+                        Unit Details
                     </a> 
                 </div>
             </div>
@@ -126,29 +138,18 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'download' %}"
                        class="btn btn-primary">
-                        资源汇总
+                        Resource
                     </a> 
                 </div>
             </div>
         </div>
 
-        <!-- <div>
-            <div id = "p_1" style="border:1px solid black;" >
-                <img id = "p_2" class="card-img-top" src="{% static 'img/c2.jpg' %}">
-                <div align="center" class="card-body">
-                    <a href="{% url 'project_index' %}"
-                       class="btn btn-primary">
-                        temp
-                    </a> 
-                </div>
-            </div>
-        </div> -->
-
-        
     </div>
+
 </div>
 
 </body>
+
 </html>
 
 {% endblock %}

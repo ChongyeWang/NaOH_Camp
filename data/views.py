@@ -23,20 +23,20 @@ def data_analyze(request):
 def data_predict(request):
 
     question = [
-        "法国的特殊单位是什么？",
-        "伊拉克的特殊单位是什么？",
-        "天启坦克的造价是多少？",
-        "幻影坦克的造价是多少？",
-        "冰天雪地地图中有几个位置？",
-        "冰天雪地地图中2号位在什么位置？（从以下选择: 左上，右上，左下，右下，小岛）",
-        "尤里复仇中盟军开局爆兵压制战术经常用在哪张六人地图中？",
-        "尤里复仇世仇地图中哪个盟军阵营国家有针对伊拉克的卖基地暴兵战术？",
-        "冰天雪地地图中左下位置经常采用几牛抢中的快攻打法？",
-        "拯救行动地图中一共有几个油井？",
-        "中间拥有大面积天然辐射的地图是什么？",
-        "红色警戒时间线中盟军的核武器被谁破坏？（从以下选择：斯大林，爱因斯坦，尤里，伊拉克，谭雅，美国总统，盟军间谍，警犬）",
-        "红色警戒2原版中核弹攻击己方的什么建筑不会造成伤害？",
-        "磁暴线圈非充电状态时在原版和尤里复仇版本中冷却时间（射速）的差值绝对值是多少？"
+        "What's the special unit of France?",
+        "What's the special unit of Iraq?",
+        "What's the price of apocalypse tank?",
+        "What's the price of mirage tank?",
+        "How many positions in map Heck freezes Over?",
+        "Where is the No.2 position in map Heck freezes Over?(Choose from Northwest, Northeast, Southwest, Southeast)",
+        "What's the name of the 6-player map of Yuri's Revenge in which Allied Camp can choose to buy plenty of G.I. to supress enemy at the beginning?",
+        "Which country can be used in map Blood Feud of Yuri's Revenge to supress Iraq by selling MCV and buying plenty of G.I. at the beginning?",
+        "At the southwest position of map Heck Freezes Over, what's the ideal number of war miners if you want to move MCV to the middle?",
+        "How many oil derricks in map May Day?",
+        "what's the name of the map that has large areas of natrual radiation in the middle?",
+        "Who destroyed the nuclear weapon of allied Camp in Red Alert timeline?(Choose from Stalin, Einstein, Yuri, Iraq, Tanya, American president, Spy, Attack Dog)",
+        "What's the name of the building that will not be self-injured by nuclear weapon in Red Alert 2 version 1.006?",
+        "What is the value difference between the ROF(cooldown) of Tesla Coil in Red Alert 2 version 1.006 and that in Yuri's Revenge?"
     ]
 
     answer = []
@@ -70,89 +70,89 @@ def data_predict(request):
             finished = True
             form = PostForm()
 
-            if content.q1 == "巨炮":
-                answer.append("正确")
+            if content.q1 == "巨炮" or content.q1 == "Grand Cannon":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q2 == "辐射工兵" or content.q2 == "辐射":
-                answer.append("正确")
+            if content.q2 == "辐射工兵" or content.q2 == "辐射" or content.q2 == "Desolator":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
             if content.q3 == "1750":
-                answer.append("正确")
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
             if content.q4 == "1000":
-                answer.append("正确")
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q5 == "8" or content.q5 == "8个" or content.q5 == "八" or content.q5 == "八个":
-                answer.append("正确")
+            if content.q5 == "8" or content.q5 == "8个" or content.q5 == "八" or content.q5 == "八个" or content.q5 == "eight" or content.q5 == "Eight":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q6 == "右上":
-                answer.append("正确")
+            if content.q6 == "右上" or content.q6 == "Northeast":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q7 == "埃及" or content.q7 == "埃及之旅":
-                answer.append("正确")
+            if content.q7 == "埃及" or content.q7 == "埃及之旅" or "Egypt" in content.q7:
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q8 == "英国":
-                answer.append("正确")
+            if content.q8 == "英国" or "Britain" in content.q8:
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if "4" in content.q9 or "四" in content.q9 or "5" in content.q9 or "五" in content.q9 or "6" in content.q9 or "六" in content.q9:
-                answer.append("正确")
+            if "4" in content.q9 or "四" in content.q9 or "5" in content.q9 or "五" in content.q9 or "6" in content.q9 or "六" in content.q9 or "four" in content.q9 or "Four" in content.q9 or "five" in content.q9 or "Five" in content.q9 or "six" in content.q9 or "Six" in content.q9:
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if "16" in content.q10 or "十六" in content.q10:
-                answer.append("正确")
+            if "16" in content.q10 or "十六" in content.q10 or "Sixteen" in content.q10 or "sixteen" in content.q10:
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q11 == "污水坑":
-                answer.append("正确")
+            if content.q11 == "污水坑" or content.q11 == "Sinkhole" or content.q11 == "sinkhole":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q12 == "尤里":
-                answer.append("正确")
+            if content.q12 == "尤里" or content.q12 == "Yuri":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if "核弹" in content.q13:
-                answer.append("正确")
+            if "核弹" in content.q13 or "nuclear" in content.q13 or "Nuclear" in content.q13:
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
-            if content.q14 == "40":
-                answer.append("正确")
+            if content.q14 == "40" or content.q14 == "Forty" or content.q14 == "forty":
+                answer.append("Correct")
                 score += 10
             else:
-                answer.append("错误")
+                answer.append("Incorrect")
 
     level = '列兵'
 
@@ -184,7 +184,8 @@ def data_predict(request):
         "language": language,
         "question": question,
         "answer": answer,
-        "level": level
+        "level": level,
+        "score": score
     }
 
     return render(request, "data_predict.html", context);

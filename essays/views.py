@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import ImageForm, PostForm
 from .models import Post, Images
+from django.core.paginator import Paginator
 
 
 def select_language(request):
@@ -57,14 +58,26 @@ def essays(request):
 
 
 def view_essays(request):
-    posts = Post.objects.all()
     language = select_language(request)
+    posts = Post.objects.all()
+
+
+    post_list = Post.objects.all()
+    paginator = Paginator(post_list, 5) # Show 25 contacts per page
+
+    page = request.GET.get('page')
+    posts = paginator.get_page(page)
     
     context = {
         "posts": posts,
         'language': language    
     }
+
     return render(request, "view_essays.html", context)
+
+
+    
+    
 
 
 def essay_details(request, pk):

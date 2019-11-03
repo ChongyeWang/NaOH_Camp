@@ -51,11 +51,42 @@ def blog_category(request, category):
     if order == 'inorder':
         posts = posts[::-1]
 
+    level = 0
+    experience = 0
+    name = 'None'
+
+    if request.user.is_authenticated:
+        try:
+            current_user = Personal_info.objects.get(name=request.user.username)
+        except:
+            current_user = None
+        
+        if current_user == None:
+            current_user = Personal_info(
+                name = request.user.username,
+                level = 0,
+                experience = 0
+            )
+            current_user.save()
+
+        level = current_user.level
+        experience = current_user.experience
+        name = request.user.username
+
+    else:
+        name = 'Anonymous'
+        level = 0
+        experience = 0
+
+
     context = {
         "category": category,
         "posts": posts,
         "language": language,
-        "order": order
+        "order": order,
+        "name": name,
+        "level": level,
+        "experience": experience
     }
 
     return render(request, "blog_category.html", context)

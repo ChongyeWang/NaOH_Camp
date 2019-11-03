@@ -4,15 +4,17 @@
 <html lang="zh">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 </head>
-<body>
-<br>
+<body >
 
 	{% ifequal finished False %}
     
 
-    <div align="center">
+    <div align="center" style="background-color: lightyellow;">
+
+    <br>
 
     <h2>Please Answer</h2>
 
@@ -64,39 +66,113 @@
 
        &nbsp;&nbsp;
        <button type="submit" class="btn btn-primary">Submit</button>
+
+       <br><br><br>
     </form>
 
     </div>
 
     {% else %}
-    <h4>您的等级预测结果：{{level}}</h4>
-    <br><br>
-    <h4>您的回答：</h4>
+
+    <div style="background-color: lightyellow; font-weight: bold;">
     <br>
-    <p>{{question.0}} {{ contents.q1 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.0}}</b> </p>
-    <p>{{question.1}} {{ contents.q2 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.1}}</b></p>
-    <p>{{question.2}} {{ contents.q3 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.2}}</b></p>
-    <p>{{question.3}} {{ contents.q4 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.3}}</b></p>
-    <p>{{question.4}} {{ contents.q5 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.4}}</b></p>
-    <p>{{question.5}} {{ contents.q6 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.5}}</b></p>
-    <p>{{question.6}} {{ contents.q7 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.6}}</b></p>
-    <p>{{question.7}} {{ contents.q8 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.7}}</b></p>
-    <p>{{question.8}} {{ contents.q9 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.8}}</b></p>
-    <p>{{question.9}} {{ contents.q10 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.9}}</b></p>
-    <p>{{question.10}} {{ contents.q11 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.10}}</b></p>
-    <p>{{question.11}} {{ contents.q12 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.11}}</b></p>
-    <p>{{question.12}} {{ contents.q13 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.12}}</b></p>
-    <p>{{question.13}} {{ contents.q14 }} &nbsp;&nbsp;&nbsp;&nbsp;<b>{{answer.13}}</b></p>
+    <h1 align="center" style="font-weight: bold;">您的等级预测结果:</h1>
+    <h1 align="center" style="font-weight:bold">{{level}}</h1>
+    <br>
+    
+    <div id="report" align="center">
 
     <br>
-    <a style="font-weight: bold; font-size: 25px; color: #00008B;" href="{% url 'data_predict' %}">
-            重新评估
-        </a>
+    <h1 style="color: black;font-weight: bold;">Your Score : {{score}} / 140</h1>
+    <br>
+    <hr>
+    <h2 style="color: black;font-weight:bold;">{{question.0}}</h2>
+    <h2 style="color: green;font-weight:bold">Your Response : {{ contents.q1 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.0}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.1}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q2 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.1}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.2}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q3 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.2}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.3}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q4 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.3}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.4}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q5 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.4}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.5}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q6 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.5}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.6}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q7 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.6}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.7}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q8 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.7}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.8}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q9 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.8}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.9}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q10 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.9}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.10}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q11 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.10}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.11}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q12 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.11}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.12}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q13 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.12}}</h2>
+    <br><hr>
+
+    <h2 style="color: black;font-weight:bold;">{{question.13}}</h2>
+    <h2 style="color: green;font-weight:bold;">Your Response : {{ contents.q14 }}</h2>
+    <h2 style="color: blue; font-weight: bold;">{{answer.13}}</h2>
+    <br><hr>
+
+    </div>
+    <div align="center"><button id="generate_report" align = "center" style="border-radius: 8px; background-color: white;color: black;border: 2px solid black;">Generate PDF Report</button></div>
+
+    <br><br>
+    <h1 align="center"><a style="font-weight: bold; font-size: 25px; color: #00008B;" href="{% url 'data_predict' %}">
+            Try again
+        </a></h1>
+
+    <br><br>
+    
+    
+
+    </div>
+
 
     {% endifequal %}
 
-    <br/>
-    <br/>
     <br/>
     <br/>
     <hr>
@@ -104,17 +180,17 @@
 
 <div align="center">
 
-<i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:30px"></i>
-<i class="fa fa-qq" style="font-size:48px;color:black;margin-right:30px"></i>
-<i class="fa fa-facebook-official" style="font-size:48px;color:blue;margin-right:30px"></i>
+<i class="fa fa-wechat" style="font-size:48px;color:#00FF00;margin-right:15px; margin-left: 15px;"></i>
+<i class="fa fa-qq" style="font-size:48px;color:black;margin-right:15px; margin-left: 15px;"></i>
+<i class="fa fa-facebook-official" style="font-size:48px;color:blue;margin-right:15px; margin-left: 15px;"></i>
 
-<i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:30px"></i>
+<i class="fa fa-twitter" style="font-size:48px;color:#A9D8FF;margin-right:15px; margin-left: 15px;"></i>
 
-<i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:30px"></i>
+<i class='fa fa-amazon' style="font-size:48px;color:black;margin-right:15px; margin-left: 15px;"></i>
 
-<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:30px"></i>
+<i class='fa fa-linkedin' style="font-size:48px;color:#3498db;margin-right:15px; margin-left: 15px;"></i>
 
-<i class='fa fa-apple' style="font-size:48px;color:black;margin-right:30px"></i>
+<i class='fa fa-apple' style="font-size:48px;color:black;margin-right:15px; margin-left: 15px;"></i>
 
 
 </div>
@@ -127,8 +203,26 @@
 <br/>
 <br/>
 
-
-
 </body>
 </html>
+
+
+<script type="text/javascript">
+    
+    var doc = new jsPDF();
+    var specialElementHandlers = {
+        '#editor': function (element, renderer) {
+            return true;
+        }
+    };
+
+    $('#generate_report').click(function () {
+        doc.fromHTML($('#report').html(), 15, 15, {
+            'width': 170,
+                'elementHandlers': specialElementHandlers
+        });
+        doc.save('report.pdf');
+    });
+
+</script>
 {% endblock %}

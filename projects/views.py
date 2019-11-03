@@ -179,5 +179,39 @@ def history(request):
     return render(request, 'history.html', context)
 
 
+def mission(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'mission.html', context)
+
+
+def mission2(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'mission2.html', context)
+
+
+def unit_data(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'unit_data.html', context)
+
+
+
 
 
