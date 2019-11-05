@@ -212,6 +212,27 @@ def unit_data(request):
     return render(request, 'unit_data.html', context)
 
 
+def story(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'story.html', context)
+
+
+def super_weapon(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'super_weapon.html', context)
+
 
 
 

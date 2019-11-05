@@ -285,7 +285,7 @@ p {
               <a href="{% url 'mod' %}" class="block-20 thumb" style="background-image: url({% static 'img/mod.jpg' %});">
               </a>
               <div class="text text-thumb d-block pl-2 pl-md-4">
-                <h3 class="heading mb-2"><a href="{% url 'mod' %}">Recommendation of 22 Mods</a></h3>
+                <h3 class="heading mb-2"><a href="{% url 'mod' %}">Recommendation of 44 Mods</a></h3>
                 <div class="meta">
                   <div><a href="{% url 'mod' %}">Tanks are no match!</a></div>
                   <div><a href="{% url 'mod' %}">Guardian G.I.</a></div>
@@ -332,8 +332,101 @@ p {
     </section>
 
 
+    <section>
+      <div class="container">
+        <br>
+        <h1 align="center"><strong>Comprehensive Official Map Interpretation</strong></h1>
+        <br>
+        <div class="row">
 
-      <div class="demo" style="background-color: #FAFAFA;">
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map/bingtianxuedi.png' %})"></div>
+              <h1><a href="{% url 'map' %}#bt" style="color: black;">Heck Freezes Over</a></h1>   
+            </div>
+          </div>
+    
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map/aijizhilv.png' %});"></div>
+              <h1><a href="{% url 'map' %}#aiji" style="color: black;">Tour of Egypt</a></h1>
+            </div>
+          </div>
+          
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map/weigongzhidu.png' %});"></div>
+              <h1><a href="{% url 'map' %}#weigongzhidu" style="color: black;">City Under Siege</a></h1>
+              
+              
+            </div>
+          </div>
+
+        </div>
+        
+    </section>
+
+
+    <section>
+      <div class="container">
+        <br>
+        <h1 align="center"><strong>Top Mod Recommendation</strong></h1>
+        <br>
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/tiberium.jpg' %});"></div>
+              <h1><a href="{% url 'mod' %}#tiberium" style="color: black;">Tiberium Crisis</a></h1>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/mod.jpg' %})"></div>
+              <h1><a href="{% url 'mod' %}#mo" style="color: black;">Mental Omega</a></h1>   
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/d-day.png' %});"></div>
+              <h1><a href="{% url 'mod' %}#d-day" style="color: black;">D-Day</a></h1>
+              
+            </div>
+          </div>
+
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/doom.png' %});"></div>
+              <h1><a href="{% url 'mod' %}#doomdesire" style="color: black;">Doom Desire</a></h1>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/easb.jpg' %})"></div>
+              <h1><a href="{% url 'mod' %}#easb" style="color: black;">EASB Hour</a></h1>   
+            </div>
+          </div>
+    
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/crisis.png' %});"></div>
+              <h1><a href="{% url 'mod' %}#global" style="color: black;">Global Crisis</a></h1>
+              
+            </div>
+          </div>
+
+        </div>
+        
+    </section>
+
+
+
+    <div class="demo" style="background-color: #FAFAFA;">
         <div class="container">
             <br>
             <h1 align="center" ><strong>NaOH Group History</strong></h1><br><br>
@@ -462,14 +555,15 @@ p {
       <!-- <div class="overlay"></div> -->
       <div class="container">
         <div align="center">
-            <h1><strong>Preferred Camp of our Members</strong></h1>
+            <h1><strong>Preferred Camp of Our Members</strong></h1>
             <br><br>
         </div>
         <div class="row " align="center">
           
           <div class="col-md-3 ">
+            <img src="{% static "img/france_flag.png" %}" style="width:100%">
             <h1><strong>70%</strong></h1>
-            <h2><strong>France Camp</strong></h2> 
+            <h2><strong>France</strong></h2> 
             <br>
             <div class="progress" style="height:20px">
               <div class="progress-bar progress-bar-striped" style="width:70%; height:20px">70%</div>
@@ -477,8 +571,9 @@ p {
           </div>
 
           <div class="col-md-3 ">
+            <img src="{% static "img/iraq_flag.png" %}" style="width:100%">
             <h1><strong>90%</strong></h1>
-            <h2><strong>Iraq Camp</strong></h2>
+            <h2><strong>Iraq</strong></h2>
             <br>
             <div class="progress" style="height:20px">
               <div class="progress-bar progress-bar-striped" style="width:90%; height:20px">90%</div>
@@ -486,8 +581,9 @@ p {
           </div>
 
           <div class="col-md-3 ">
+            <img src="{% static "img/yuri_flag.png" %}" style="width:100%">
             <h1><strong>60%</strong></h1>
-            <h2><strong>Yuri Camp</strong></h2>
+            <h2><strong>Yuri</strong></h2>
             <br>
             <div class="progress" style="height:20px">
               <div class="progress-bar progress-bar-striped" style="width:60%; height:20px">60%</div>
@@ -495,8 +591,9 @@ p {
           </div>
 
           <div class="col-md-3 ">
+            <img src="{% static "img/america_flag.png" %}" style="width:100%">
             <h1><strong>55%</strong></h1>
-            <h2><strong>America Camp</strong></h2>
+            <h2><strong>America</strong></h2>
             <br>
             <div class="progress" style="height:20px">
               <div class="progress-bar progress-bar-striped" style="width:55%; height:20px">55%</div>
@@ -513,17 +610,12 @@ p {
     <section >
       <div class="container">
         <br>
-        <h1 align="center"><strong>Design of our members!</strong></h1>
+        <h1 align="center"><strong>Design of Our Members!</strong></h1>
         <br>
+
+
         <div class="row">
-          <div class="col-md-4">
-            <div class="causes causes-2 text-center ">
-              <div class="img" style="background-image: url({% static 'img/map2/chuan.jpg' %});"></div>
-              <h1>Dusk Storm</h1>
-              <h2>Designed by 911ldc</h2>
-              
-            </div>
-          </div>
+
           <div class="col-md-4">
             <div class="causes causes-2 text-center ">
               <div class="img" style="background-image: url({% static 'img/map2/shaobing.jpg' %})"></div>
@@ -532,6 +624,18 @@ p {
               
             </div>
           </div>
+    
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/hanma2.jpg' %});"></div>
+              <h1>Memphis</h1>
+              <h2>Designed by Han Ma</h2>
+              
+            </div>
+          </div>
+          
+          
           <div class="col-md-4">
             <div class="causes causes-2 text-center ">
               <div class="img" style="background-image: url({% static 'img/map2/xiaochunjie.jpg' %});"></div>
@@ -540,12 +644,41 @@ p {
               
             </div>
           </div>
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/hanma1.jpg' %});"></div>
+              <h1>Xue Nue Feng Tao</h1>
+              <h2>Designed by Han Ma</h2>
+              
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/chuan.jpg' %});"></div>
+              <h1>Dusk Storm</h1>
+              <h2>Designed by 911ldc</h2>
+              
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="causes causes-2 text-center ">
+              <div class="img" style="background-image: url({% static 'img/map2/hanma3.jpg' %});"></div>
+              <h1>Ri Yue Chong Kai Da Song Tian</h1>
+              <h2>Designed by Han Ma</h2>
+              
+            </div>
+          </div>
+
         </div>
         
     </section>
 
 
 
+    <br><br><br>
 
 
     <footer class=" ftco-sectio" style="background-color: lightyellow;">

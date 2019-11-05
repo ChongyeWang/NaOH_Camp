@@ -43,7 +43,7 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'background' %}"
                        class="btn btn-primary">
-                        Background
+                        Plot
                     </a> 
                 </div>
             </div>
@@ -51,15 +51,16 @@
 
         <div>
             <div id = "p_1" style="border:1px solid black;" >
-                <img id = "p_2" class="card-img-top" src="{% static 'img/a2.jpg' %}">
+                <img id = "p_2" class="card-img-top" src="{% static 'img/red_alert_story.jpg' %}">
                 <div align="center" class="card-body">
-                    <a href="{% url 'game_setting' %}"
+                    <a href="{% url 'story' %}"
                        class="btn btn-primary">
-                        Unit
+                        Background
                     </a> 
                 </div>
             </div>
         </div>
+
 
         <div>
             <div id = "p_1" style="border:1px solid black;" >
@@ -118,7 +119,20 @@
     </div>
 
 
-     <div id="base2" class="row" align="center">
+    <div id="base2" class="row" align="center">
+
+        <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/a2.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'game_setting' %}"
+                       class="btn btn-primary">
+                        Unit
+                    </a> 
+                </div>
+            </div>
+        </div>
+
 
         <div>
             <div id = "p_1" style="border:1px solid black;" >
@@ -126,12 +140,29 @@
                 <div align="center" class="card-body">
                     <a href="{% url 'unit_data' %}"
                        class="btn btn-primary">
-                        Unit Details
+                        Arsenal
                     </a> 
                 </div>
             </div>
         </div>
 
+         <div>
+            <div id = "p_1" style="border:1px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/super_weapon.png' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'super_weapon' %}"
+                       class="btn btn-primary">
+                        Super Weapon
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="base2" class="row" align="center">
         <div>
             <div id = "p_1" style="border:1px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/project1.png' %}">
@@ -143,6 +174,7 @@
                 </div>
             </div>
         </div>
+       
 
     </div>
 

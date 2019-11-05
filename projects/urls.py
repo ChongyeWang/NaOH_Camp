@@ -18,5 +18,7 @@ urlpatterns = [
     path("resource/history", views.history, name="history"),
     path("resource/allied_mission", views.mission, name="mission"),
     path("resource/soviet_mission", views.mission2, name="mission2"),
-    path("resource/unit_data", views.unit_data, name="unit_data")
+    path("resource/unit_data", views.unit_data, name="unit_data"),
+    path("resource/story", views.story, name="story"),
+    path("resource/super_weapon", views.super_weapon, name="super_weapon")
 ]
