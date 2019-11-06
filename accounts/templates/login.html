@@ -4,34 +4,195 @@
 
 <style type="text/css">
     
+    
+    p {
+        color: black;
+    }
+    
+
+    html,body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+
+    .container{
+    height: 100%;
+    align-content: center;
+
+    }
+
+   
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+
+    .card-header h3{
+    color: black;
+    }
+
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: lightyellow;
+    color: black;
+    border:0 !important;
+    }
+
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+
+    }
+
+    .remember{
+    color: white;
+    }
+
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+
+    .login_btn{
+    color: black;
+    background-color: #FFC312;
+    width: 100px;
+    }
+
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+
+    .links{
+    color: white;
+    }
+
+    .links a{
+    margin-left: 4px;
+    }
+
+
     input[type=submit] {
+        box-shadow:inset 0px 1px 3px 0px #91b8b3;
+        background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+        background-color:#768d87;
+        border-radius:5px;
+        border:1px solid #566963;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:3px 17px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #2b665e;
+    }
+    input[type=submit]:hover {
+        background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+        background-color:#6c7c7c;
+    }
+    input[type=submit]:active {
+        position:relative;
+        top:1px;
+    }
 
-    border-radius: 3px;
-    border: 0;
-    width: 60px;
-    height: 26px;
-
-    font-family: Tahoma;
-    background: #f4f4f4;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
-    /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #f4f4f4), color-stop(100%, #ededed));
-    /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
-    /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #f4f4f4 1%, #ededed 100%);
-    /* IE10+ */
-    background: linear-gradient(to bottom, #f4f4f4 1%, #ededed 100%);
-    /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f4f4f4', endColorstr='#ededed', GradientType=0);
-    /* IE6-9 */
-}
 </style>
 
-{% if form.errors %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+   
+<body>
+
+    <br><br>
+<div class="container">
+
+    <div class="d-flex justify-content-center h-100">
+        <div style="border-style: double; height: 450px; width: 450px;">
+            <div class="card-header">
+
+                <h3 >Sign In</h3>
+                
+            </div>
+            <div class="card-body" >
+
+                <form method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <table>
+                        <tr>
+                    
+                            <div class="input-group form-group">
+                                <td style="color: black; font-weight: bold;" >{{ form.username.label_tag }}</td>
+                                <td>{{ form.username }}</td>
+                                
+                            </div>
+                        </tr>
+
+                        <tr>
+                            <div class="input-group form-group">
+                                <td style="color: black; font-weight: bold;" >{{ form.password.label_tag }}</td>
+                                <td>{{ form.password }}</td>
+                            </div>
+
+                        </tr>
+                    </table>
+
+                    <input type="submit" value="login" style="margin-top: 20px;">
+                    <input type="hidden" name="next" value="{{ next }}">
+                </form>
+                {% if form.errors %}
+                <p>Your username and password didn't match. Please try again.</p>
+                {% endif %}
+
+                {% if next %}
+                    {% if user.is_authenticated %}
+                    <p>Your account doesn't have access to this page. To proceed,
+                    please login with an account that has access.</p>
+                    {% else %}
+                    <p>Please login to see this page.</p>
+                    {% endif %}
+                {% endif %}
+
+                        <!-- <div class="row align-items-center remember">
+                            <input type="checkbox">Remember Me
+                        </div> -->
+                
+                    
+            
+            </div>
+            <hr>
+            <div class="row" style="width: 400px; margin: 0 auto;">
+                <div >
+                    <a style="color: #00008B; margin-right: 50px; margin-left: 16px;" id = "a1" class="navbar-brand" href="{% url 'register' %}">New User</a>
+                </div>
+                <div >
+                    <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'register' %}">Forget Your Password</a>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- {% if form.errors %}
 <p>Your username and password didn't match. Please try again.</p>
 {% endif %}
 
@@ -57,11 +218,10 @@
 </tr>
 </table>
 
-<input type="submit" value="login">
-<input type="hidden" name="next" value="{{ next }}">
+
 
 <a style="color: #00008B; margin-left: 60px;" id = "a1" class="navbar-brand" href="{% url 'register' %}">New User?</a>
 </form>
-
+ -->
 
 {% endblock %}
