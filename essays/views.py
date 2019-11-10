@@ -76,8 +76,6 @@ def view_essays(request):
     return render(request, "view_essays.html", context)
 
 
-    
-    
 
 
 def essay_details(request, pk):

@@ -1,0 +1,220 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style type="text/css">
+        textarea {
+            width: 500px;
+            height: 600px;
+            margin-right: 80px;
+            resize: none;
+        }
+
+        input {
+            width: 300px;
+        }
+
+        #main_chat {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        #online_user_list {
+            height:200px; 
+            overflow:hidden; 
+            overflow-y:scroll;
+
+            background-color: lightyellow;
+        }
+
+        button {
+         display:inline-block;
+         padding:0.46em 1.6em;
+         border:0.1em solid #000000;
+         margin:0 0.2em 0.2em 0;
+         border-radius:0.12em;
+         box-sizing: border-box;
+         text-decoration:none;
+         font-family:'Roboto',sans-serif;
+         font-weight:300;
+         color:#000000;
+         text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+         background-color:#FFFFFF;
+         text-align:center;
+         transition: all 0.15s;
+        }
+        button {
+         text-shadow: 0 0 2em rgba(255,255,255,1);
+         color:#FFFFFF;
+         border-color:#FFFFFF;
+        }
+        
+    </style>
+</head>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Room</title>
+</head>
+<body>
+    <br>
+    <div class="row" id="main_chat">
+        <div class="column">
+            <textarea id="chat-log" >报告指挥官：听说韭菜割了会变得更粗更大，胡子刮了也会变得更粗更长，所以现在我有一个很大胆的想法。。。&#13;&#10;</textarea><br/><br>
+            <input id="chat-message-input" type="text" size="100" style="width: 500px; height: 50px;" /><br/>
+            <input id="chat-message-submit" type="button" value="Send" style="width: 100px;" />
+            <br>
+        </div>
+        <div class="column">
+
+
+            <table>
+                <tr>
+                    <td><a onclick='f1()'><img src="{% static "img/mutator.png" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f2()'><img src="{% static "img/weather_control.jpg" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f3()'><img src="{% static "img/mo_square.png" %}" style="width:100px;"></a></td>
+                </tr>
+                <tr style="color: black;">
+                    <td align="center"><a onclick='f1()'>Red Alert 2</a></td>
+                    <td align="center"><a onclick='f2()'>Yuri's Revenge</a></td>
+                    <td align="center"><a onclick='f3()'>Mental Omega</td>
+                </tr>
+
+                <tr>
+                    <td><a onclick='f4()'><img src="{% static "img/bt_square.png" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f5()'><img src="{% static "img/aiji_square.png" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f6()'><img src="{% static "img/wushui_square.png" %}" style="width:100px;"></a></td>
+                </tr>
+                <tr style="color: black;">
+                    <td align="center"><a onclick='f4()'>Freezes</a></td>
+                    <td align="center"><a onclick='f5()'>Egypt</a></td>
+                    <td align="center"><a onclick='f6()'>Others</td>
+                </tr>
+            </table>
+            <br>
+
+            <h4>Create A New Room</h4>
+            <input id="room-name-input1" type="text" size="100"/><br/>
+            <input style="background-color: lightgreen;" id="room-name-submit1" type="button" value="Create"/>
+
+            <br><br>
+
+            <h4>Online Users</h4>
+
+            <ul id="online_user_list">
+
+                {% for user in users %}
+                <li style="color: black;">{{ user }}</li>
+                {% endfor %}
+
+            </ul>
+
+            <a class="navbar-brand" href="{% url 'all_users' %}">View All Users</a>
+
+           
+        </div>
+    </div>
+
+    <br><br>
+
+    
+</body>
+
+<script type="text/javascript">
+    function f1() {
+        window.location.pathname = '/chat/' + 'r1' + '/';       
+    } 
+    function f2() {
+        window.location.pathname = '/chat/' + 'r2' + '/';       
+    } 
+    function f3() {
+        window.location.pathname = '/chat/' + 'r3' + '/';       
+    }   
+
+    function f4() {
+        window.location.pathname = '/chat/' + 'r4' + '/';       
+    } 
+    function f5() {
+        window.location.pathname = '/chat/' + 'r5' + '/';       
+    } 
+    function f6() {
+        window.location.pathname = '/chat/' + 'r6' + '/';       
+    }   
+    
+</script>
+
+
+<script type="text/javascript">
+    var textarea = document.getElementById('chat-log');
+    textarea.scrollTop = textarea.scrollHeight;
+</script>
+
+<script>
+
+    var chatSocket = new WebSocket(
+        'ws://' + window.location.host +
+        '/ws/chat/' );
+
+    chatSocket.onmessage = function(e) {
+        var data = JSON.parse(e.data);
+        var message = data['message'];
+        document.querySelector('#chat-log').value += (message + '\n');
+        var textarea = document.getElementById('chat-log');
+        textarea.scrollTop = textarea.scrollHeight;
+    };
+
+    chatSocket.onclose = function(e) {
+        console.error('Chat socket closed unexpectedly');
+    };
+
+    document.querySelector('#chat-message-input').focus();
+    document.querySelector('#chat-message-input').onkeyup = function(e) {
+        if (e.keyCode === 13) {  // enter, return
+            document.querySelector('#chat-message-submit').click();
+        }
+    };
+
+    document.querySelector('#chat-message-submit').onclick = function(e) {
+        var messageInputDom = document.querySelector('#chat-message-input');
+        var message = messageInputDom.value;
+        var time = new Date().toLocaleTimeString();
+        chatSocket.send(JSON.stringify({
+            'message': time + " " + "{{user}}" + ": " + message
+        }));
+
+        messageInputDom.value = '';
+        var textarea = document.getElementById('chat-log');
+        textarea.scrollTop = textarea.scrollHeight;
+    };
+</script>
+
+<script>
+    document.querySelector('#room-name-input1').focus();
+    document.querySelector('#room-name-input1').onkeyup = function(e) {
+        if (e.keyCode === 13) {  // enter, return
+            document.querySelector('#room-name-submit1').click();
+        }
+    };
+
+    document.querySelector('#room-name-submit1').onclick = function(e) {
+        var roomName = document.querySelector('#room-name-input1').value;
+        if (roomName.length != 0){
+            window.location.pathname = '/chat/' + roomName + '/';
+        }
+        
+    };
+</script>
+
+</html>
+
+
+
+
+{% endblock %}

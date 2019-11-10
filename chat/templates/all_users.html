@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block page_content %}
+  
+<style type="text/css">
+    #all_user_list {
+        height:800px; 
+        overflow:hidden; 
+        overflow-y:scroll;
+
+        background-color: lightyellow;
+    }
+    
+</style>
+<body>
+
+
+<ul id="all_user_list">
+
+{% for user in users %}
+<li style="color: black;">{{ user }}</li>
+{% endfor %}
+
+</ul>
+        
+
+</body>
+
+
+
+{% endblock %}

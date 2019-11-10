@@ -28,4 +28,5 @@ urlpatterns = [
     path("data/", include("data.urls")),
     path("essays/", include("essays.urls")),
     path("videos/", include("videos.urls")),
+    path("chat/", include("chat.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

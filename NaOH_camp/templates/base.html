@@ -12,9 +12,9 @@
 
     .logo {
         
-        width: 65px;
-        height: 32.5px;
-        margin-right: 5px;
+        width: 70px;
+        height: 35px;
+        margin-right: 10px;
         
     }
 
@@ -77,6 +77,9 @@
               <a class="navbar-brand" href="{% url 'view_videos' %}">视频</a>
             </li>
             <li class="nav-item">
+              <a class="navbar-brand" href="{% url 'chat_index' %}">聊天室</a>
+            </li>
+            <li class="nav-item">
               <a class="navbar-brand" href="{% url 'info_team' %}">战队简介</a>
             </li>
             <li class="nav-item">
@@ -95,7 +98,7 @@
             <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
             <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
         {% else %}
-            <a class="navbar-brand">{{user}}</a>
+            
             <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
         {% endif %}
 
@@ -133,6 +136,9 @@
               <a class="navbar-brand" href="{% url 'view_videos' %}">Video</a>
             </li>
             <li class="nav-item">
+              <a class="navbar-brand" href="{% url 'chat_index' %}">Chat</a>
+            </li>
+            <li class="nav-item">
               <a class="navbar-brand" href="{% url 'info_team' %}">Team</a>
             </li>
             <li class="nav-item">
@@ -151,7 +157,7 @@
             <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
             <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
         {% else %}
-            <a class="navbar-brand">{{user}}</a>
+            
             <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
         {% endif %}
 
@@ -194,6 +200,9 @@
               <a class="navbar-brand" href="{% url 'info_team' %}">Team</a>
             </li>
             <li class="nav-item">
+              <a class="navbar-brand" href="{% url 'chat_index' %}">Chat</a>
+            </li>
+            <li class="nav-item">
               <a class="navbar-brand" href="{% url 'info_index' %}">NaOH Group</a>
             </li>
             <li class="nav-item">
@@ -206,7 +215,7 @@
             <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
             <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
         {% else %}
-            <a class="navbar-brand">{{user}}</a>
+            
             <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
         {% endif %}
 
