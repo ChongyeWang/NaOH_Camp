@@ -98,24 +98,28 @@ input[type=submit] {
             
 .container .box { 
     width:800px; 
-    
+
     display:table; 
 } 
 .container .box .box-row { 
     display:table-row; 
+
 } 
 .container .box .box-cell { 
     display:table-cell; 
+
     
     padding:10px; 
+    border-style: double;
 } 
 .container .box .box-cell.box1 { 
     background:lightgrey; 
     background:lightyellow; 
     text-align:justify; 
+    background-color: #272727;
  } 
 .container .box .box-cell.box2 { 
-    background:lightgreen; 
+    background:#7FFFD4; 
     text-align:justify 
 } 
 
@@ -128,7 +132,7 @@ input[type=submit] {
 
 <body>
 
-<div style="width:800px; margin:0 auto;">
+<div style="width:860px; margin:0 auto;">
     
     <div>
       <br>
@@ -140,16 +144,16 @@ input[type=submit] {
     <div class="container"> 
         <div class="box"> 
             <div class="box-row"> 
-                <div class="box-cell box1" style="width: 500px;"> 
+                <div class="box-cell box1" style="width: 550px;"> 
                     <div style="width: 550px;">
                     {% for post in posts %}
-                        <h2><a style="color: #00008B;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+                        <h2><a style="color: #7FFFD4;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
                         <small>
                             {{ post.author }} |&nbsp;
                             {{ post.created_on.date }} |&nbsp;
                             Categories:&nbsp;
                             {% for category in post.categories.all %}
-                            <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
+                            <a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
                                 {{ category.name }}
                             </a>&nbsp;
                             {% endfor %}
@@ -217,6 +221,7 @@ input[type=submit] {
             </div> 
         </div> 
     </div> 
+    <br>
 
 
 </div>

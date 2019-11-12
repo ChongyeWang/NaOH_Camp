@@ -1,7 +1,6 @@
 {% load static %}
 
-<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
- -->
+
 <link rel="stylesheet" href={%static "css/style.css" %}>
 
 <html lang="zh">
@@ -11,10 +10,12 @@
     <style>
 
     .logo {
+      
+        width: 80px;
+        height: 40px;
         
-        width: 70px;
-        height: 35px;
-        margin-right: 10px;
+        margin-right: 13px;
+        display: block;
         
     }
 
@@ -47,181 +48,201 @@
 {% if user.is_authenticated %}
 
 {% if language == "Chinese" %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+          <img class="logo" src="{% static "img/NaOH.png" %}">
+    </a>
+    
 
-<nav id="base" class="navbar navbar-expand-lg navbar-light">
-    <div id = "main_bar" class="container" >
-        <img class="logo" src="{% static "img/NaOH.png" %}">
-        <a class="navbar-brand" href="{% url 'home' %}">主页</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'home' %}">主页</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog_index' %}">论坛</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'project_index' %}">档案馆</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'map' %}">地图池</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'data_predict' %}">测试</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_essays' %}">专栏</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_videos' %}">视频</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'chat_index' %}">聊天室</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_team' %}">战队简介</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_index' %}">烧碱集团</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'author_index' %}">关于我们</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'setting' %}">设置</a>
+          </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'blog_index' %}">论坛</a>
-            </li>
-            <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">档案馆</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'map' %}">地图池</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'data_predict' %}">军衔预测</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_essays' %}">专栏</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_videos' %}">视频</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'chat_index' %}">聊天室</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_team' %}">战队简介</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_index' %}">烧碱集团</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'author_index' %}">关于我们</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'setting' %}">设置</a>
-            </li>
-
-          </ul>
-        </div>
-        {% if not user.is_authenticated %}
-            <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">登录</a>
-            <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">注册</a>
-        {% else %}
-            
-            <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">退出</a>
-        {% endif %}
+        </ul>
 
     </div>
-
+    {% if not user.is_authenticated %}
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}">登录</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}">注册</a>
+    {% else %}
+        
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}">退出</a>
+    {% endif %}
+  </div>
 </nav>
+
+
+
 
 {% else %}
-<nav id="base_en" class="navbar navbar-expand-lg navbar-light">
-    <div id = "main_bar" class="container">
-        <img class="logo" src="{% static "img/NaOH.png" %}">
-        <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+          <img class="logo" src="{% static "img/NaOH.png" %}">
+    </a>
+    
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog_index' %}">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'project_index' %}">Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'map' %}">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'data_predict' %}">Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_essays' %}">Column</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_videos' %}">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'chat_index' %}">Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_team' %}">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_index' %}">NaOH Group</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'author_index' %}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'setting' %}">Setting</a>
+          </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'blog_index' %}">Forum</a>
-            </li>
-            <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">Archive</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'map' %}">Map</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'data_predict' %}">Test</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_essays' %}">Column</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_videos' %}">Video</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'chat_index' %}">Chat</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_team' %}">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_index' %}">NaOH Group</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'author_index' %}">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'setting' %}">Setting</a>
-            </li>
-
-          </ul>
-        </div>
-        {% if not user.is_authenticated %}
-            <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
-            <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
-        {% else %}
-            
-            <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
-        {% endif %}
+        </ul>
 
     </div>
-
+    {% if not user.is_authenticated %}
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}">Log in</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}">Register</a>
+    {% else %}
+        
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}">Exit</a>
+    {% endif %}
+  </div>
 </nav>
+
 
 {% endif %}
 
 {% else %}
-<nav id="base_en" class="navbar navbar-expand-lg navbar-light">
-    <div id = "main_bar" class="container">
-        <img class="logo" src="{% static "img/NaOH.png" %}">
-        <a class="navbar-brand" href="{% url 'home' %}">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'home' %}">
+          <img class="logo" src="{% static "img/NaOH.png" %}">
+    </a>
+    
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'blog_index' %}">Forum</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'project_index' %}">Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'map' %}">Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'data_predict' %}">Test</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_essays' %}">Column</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'view_videos' %}">Video</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'chat_index' %}">Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_team' %}">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'info_index' %}">NaOH Group</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'author_index' %}">About Us</a>
+          </li>
+          
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'blog_index' %}">Forum</a>
-            </li>
-            <li class="nav-item active">
-              <a class="navbar-brand" href="{% url 'project_index' %}">Archive</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'map' %}">Map</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'data_predict' %}">Test</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_essays' %}">Column</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'view_videos' %}">Video</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_team' %}">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'chat_index' %}">Chat</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'info_index' %}">NaOH Group</a>
-            </li>
-            <li class="nav-item">
-              <a class="navbar-brand" href="{% url 'author_index' %}">About us</a>
-            </li>
-
-          </ul>
-        </div>
-        {% if not user.is_authenticated %}
-            <a style="color: #00008B;" id = "a1" class="navbar-brand" href="{% url 'login' %}">Log in</a>
-            <a style="color: #00008B;" id = "a2" class="navbar-brand" href="{% url 'register' %}">Register</a>
-        {% else %}
-            
-            <a style="color: #00008B;" id = "a3" class="navbar-brand" href="{% url 'logout' %}">Exit</a>
-        {% endif %}
+        </ul>
 
     </div>
-
+    {% if not user.is_authenticated %}
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}">Log in</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}">Register</a>
+    {% else %}
+        
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}">Exit</a>
+    {% endif %}
+  </div>
 </nav>
+
 
 
 {% endif %}

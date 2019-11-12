@@ -1,17 +1,163 @@
 
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
     <title>Chat Room</title>
+    <style type="text/css">
+        textarea {
+            width: 500px;
+            height: 540px;
+            margin-right: 80px;
+            resize: none;
+            border:solid 1px black;
+        }
+
+    
+        
+        #room {
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        #chat-message-input{
+            width: 500px;
+            height: 80px;
+        }
+
+        #chat-message-submit{
+            width: 50px;
+            
+        }
+        
+
+        
+    </style>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
-    <input id="chat-message-input" type="text" size="100"/><br/>
-    <input id="chat-message-submit" type="button" value="Send"/>
-    <br>
-    <a class="navbar-brand" href="{% url 'chat_index' %}">Return</a>
+    <div id="room">
+        <br>
+        <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
+        <input id="chat-message-input" type="text" size="100"/ style="width: 500px; height: 30px; border:solid 1px black;" placeholder="我有一个大胆的想法.."><br/>
+        
+        <div class="row" style="margin-left: -1px;">
+        <a onclick="e1()" style="font-size: 30px;">😀</a>
+        <a onclick="e2()" style="font-size: 30px;">😃</a>
+        <a onclick="e3()" style="font-size: 30px;">😅</a>
+        <a onclick="e4()" style="font-size: 30px;">😂</a>
+
+        <a onclick="e5()" style="font-size: 30px;">😒</a>
+        <a onclick="e6()" style="font-size: 30px;">😳</a>
+        <a onclick="e7()" style="font-size: 30px;">😱</a>
+        <a onclick="e8()" style="font-size: 30px;">😓</a>
+
+        <a onclick="e9()" style="font-size: 30px;">👍</a>
+        <a onclick="e10()" style="font-size: 30px;">🙏</a>
+        <a onclick="e11()" style="font-size: 30px;">💪</a>
+        <a onclick="e12()" style="font-size: 30px;">👀</a>
+
+        <a onclick="e13()" style="font-size: 30px;">👴</a>
+        <a onclick="e14()" style="font-size: 30px;">🎉</a>
+        <a onclick="e15()" style="font-size: 30px;">💤</a>
+        <a onclick="e16()" style="font-size: 30px;">💢</a>
+        <a onclick="e17()" style="font-size: 30px;">🙈</a>
+        
+        </div>
+
+        <div align="right">
+        <input id="chat-message-submit" type="button" value="Send" style="width: 100px; height: 30px;" />
+        </div>
+        <div align="left">
+            <h2 align="center"><a class="navbar-brand" href="{% url 'chat_index' %}">Return</a></h2>
+
+        </div>
+
+    </div>
+
+    
+    
+
 </body>
+
+<script>
+function e1()
+{
+    document.getElementById("chat-message-input").value += '😀';
+}
+function e2()
+{
+    document.getElementById("chat-message-input").value += '😀';
+}
+function e3()
+{
+    document.getElementById("chat-message-input").value += '😅';
+}
+function e4()
+{
+    document.getElementById("chat-message-input").value += '😂';
+}
+function e5()
+{
+    document.getElementById("chat-message-input").value += '😒';
+}
+function e6()
+{
+    document.getElementById("chat-message-input").value += '😳';
+}
+function e7()
+{
+    document.getElementById("chat-message-input").value += '😱';
+}
+function e8()
+{
+    document.getElementById("chat-message-input").value += '😓';
+}
+function e9()
+{
+    document.getElementById("chat-message-input").value += '👍';
+}
+function e10()
+{
+    document.getElementById("chat-message-input").value += '🙏';
+}
+
+function e11()
+{
+    document.getElementById("chat-message-input").value += '💪';
+}
+function e12()
+{
+    document.getElementById("chat-message-input").value += '👀';
+}
+function e13()
+{
+    document.getElementById("chat-message-input").value += '👴';
+}
+function e14()
+{
+    document.getElementById("chat-message-input").value += '🎉';
+}
+function e15()
+{
+    document.getElementById("chat-message-input").value += '💤';
+}
+function e16()
+{
+    document.getElementById("chat-message-input").value += '💢';
+}
+function e17()
+{
+    document.getElementById("chat-message-input").value += '🙈';
+}
+
+
+</script>
+
+
 <script>
     var roomName = {{ room_name_json }};
 
@@ -23,6 +169,8 @@
         var data = JSON.parse(e.data);
         var message = data['message'];
         document.querySelector('#chat-log').value += (message + '\n');
+        var textarea = document.getElementById('chat-log');
+        textarea.scrollTop = textarea.scrollHeight;
     };
 
     chatSocket.onclose = function(e) {
@@ -41,11 +189,15 @@
         var message = messageInputDom.value;
         var time = new Date().toLocaleTimeString();
         chatSocket.send(JSON.stringify({
-            'message': time + " " + "{{user}}" + message
+            'message': time + " " + "{{user}}: " + message
         }));
 
         messageInputDom.value = '';
+        var textarea = document.getElementById('chat-log');
+        textarea.scrollTop = textarea.scrollHeight;
     };
 </script>
 </html>
 
+
+{% endblock %}

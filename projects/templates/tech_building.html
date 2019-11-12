@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<style type="text/css">
+	#tech1 {
+		width: 250px;
+		height: 250px;
+		margin-right: 20px;
+		float: left;
+	}
+</style>
+
+<br>
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech1.png' %}">
+	<h5 style="font-weight: bold;">Tech Airport</h5>
+	</div>
+
+	<h5 align="justify">Airports are civilian structures designed for the commercial traffic of passenger aircraft. During wartime, however, these buildings could be captured and the planes commandeered by a military engineer for their use. They are usually used to coordinate a paratrooper assault consisting of the respective faction's main infantry in a theater. The transport plane used to carry paratroopers may be modeled after real life US C-130 transport aircraft.
+
+	Once captured, a Tech Airport allowed commanders to call Paratroopers. About 7 or so are dropped from each plane; typically, Soviets will get 9 from each paradrop, whereas Allied and Yuri will get only 6 due to their infantry's higher value. Clever American commanders combined their paradrop ability with this to bring large amounts of GIs in any needed area in minutes.
+
+	In the 4th Soviet mission (Romanov on the Run) of Yuri's Revenge, the Soviets made additional use of this structure. During this retrieval and evacuation mission from Libya, the Soviets capture an airport in order to call in an evac helicopter to transport Romanov from the theater.
+
+	It looks slightly different in Yuri's Revenge, where its footprint is square shaped rather than being sloped as with the Red Alert 2 variant.</h5>
+</div>
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech2.png' %}">
+	<h5 style="font-weight: bold;">Tech Oil Derrick</h5>
+	</div>
+	<h5 align="justify">Tech oil derricks were one of the most significant tech buildings during the first and second iterations of the Third World War, as oil was a very valuable resource. Commanders from all factions could order their engineers to capture these structures. Once captured, an oil derrick instantly produced 1000 dollars for its new owner, followed thereafter by a steady, unlimited stream of revenue, which was typically 20 dollars per cycle. The endless cash provided by the capture of an Oil Derrick makes these buildings valuable targets to all commanders, as they provide the flashpoint for many vicious skirmishes. Once captured, oil derricks are often zealously protected, lest it be captured by the enemy or simply destroyed. Commanders who are lucky enough to capture multiple derricks often become quite paranoid, building needless amounts of defenses to protect them. One should not be surprised to find various defense structures protecting them, from humble sentry guns to grand cannons.
+
+	Oil is highly combustible. If an oil derrick is destroyed, the explosion will damage anything nearby, making it possible to take out a significant amount of the defenses around a derrick by destroying it, rather than trying to capture it. Chain explosion can occur among neighbouring Oil Derricks and/or other explosives.
+
+	If a computer controlled opponent is defeated by a player or another computer, any oil derrick(s) under that defeated team will be instantly destroyed.
+
+	Oil Derricks cannot be plundered by a Spy or Floating Disc.</h5>
+</div>
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech3.png' %}">
+	<h5 style="font-weight: bold;">Tech Hospital</h5>
+	</div>
+	<h5 align="justify">Originally, a damaged infantry unit would enter the hospital, and would come out a short time later fully healed. Commanders saw the usefulness of this and had Engineers trained to capture the building as a center to heal injured troops. After the Allied forces came from the future of the Psychic Dominator Disaster brought news of how brutal the war would be, medical funding was increased allowing hospitals to deliver medical supplies across a battlefield (however, infantry would no longer be able to actually enter the hospital as before.) Like the Tech Machine Shop, owning more allowed faster healing. The healing rate is vastly superior to that of the Machine Shop.
+
+	All infantry units receive portable medical kits and extra armor to heal themselves. Although Elite infantry units already know basic field survival and can heal themselves without any medical attention (like the heroes, such as Tanya, or elite infantry), a Tech Hospital or Tech Machine Shop was required to allow all units to completely heal or repair themselves.
+
+	Commanders can capture more tech hospitals to stack up the healing effect of their large infantry groups. However, this might not be effective when attacking a brutal AI opponent as France, as Prism tanks or Grand Cannons of sufficient firepower may be able to obliterate them. Hospitals are not permanently on one side. With the arrival of an enemy engineer, a hospital may be redirected to produce medical equipment to treat members of the new allegiance. Nonetheless, hospitals are useful for reinforcing a commando raid, as it helps heal the infantry while in combat or retreating. It takes an estimated 5 to 10 seconds to patch up a unit to full health, depending on the damage taken and the health of infantry originally.
+
+	It should also be noted that when infantry actually enters the Tech Hospital, due to a glitch, or else the nature of the Hospital's functioning, the unit that exits the Hospital is duplicated in the player's Cloning vat, if any.
+
+	In Red Alert 2, if the hospital is neutral colored, it cannot be attacked other than force-firing. Unlike in Yuri's Revenge, where they can be attacked even if they're neutral.</h5>
+</div>
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech4.png' %}">
+	<h5 style="font-weight: bold;">Tech Outpost</h5>
+	</div>
+	<h5 align="justify">The Tech Outpost is a tech building seen during Third World War and Psychic Dominator Disaster. It is basically a Service Depot with a defense system to protect it from attacks and enemy engineers. Though of considerably less value than a Tech Airport or Tech Hospital, the Tech Outpost was of significantly greater utility than the standard Soviet and Allied Service Depots. First off, it had more health and therefore it could survive enemy fire much longer than other service depots. Additionally, it had a defensive turret, similar to that of an IFV, to prevent enemy engineers to capture it and to take down infantry and light vehicles and even can attack aircraft. Finally, when captured, it allowed additional construction to take place around it, much like a construction yard. It has a significant value for Yuri faction, as they cannot build repair depots.
+
+	This structure was seen both in Third World War and the Psychic Dominator Disaster, present in many locales, including cities, islands, and deserts. It was seen in cities and other locations of the world, such as deserts or tropical islands.</h5>
+</div>
+
+
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech5.png' %}">
+	<h5 style="font-weight: bold;">Tech Civilian Power Plant</h5>
+	</div>
+	<h5 align="justify">Civilian Power Plants provide power for civilian areas. In times of war, Engineers could capture them to provide power for a military base. At times control of these sites could be crucial.
+
+	These power plants are unlike the ones set up relatively quickly on the battlefield, and are well constructed. Therefore, they are superior to all basic power plants, and thus they were often zealously sought out.
+
+	All these power plants are heavily armored, and will take a lot of damage. They cannot be sabotaged by a Spy, nor they can be power-drained by a Floating Disc, making them much more reliable in power consistency. During the Battle of San Francisco, Allied, Soviet and Yuri forces competed to control the city's power plants to bring the Time Machine (Allied and Soviets) or the Psychic Dominator (Yuri) online.
+	During the Battle of Seattle during the Psychic Dominator Disaster, Allied and Yuri's forces contested over a series of power plants across the city to deny the other use of their superweapon while at the same time powering their own.</h5>
+</div>
+
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech7.png' %}">
+	<h5 style="font-weight: bold;">Tech Machine Shop</h5>
+	</div>
+	<h5 align="justify">The Tech Machine Shop was a civilian facility that could quickly manufacture almost any replacement part for vehicles. Military engineers may capture them to allow for the repair of land vehicles, ships and aircrafts all over the battlefield.
+
+	The more tech machine shops a commander owns, the faster the repairs. With one tech machine shop, the repair rate seem to be about 5% of a vehicles structural integrity every few tens of seconds. The repair ability will stack with self-repair ability granted by Elite veterancy or inherent self-repair capabilities, for instance, in the case of the Apocalypse tanks. With four or so machine shops, an elite apocalypse tank will be nearly invulnerable.
+
+	Many of these buildings were captured and used by various factions during the Psychic Dominator Disaster. Until they are captured, these buildings repair civilian vehicles and naval units. By the time of the War of the Three Powers, the Machine Shop was replaced by two separate Tech Structures, the Garage (repairs land vehicles) and the Dry Dock.</h5>
+</div>
+
+<br><br>
+
+<div>
+	<div style="float: left;">
+	<img id = "tech1" class="card-img-top" src="{% static 'img/tech8.png' %}">
+	<h5 style="font-weight: bold;">Tech Secret Lab</h5>
+	</div>
+	<h5 align="justify">Secret laboratories allowed the production of special units usually affiliated with specific countries. However, they can sometimes give the production capability for a unit that can already be created.
+
+	Affiliation with a side does not matter as an Allied commander could obtain the ability to train Soviet units such as Desolators or Terrorists, or other Allied units like the Tank Destroyer or the Sniper. These buildings were the rarest tech buildings in the war. 
+
+	There is a tidbit about the Secret Lab to keep in mind when using this on maps or capturing them. The game does not choose the unit the player will receive when the Lab is captured. Instead, the game decides which unit to grant at game start, and it does not change for the duration. Capturing multiple Labs does not yield additional units, and this is why it can be captured and the player will not receive an additional unit.
+
+	In Head Games, the final Soviet mission in Yuri's Revenge, a Tech Secret Lab is specifically scripted to access the Grand Cannon from Allied France.</h5>
+</div>
+
+<br><br>
+
+
+
+{% endblock %}

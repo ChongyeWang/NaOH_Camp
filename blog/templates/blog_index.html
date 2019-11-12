@@ -58,15 +58,15 @@
 		display:table-cell; 
 		border-style: groove;
 		padding:10px; 
+		background-color: black;
 	} 
 	.container .box .box-cell.box1 { 
-		background:lightgrey; 
-		background:lightyellow; 
+		background-color: black;
+		
 		text-align:justify; 
-		border-style: groove;
 	} 
 	.container .box .box-cell.box2 { 
-		background:lightgreen; 
+		
 		text-align:justify 
 
 	} 
@@ -75,6 +75,7 @@
 </style>
 <br>
 <div style="width: 760px;margin:0 auto;">
+
 
 	<div class="row" align="center">
 
@@ -96,7 +97,7 @@
             <div class="box-cell box1" style="width: 50%;"> 
             	{% for category in categories1 %}
 
-		        <h2 ><a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
+		        <h2 ><a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
 		        {{ category.name }}
 		        </a>&nbsp;<h2>
 		        <hr>
@@ -107,7 +108,7 @@
             <div class="box-cell box2" style="width: 50%;"> 
             	{% for category in categories2 %}
 
-		        <h2><a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
+		        <h2><a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
 		        {{ category.name }}
 		        </a>&nbsp;<h2>
 		        <hr>

@@ -234,5 +234,25 @@ def super_weapon(request):
     return render(request, 'super_weapon.html', context)
 
 
+def tech_building(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'tech_building.html', context)
+
+
+def timeline(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'timeline.html', context)
 
 

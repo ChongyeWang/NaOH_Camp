@@ -53,7 +53,7 @@ def room(request, room_name):
 	context = {
 		'language': language,
 		'room_name_json': mark_safe(json.dumps(room_name)),
-		'user': user
+		
 	}
 	return render(request, 'room.html', context)
 

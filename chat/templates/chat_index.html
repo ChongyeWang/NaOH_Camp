@@ -8,13 +8,15 @@
     <style type="text/css">
         textarea {
             width: 500px;
-            height: 600px;
+            height: 540px;
             margin-right: 80px;
             resize: none;
+            border:solid 1px black;
         }
 
         input {
             width: 300px;
+            border:solid 1px black;
         }
 
         #main_chat {
@@ -64,16 +66,42 @@
     <title>Chat Room</title>
 </head>
 <body>
-    <br>
-    <div class="row" id="main_chat">
+    
+    <div class="row" id="main_chat" style="margin-top: 10px;">
         <div class="column">
-            <textarea id="chat-log" >报告指挥官：听说韭菜割了会变得更粗更大，胡子刮了也会变得更粗更长，所以现在我有一个很大胆的想法。。。&#13;&#10;</textarea><br/><br>
-            <input id="chat-message-input" type="text" size="100" style="width: 500px; height: 50px;" /><br/>
+            <textarea id="chat-log" >报告指挥官：听说韭菜割了会变得更粗更大，胡子刮了也会变得更粗更长，所以现在我有一个很大胆的想法。。。&#13;&#10;</textarea><br/>
+            <input id="chat-message-input" type="text" size="100" style="width: 500px; height: 50px;" placeholder="我有一个大胆的想法.."/><br/>
+            <div class="row" style="margin-left: -1px;">
+            <a onclick="e1()" style="font-size: 30px;">😀</a>
+            <a onclick="e2()" style="font-size: 30px;">😃</a>
+            <a onclick="e3()" style="font-size: 30px;">😅</a>
+            <a onclick="e4()" style="font-size: 30px;">😂</a>
+
+            <a onclick="e5()" style="font-size: 30px;">😒</a>
+            <a onclick="e6()" style="font-size: 30px;">😳</a>
+            <a onclick="e7()" style="font-size: 30px;">😱</a>
+            <a onclick="e8()" style="font-size: 30px;">😓</a>
+
+            <a onclick="e9()" style="font-size: 30px;">👍</a>
+            <a onclick="e10()" style="font-size: 30px;">🙏</a>
+            <a onclick="e11()" style="font-size: 30px;">💪</a>
+            <a onclick="e12()" style="font-size: 30px;">👀</a>
+
+            <a onclick="e13()" style="font-size: 30px;">👴</a>
+            <a onclick="e14()" style="font-size: 30px;">🎉</a>
+            <a onclick="e15()" style="font-size: 30px;">💤</a>
+            <a onclick="e16()" style="font-size: 30px;">💢</a>
+            <a onclick="e17()" style="font-size: 30px;">🙈</a>
+            
+            </div>
+
+            <div>
             <input id="chat-message-submit" type="button" value="Send" style="width: 100px;" />
+            </div>
             <br>
         </div>
-        <div class="column">
 
+        <div class="column">
 
             <table>
                 <tr>
@@ -98,15 +126,15 @@
                     <td align="center"><a onclick='f6()'>Others</td>
                 </tr>
             </table>
-            <br>
+            
 
-            <h4>Create A New Room</h4>
+            <h4 style="margin-top: 10px;">Create A New Room</h4>
             <input id="room-name-input1" type="text" size="100"/><br/>
             <input style="background-color: lightgreen;" id="room-name-submit1" type="button" value="Create"/>
 
-            <br><br>
+            <br>
 
-            <h4>Online Users</h4>
+            <h4 style="margin-top: 10px;">Online Users</h4>
 
             <ul id="online_user_list">
 
@@ -126,6 +154,81 @@
 
     
 </body>
+
+<script>
+
+function e1()
+{
+    document.getElementById("chat-message-input").value += '😀';
+}
+function e2()
+{
+    document.getElementById("chat-message-input").value += '😀';
+}
+function e3()
+{
+    document.getElementById("chat-message-input").value += '😅';
+}
+function e4()
+{
+    document.getElementById("chat-message-input").value += '😂';
+}
+function e5()
+{
+    document.getElementById("chat-message-input").value += '😒';
+}
+function e6()
+{
+    document.getElementById("chat-message-input").value += '😳';
+}
+function e7()
+{
+    document.getElementById("chat-message-input").value += '😱';
+}
+function e8()
+{
+    document.getElementById("chat-message-input").value += '😓';
+}
+function e9()
+{
+    document.getElementById("chat-message-input").value += '👍';
+}
+function e10()
+{
+    document.getElementById("chat-message-input").value += '🙏';
+}
+
+function e11()
+{
+    document.getElementById("chat-message-input").value += '💪';
+}
+function e12()
+{
+    document.getElementById("chat-message-input").value += '👀';
+}
+function e13()
+{
+    document.getElementById("chat-message-input").value += '👴';
+}
+function e14()
+{
+    document.getElementById("chat-message-input").value += '🎉';
+}
+function e15()
+{
+    document.getElementById("chat-message-input").value += '💤';
+}
+function e16()
+{
+    document.getElementById("chat-message-input").value += '💢';
+}
+function e17()
+{
+    document.getElementById("chat-message-input").value += '🙈';
+}
+
+
+</script>
 
 <script type="text/javascript">
     function f1() {

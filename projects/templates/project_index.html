@@ -6,14 +6,14 @@
 
 #p_1 {
     width: 250px;
-    height: 250px;
+    height: 255px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
 }
 
 #p_2 {
-    width: 248px;
+    width: 244px;
     height: 180px;
 }
 
@@ -22,7 +22,22 @@
     margin: 0 auto;
 
 }
+#base a:link, a:visited {
+  background-color: black;
+  font-size: 20px;
+  font-weight: bold;
+  color: #7FFFD4;
+  padding: 1px 18px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}
 
+#base a:hover, a:active {
+  background-color: black;
+
+}
 
 
 </style>
@@ -38,11 +53,11 @@
     <div id="base2" class="row" align="center">
     
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/background.png' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'background' %}"
-                       class="btn btn-primary">
+                       >
                         Plot
                     </a> 
                 </div>
@@ -50,11 +65,11 @@
         </div>
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/red_alert_story.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'story' %}"
-                       class="btn btn-primary">
+                       >
                         Background
                     </a> 
                 </div>
@@ -63,11 +78,11 @@
 
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/mod.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'mod' %}"
-                       class="btn btn-primary">
+                       >
                         Mod
                     </a> 
                 </div>
@@ -80,11 +95,11 @@
     <div id="base2" class="row" align="center">
 
          <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/a5.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'mission2' %}"
-                       class="btn btn-primary">
+                       >
                         Soviet Mission
                     </a> 
                 </div>
@@ -92,11 +107,11 @@
         </div>
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/a4.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'mission' %}"
-                       class="btn btn-primary">
+                       >
                         Allied Mission
                     </a> 
                 </div>
@@ -105,11 +120,11 @@
        
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/history.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'history' %}"
-                       class="btn btn-primary">
+                       >
                         History
                     </a> 
                 </div>
@@ -122,11 +137,11 @@
     <div id="base2" class="row" align="center">
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/a2.jpg' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'game_setting' %}"
-                       class="btn btn-primary">
+                       >
                         Unit
                     </a> 
                 </div>
@@ -135,11 +150,11 @@
 
 
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/unit_details.png' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'unit_data' %}"
-                       class="btn btn-primary">
+                       >
                         Arsenal
                     </a> 
                 </div>
@@ -147,11 +162,11 @@
         </div>
 
          <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/super_weapon.png' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'super_weapon' %}"
-                       class="btn btn-primary">
+                       >
                         Super Weapon
                     </a> 
                 </div>
@@ -164,19 +179,45 @@
 
     <div id="base2" class="row" align="center">
         <div>
-            <div id = "p_1" style="border:1px solid black;" >
+            <div id = "p_1" style="border:3px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/tech_building.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'tech_building' %}"
+                       >
+                        Tech Building
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:3px solid black;" >
+                <img id = "p_2" class="card-img-top" src="{% static 'img/tl.jpg' %}">
+                <div align="center" class="card-body">
+                    <a href="{% url 'timeline' %}"
+                       >
+                        Timeline
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div id = "p_1" style="border:3px solid black;" >
                 <img id = "p_2" class="card-img-top" src="{% static 'img/project1.png' %}">
                 <div align="center" class="card-body">
                     <a href="{% url 'download' %}"
-                       class="btn btn-primary">
+                       >
                         Resource
                     </a> 
                 </div>
             </div>
         </div>
        
-
     </div>
+
+
+
 
 </div>
 

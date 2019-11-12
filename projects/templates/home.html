@@ -83,6 +83,44 @@ p {
   font-size:13px;
 }
 
+.background {
+    
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+
+}
+
+.layer {
+    background-color: rgba(200, 247, 216, 0.88);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+#final_bg a:link, a:visited {
+  background-color: black;
+  font-size: 23px;
+  font-weight: bold;
+  color: #7FFFD4;
+  padding: 3px 28px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 8px;
+}
+
+#final_bg a:hover, a:active {
+  background-color: black;
+
+}
 
 </style>
 
@@ -121,9 +159,36 @@ p {
 
 <body>
 
+
+
+  <!-- ***** Hero Area Start ***** -->
+    <div class="background">
+      <img  src="{% static "img/final_background.jpg" %}" style="width:100%; ">
+      <div class="layer">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12">
+                    <div id="final_bg" class="fancy-hero-content text-center">
+                        <!-- Video Overview -->
+                        <h1 style="font-weight: bold; ">NaOH Group</h1>
+                        <h1 style="font-weight: bold;">It Is All About Red Alert</h1>
+                        
+                        <br>
+                        <h1><a class="navbar-brand" href="{% url 'register' %}">Join Us Today</a></h1>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+        
+    </div>
+
+    <br>
+
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-volunteer">
       <div class="container-fluid px-md-0">
-        <div class="row no-gutters" style="background-color: lightyellow;">
+        <div class="row no-gutters" >
 
 
           <div class="col-md-6">
@@ -680,7 +745,7 @@ p {
     <br><br><br>
 
 
-    <footer class=" ftco-sectio" style="background-color: lightyellow;">
+    <footer class=" ftco-sectio" style="background-color: #C8F7D8;">
       <div class="overlay"></div>
       <div class="container">
         <div class="row mb-5">

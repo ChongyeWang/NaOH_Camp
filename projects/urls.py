@@ -20,5 +20,7 @@ urlpatterns = [
     path("resource/soviet_mission", views.mission2, name="mission2"),
     path("resource/unit_data", views.unit_data, name="unit_data"),
     path("resource/story", views.story, name="story"),
-    path("resource/super_weapon", views.super_weapon, name="super_weapon")
+    path("resource/super_weapon", views.super_weapon, name="super_weapon"),
+    path("resource/tech_building", views.tech_building, name="tech_building"),
+    path("resource/timeline", views.timeline, name="timeline")
 ]
