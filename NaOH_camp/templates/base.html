@@ -102,11 +102,11 @@
 
     </div>
     {% if not user.is_authenticated %}
-        <a  id = "a1" class="nav-link" href="{% url 'login' %}">登录</a>
-        <a id = "a2" class="nav-link" href="{% url 'register' %}">注册</a>
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}" style="color: #00BFFF;">登录</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}" style="color: #00BFFF;">注册</a>
     {% else %}
         
-        <a id = "a3" class="nav-link" href="{% url 'logout' %}">退出</a>
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}" style="color: #00BFFF;">退出</a>
     {% endif %}
   </div>
 </nav>
@@ -169,11 +169,11 @@
 
     </div>
     {% if not user.is_authenticated %}
-        <a  id = "a1" class="nav-link" href="{% url 'login' %}">Log in</a>
-        <a id = "a2" class="nav-link" href="{% url 'register' %}">Register</a>
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}" style="color: #00BFFF;">Log in</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}" style="color: #00BFFF;">Register</a>
     {% else %}
         
-        <a id = "a3" class="nav-link" href="{% url 'logout' %}">Exit</a>
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}" style="color: #00BFFF;">Exit</a>
     {% endif %}
   </div>
 </nav>
@@ -234,11 +234,11 @@
 
     </div>
     {% if not user.is_authenticated %}
-        <a  id = "a1" class="nav-link" href="{% url 'login' %}">Log in</a>
-        <a id = "a2" class="nav-link" href="{% url 'register' %}">Register</a>
+        <a  id = "a1" class="nav-link" href="{% url 'login' %}" style="color: #00BFFF;">Log in</a>
+        <a id = "a2" class="nav-link" href="{% url 'register' %}" style="color: #00BFFF;">Register</a>
     {% else %}
         
-        <a id = "a3" class="nav-link" href="{% url 'logout' %}">Exit</a>
+        <a id = "a3" class="nav-link" href="{% url 'logout' %}" style="color: #00BFFF;">Exit</a>
     {% endif %}
   </div>
 </nav>

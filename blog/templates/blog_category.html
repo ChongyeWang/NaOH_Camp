@@ -108,7 +108,6 @@ input[type=submit] {
 .container .box .box-cell { 
     display:table-cell; 
 
-    
     padding:10px; 
     border-style: double;
 } 
@@ -116,14 +115,13 @@ input[type=submit] {
     background:lightgrey; 
     background:lightyellow; 
     text-align:justify; 
-    background-color: #272727;
+    background-color: white;
+    
  } 
 .container .box .box-cell.box2 { 
-    background:#7FFFD4; 
+    background:white;
     text-align:justify 
 } 
-
-
 
 </style>
 
@@ -147,13 +145,13 @@ input[type=submit] {
                 <div class="box-cell box1" style="width: 550px;"> 
                     <div style="width: 550px;">
                     {% for post in posts %}
-                        <h2><a style="color: #7FFFD4;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
+                        <h2><a style="color: black;" href="{% url 'blog_detail' post.pk%}">{{ post.title }}</a></h2>
                         <small>
                             {{ post.author }} |&nbsp;
                             {{ post.created_on.date }} |&nbsp;
                             Categories:&nbsp;
                             {% for category in post.categories.all %}
-                            <a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
+                            <a style="color: #00008B;" href="{% url 'blog_category' category.name %}">
                                 {{ category.name }}
                             </a>&nbsp;
                             {% endfor %}

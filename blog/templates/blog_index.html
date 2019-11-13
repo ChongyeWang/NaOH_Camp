@@ -18,6 +18,8 @@
 	  width: 60%;
 	  height: 80%;
 	  background: #f1f1f1;
+
+	  margin-top: 12px;
 	}
 
 	/* Style the submit button */
@@ -32,6 +34,8 @@
 	  border: 2.5px solid #2196F3;
 	  border-left: none; /* Prevent double borders */
 	  cursor: pointer;
+
+	  margin-top: 12px;
 	}
 
 	form.example button:hover {
@@ -48,7 +52,7 @@
 
 	.container .box { 
 	    width:730px; 
-	    
+	    margin:0 auto;
 	    display:table; 
 	} 
 	.container .box .box-row { 
@@ -58,29 +62,44 @@
 		display:table-cell; 
 		border-style: groove;
 		padding:10px; 
-		background-color: black;
+		
 	} 
 	.container .box .box-cell.box1 { 
-		background-color: black;
+		background: url("{% static "img/sketch/a3.png" %}") top left no-repeat, 
+                url("{% static "img/sketch/a4.png" %}") bottom left no-repeat;
 		
+		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+
 		text-align:justify; 
 	} 
 	.container .box .box-cell.box2 { 
-		
+		background: url("{% static "img/sketch/a6.png" %}") top left no-repeat, 
+                url("{% static "img/sketch/a0.png" %}") bottom left no-repeat;
+		box-shadow: inset 0 0 0 1000px rgba(0,0,0,.7);
+
 		text-align:justify 
 
 	} 
 
+	#blog_top {
+		background: url("{% static "img/sketch/a6.png" %}") top left no-repeat, 
+                url("{% static "img/sketch/a0.png" %}") bottom left no-repeat;
+		box-shadow: inset 0 0 0 1000px rgba(200,247,216,.9);
+		margin:0 auto;
+		border-style: groove;
+	}
+	
 
 </style>
+
 <br>
-<div style="width: 760px;margin:0 auto;">
+<div >
 
-
-	<div class="row" align="center">
+	<div class="container" > 
+	<div id="blog_top" class="row" align="center" style="width: 730px;margin:0 auto;">
 
 		
-		<h2 style="margin-right: 180px; margin-left: 40px;">当前人数：{{user_num}}</h2>
+		<h2 style="margin-right: 160px; margin-left: 10px; margin-top: 8px; font-weight: bold;">当前人数：{{user_num}}</h2>
 		
 		<form class="example" action="{% url 'blog_search' %}" method="get">
   			<input type="text" placeholder="Search.." name="search_result">
@@ -88,13 +107,14 @@
 		</form>
 	</div>
 
-    
+    </div>
 
 <div class="container"> 
     <div class="box"> 
         <div class="box-row">
 
-            <div class="box-cell box1" style="width: 50%;"> 
+            <div class="box-cell box1" style="width: 50%;" > 
+            	
             	{% for category in categories1 %}
 
 		        <h2 ><a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
@@ -105,7 +125,7 @@
                 
             </div> 
               
-            <div class="box-cell box2" style="width: 50%;"> 
+            <div class="box-cell box2" > 
             	{% for category in categories2 %}
 
 		        <h2><a style="color: #7FFFD4;" href="{% url 'blog_category' category.name %}">
