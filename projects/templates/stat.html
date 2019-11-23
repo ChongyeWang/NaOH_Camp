@@ -1,0 +1,1262 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+<style type="text/css">
+	#stat {
+		color: black;
+	}
+</style>
+
+<br>
+<body id="stat">
+===============================================================================<br>
+------------------------------Allied Land Units--------------------------------<br>
+===============================================================================<br>
+                                   <Sec2a><br>
+
+<br>-------------------------------------------------------------------------------<br>
+===============================Allied Infantry=================================<br>
+-------------------------------------------------------------------------------<br>
+                                   <AInf><br>
+
+<br>- - - - - - - - - - - - - - - - - - - GI - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 200<br>
+Hit Points: 125<br>
+Speed: 4 <br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - -Attack Dog (German Shepherd)- - - - - - - - - - - - - <br>
+
+<br>Cost: 200<br>
+Hit Points: 100<br>
+Speed: 8<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - - - Engineer - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 75<br>
+Speed: 4<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - - -  Guardian GI - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 400<br>
+Hit Points: 100<br>
+Speed: 3<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - - - - -Spy- - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 100<br>
+Speed: 4<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - - -Navy SEAL- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 125<br>
+Speed: 5<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - Chrono Legionnaire - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1500<br>
+Hit Points: 125<br>
+Speed: Chrono<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - -Chrono Commando- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1800<br>
+Hit Points: 500<br>
+Speed: Chrono<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - Psi-Commando - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 100<br>
+Speed: Chrono<br>
+Sight Range: 8<br>
+
+<br>-------------------------------------------------------------------------------<br>
+==============================Allied Vehicles==================================<br>
+-------------------------------------------------------------------------------<br>
+                                   <AVeh><br>
+
+<br>- - - - - - - - - - - - - - Grizzly Battle Tank - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 700<br>
+Hit Points: 300<br>
+Speed: 7<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - -Infantry Fighting Vehicle- - - - - - - - - - - - - - -<br>
+-  -  -  -  -  -  -  -  -  -  -  -(I F V)-  -  -  -  -  -  -  -  -  -  -  -  -<br>
+
+<br>Cost: 600<br>
+Hit Points: 200<br>
+Speed: 10<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - Mirage Tank - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 275<br>
+Speed: 7<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - - -Prism Tank- - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1200<br>
+Hit Points: 250<br>
+Speed: 4<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - Battle Fortress - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - Mobile Construction Vehicle - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - -Chrono Miner- - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1400<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - - Robot Tank - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 180<br>
+Speed: 10<br>
+Sight Range: 6<br>
+
+<br>===============================================================================<br>
+-----------------------------Allied Air Units----------------------------------<br>
+===============================================================================<br>
+                                  <Sec2b><br>
+
+<br>- - - - - - - - - - - - - - - - - Rocketeer - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 125<br>
+Speed: 9 <br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - - Night Hawk - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1000<br>
+Hit Points: 175<br>
+Speed: 12<br>
+Sight Range: 7<br>
+
+<br>- - - - - - - - - - - - - - - - - -Harrier- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1200<br>
+Hit Points: 150<br>
+Speed: 14<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - - -Osprey- - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 50 (Plane on back of Destroyer)<br>
+Hit Points: 30<br>
+Speed: 12<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - - - - - -Hornet- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 50<br>
+Hit Points: 75<br>
+Speed: 12<br>
+Sight Range: 2<br>
+
+<br>===============================================================================<br>
+----------------------------Allied Water Units---------------------------------<br>
+===============================================================================<br>
+                                  <Sec2c><br>
+
+<br>- - - - - - - - - - - - - -Amphibious Transport- - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 900<br>
+Hit Points: 300<br>
+Speed: 6<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - - Destroyer - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 600<br>
+Speed: 6<br>
+Sight Range: 7<br>
+
+<br>- - - - - - - - - - - - - - - - -Dolphin- - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 200<br>
+Speed: 8<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - Aegis Cruiser - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1200<br>
+Hit Points: 800<br>
+Speed: 4<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - -Aircraft Carrier- - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2000<br>
+Hit Points: 800<br>
+Speed: 4<br>
+Sight Range: 7<br>
+
+<br>===============================================================================<br>
+-----------------------------Allied Buildings----------------------------------<br>
+===============================================================================<br>
+                                  <Sec2d><br>
+
+<br>-------------------------------------------------------------------------------<br>
+==============================Normal Buildings=================================<br>
+-------------------------------------------------------------------------------<br>
+                                  <ANor><br>
+
+<br>- - - - - - - - - - - - - - -Construction Yard- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Space Away: Anywhere<br>
+Sight Range: 8<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - - Power Plant - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 800<br>
+Hit Points: 750<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: +200<br>
+
+<br>- - - - - - - - - - - - - - - - -Barracks- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -10<br>
+
+<br>- - - - - - - - - - - - - - - -Ore Refinery- - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - -Weapons Factory- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - Airforce Command Headquarters - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - Naval Shipyard - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1000<br>
+Hit Points: 1500<br>
+Space Away: 12<br>
+Sight Range: 10<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - - - - - -Service Depot- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 800<br>
+Hit Points: 1200<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - - - - - - Battle Lab - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - - -Ore Purifier- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2500<br>
+Hit Points: 900<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -200<br>
+
+<br>- - - - - - - - - - - - - -Robot Control Center- - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 600<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -100<br>
+
+<br>-------------------------------------------------------------------------------<br>
+======================Defence/Superweapon Buildings============================<br>
+-------------------------------------------------------------------------------<br>
+                                  <ADef><br>
+
+<br>- - - - - - - - - - - - - - - -Concrete Wall- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 100<br>
+Hit Points: 300 per single square<br>
+Space Away: 8<br>
+Sight Range: 1<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - - -Pill Box- - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 500<br>
+Hit Points: 400<br>
+Space Away: 4<br>
+Sight Range: 7<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - Patriot Missile - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 900<br>
+Space Away: 4<br>
+Sight Range: 10<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - - Prism Tower - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 8<br>
+Power Usage: -75<br>
+
+<br>- - - - - - - - - - - - - -Spy Satellite Uplink - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - - -Gap Generator- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - - - Chronoshere - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2500<br>
+Hit Points: 750<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -200<br>
+
+<br>- - - - - - - - - - - - - Weather Control Device - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 5000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5 <br>
+Power Usage: -200<br>
+
+<br>
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+><><><><><><><><><><><><><><><><><Soviet><><><><><><><><><><><><><><><><><><><><br>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+                                  <Sec3><br>
+
+<br>===============================================================================<br>
+-----------------------------Soviet Land Units---------------------------------<br>
+===============================================================================<br>
+                                  <Sec3a><br>
+
+<br>-------------------------------------------------------------------------------<br>
+==============================Soviet Infantry==================================<br>
+-------------------------------------------------------------------------------<br>
+                                  <SInf><br>
+
+<br>- - - - - - - - - - - - - - - - -Conscript- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 100<br>
+Hit Points: 125<br>
+Speed: 4<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - -Attack Dog (Alaskan Husky)- - - - - - - - - - - - - -<br>
+
+<br>Cost: 200<br>
+Hit Points: 100<br>
+Speed: 8 <br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - - Flak Trooper - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 300<br>
+Hit Points: 100<br>
+Speed: 4<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - - - - Engineer - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 75<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - -Tesla Trooper- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 130<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - - Crazy Ivan - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 125<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - -Chrono Ivan- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1750<br>
+Hit Points: 100<br>
+Speed: Chrono<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - Lunar Infantry - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 125<br>
+Speed: 9<br>
+Sight Range: 8<br>
+
+<br>-------------------------------------------------------------------------------<br>
+=============================Soviet Vehicles===================================<br>
+-------------------------------------------------------------------------------<br>
+                                 <SVeh><br>
+
+<br>- - - - - - - - - - - - - - - Terror Drone - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 100<br>
+Speed: 10<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - -Flak Track- - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 500<br>
+Hit Points: 180<br>
+Speed: 8<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - Rhino Heavy Tank - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 900<br>
+Hit Points: 400<br>
+Speed: 6<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - V3 Rocket Launcher - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 800<br>
+Hit Points: 150<br>
+Speed: 4<br>
+Sight Range: 7<br>
+
+<br>- - - - - - - - - - - - - - - - Apocalypse - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1750<br>
+Hit Points: 800<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - -Mobile Construction Vehicle- - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - - War Miner - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1400<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>===============================================================================<br>
+-----------------------------Soviet Air Units----------------------------------<br>
+===============================================================================<br>
+                                  <Sec3b><br>
+
+<br>- - - - - - - - - - - - - - - -Siege Chopper- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 200<br>
+Speed: 12 <br>
+Sight Range: 7<br>
+
+<br>- - - - - - - - - - - - - - - -Kirov Airship- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 2000<br>
+Speed: 5<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - - -MIG- - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A Boris calls them in.<br>
+Hit Points: 100<br>
+Speed: 16<br>
+Sight Range: 0<br>
+
+<br>- - - - - - - - - - - - - - - - Spy Plane - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A Create a Radar Tower<br>
+Hit Points: 400 <br>
+Speed: 15<br>
+Sight Range: 0<br>
+
+<br>===============================================================================<br>
+----------------------------Soviet Water Units---------------------------------<br>
+===============================================================================<br>
+                                 <Sec3c><br>
+
+<br>- - - - - - - - - - - - - -Amphibious Transport- - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 900<br>
+Hit Points: 300<br>
+Speed: 6<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - Sea Scorpion - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 600<br>
+Hit Points: 400<br>
+Speed: 8<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - -Typhoon Attack Sub- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 600<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - -Giant Squid- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 200<br>
+Speed: 8<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - - -Dreadnought- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 800<br>
+Speed: 4<br>
+Sight Range: 7<br>
+
+<br>===============================================================================<br>
+----------------------------Soviet Buildings-----------------------------------<br>
+===============================================================================<br>
+                                <Sec3d><br>
+
+<br>-------------------------------------------------------------------------------<br>
+============================Normal Buildings===================================<br>
+-------------------------------------------------------------------------------<br>
+                                 <SNor><br>
+
+<br>- - - - - - - - - - - - - - Construction Yard - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Space Away: Anywhere<br>
+Sight Range: 8<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - Tesla Reactor - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 750<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: +150<br>
+
+<br>- - - - - - - - - - - - - - - - Barracks - - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 500<br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -10<br>
+
+<br>- - - - - - - - - - - - - - - Ore Refinery - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - -Weapons Factory- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - - - - - -Radar Tower- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 10<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - - Shipyard - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 1500<br>
+Space Away: 12<br>
+Sight Range: 10<br>
+Power Usage: -20<br>
+
+<br>- - - - - - - - - - - - - - - Service Depot - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 800<br>
+Hit Points: 1200<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -20<br>
+
+<br>- - - - - - - - - - - - - - - -Battle Lab- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000 <br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - -Nuclear Reactor- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: +2000<br>
+
+<br>- - - - - - - - - - - - - - -Industrial Plant- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2500<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -200<br>
+
+<br>-------------------------------------------------------------------------------<br>
+======================Defence/Superweapon Buildings============================<br>
+-------------------------------------------------------------------------------<br>
+                                 <SDef><br>
+
+<br>- - - - - - - - - - - - - - - - - Wall - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 100<br>
+Hit Points: 300 per square<br>
+Space Away: 8<br>
+Sight Range: 1<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - -Sentry Gun- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 400<br>
+Space Away: 4<br>
+Sight Range: 7<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - -Flak Cannon- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 900<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - - Tesla Coil - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 8<br>
+Power Usage: -75<br>
+
+<br>- - - - - - - - - - - - - - - -Battle Bunker- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 600<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - -Iron Curtain- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2500<br>
+Hit Points: 750<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -200<br>
+
+<br>- - - - - - - - - - - - - -Nuclear Missile Silo- - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 5000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -200<br>
+
+<br>+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+><><><><><><><><><><><><><><><><><Yuri><><><><><><><><><><><><><><><><><><><><><br>
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>
+                                 <Sec4><br>
+
+<br>===============================================================================<br>
+-----------------------------Yuri Land Units-----------------------------------<br>
+===============================================================================<br>
+                                 <Sec4a><br>
+
+<br>-------------------------------------------------------------------------------<br>
+==============================Yuri Infantry====================================<br>
+-------------------------------------------------------------------------------<br>
+                                 <YInf><br>
+
+<br>- - - - - - - - - - - - - - - - Initiate - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 200<br>
+Hit Points: 100<br>
+Speed: 4<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - Slave Worker - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 10 (Trains one Automatically when one is killed)<br>
+Hit Points: 125<br>
+Speed: 3<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - - - Engineer - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 75<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - - -Brute- - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 500<br>
+Hit Points: 200<br>
+Speed: 6<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - -Virus- - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 700<br>
+Hit Points: 100<br>
+Speed: 4<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - -Yuri Clone- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 800<br>
+Hit Points: 100<br>
+Speed: 4<br>
+Sight Range: 12<br>
+
+<br>-------------------------------------------------------------------------------<br>
+==============================Yuri Vehicles====================================<br>
+-------------------------------------------------------------------------------<br>
+                                 <YVeh><br>
+
+<br>- - - - - - - - - - - - - - Lasher Light Tank - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 700<br>
+Hit Points: 300<br>
+Speed: 7<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - Gattling Tank - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 210<br>
+Speed: 6<br>
+Sight Range: 10<br>
+
+<br>- - - - - - - - - - - - - - - - Magnetron - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 150<br>
+Speed: 5<br>
+Sight Range: 10<br>
+
+<br>- - - - - - - - - - - - - - - -Mastermind- - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1750<br>
+Hit Points: 500<br>
+Speed: 4<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - -Chaos Drone- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 800<br>
+Hit Points: 200<br>
+Speed: 8<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - -Mobile Construction Vehicle- - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Speed: 4<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - -Slave Miner- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1400<br>
+Hit Points: 2000<br>
+Speed: 3<br>
+Sight Range: 4<br>
+
+<br>===============================================================================<br>
+------------------------------Yuri Air Units-----------------------------------<br>
+===============================================================================<br>
+                                  <Sec4b><br>
+
+<br>- - - - - - - - - - - - - - - -Floating Disk- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1750<br>
+Hit Points: 600<br>
+Speed: 15<br>
+Sight Range: 9<br>
+
+<br>===============================================================================<br>
+-----------------------------Yuri Water Units----------------------------------<br>
+===============================================================================<br>
+                                 <Sec4c><br>
+
+<br>- - - - - - - - - - - - - - - Hover Transport - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 900<br>
+Hit Points: 300<br>
+Speed: 6<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - - - - - Boomer - - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2000<br>
+Hit Points: 1200<br>
+Speed: 5<br>
+Sight Range: 8<br>
+
+<br>===============================================================================<br>
+-----------------------------Yuri Buildings------------------------------------<br>
+===============================================================================<br>
+                                <Sec4d><br>
+
+<br>-------------------------------------------------------------------------------<br>
+============================Normal Buildings===================================<br>
+-------------------------------------------------------------------------------<br>
+                                <YNor><br>
+
+<br>- - - - - - - - - - - - - -Construction Yard- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 3000<br>
+Hit Points: 1000<br>
+Space Away: Anywhere<br>
+Sight Range: 10<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - -Bio Reactor- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 700<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: +150 plus 100 for each unit entered<br>
+Total Power: +650<br>
+
+<br>- - - - - - - - - - - - - - - - Barracks - - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 500<br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -10<br>
+
+<br>- - - - - - - - - - - - - - - -Slave Miner- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 2000<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - -Weapons Factory- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 4<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - - - - - Psychic Sensor - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 750<br>
+Space Away: 2<br>
+Sight Range: 10<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - -Submarine Pen- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 1500<br>
+Space Away: 12<br>
+Sight Range: 10<br>
+Power Usage: -25<br>
+
+<br>- - - - - - - - - - - - - - - - - Grinder - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 900<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - - Battle Lab - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2000<br>
+Hit Points: 500<br>
+Space Away: 2<br>
+Sight Range: 6<br>
+Power Usage: -100<br>
+-------------------------------------------------------------------------------<br>
+======================Defence/Superweapon Buildings============================<br>
+-------------------------------------------------------------------------------<br>
+                                 <YDef><br>
+
+<br>- - - - - - - - - - - - - - - -Citadel Wall- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 100<br>
+Hit Points: 300 per square<br>
+Space Away: 8<br>
+Sight Range: 1<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - Gattling Cannon - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1000<br>
+Hit Points: 810<br>
+Space Away: 4<br>
+Sight Range: 10<br>
+Power Usage: -50<br>
+
+<br>- - - - - - - - - - - - - - - -Phychic Tower- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 455<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - - - Tank Bunker - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 400 <br>
+Hit Points: 1000<br>
+Space Away: 3<br>
+Sight Range: 6<br>
+Power Usage: 0<br>
+
+<br>- - - - - - - - - - - - - - - -Cloning Vats- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2500<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -200<br>
+
+<br>- - - - - - - - - - - - - Genetic Mutator Device - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 2500<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -200<br>
+
+<br>- - - - - - - - - - - - - - -Psychic Dominator- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 5000<br>
+Hit Points: 1000<br>
+Space Away: 2<br>
+Sight Range: 5<br>
+Power Usage: -200<br>
+
+<br>===============================================================================<br>
+--------------------------Country Specific Units-------------------------------<br>
+===============================================================================<br>
+                                  <Sec5><br>
+
+<br>- - - - - - - - - - - - - - - -British Sniper- - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 600<br>
+Hit Points: 125<br>
+Speed: 4 <br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - Cuban Terrorist - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 75<br>
+Speed: 6<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - -Iraqi Desolator- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 600<br>
+Hit Points: 150<br>
+Speed: 4<br>
+Sight Range: 6<br>
+
+<br>- - - - - - - - - - - - - -German Tank Destroyer- - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 900<br>
+Hit Points: 400<br>
+Speed: 5<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - Russian Tesla Tank - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1200<br>
+Hit Points: 300<br>
+Speed: 6<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - Libyan Demolition Truck - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 150<br>
+Speed: 5<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - French Grand Cannon - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 2000<br>
+Hit Points: 900<br>
+Space Away: 2<br>
+Sight Range: 10<br>
+Power Usage: -100<br>
+
+<br>- - - - - - - - - - - - - - - - -Black Eagle- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1200<br>
+Hit Points: 200<br>
+Speed: 14<br>
+Sight Range: 8<br>
+
+<br>===============================================================================<br>
+-----------------------------------Heroes--------------------------------------<br>
+===============================================================================<br>
+                                   <Sec6><br>
+
+<br>- - - - - - - - - - - - - - - - - - Tanya - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 200<br>
+Speed: 6<br>
+Sight Range: 8<br>
+
+<br>- - - - - - - - - - - - - - - - - - Boris - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: 1500<br>
+Hit Points: 200<br>
+Speed: 5<br>
+Sight Range: 9<br>
+
+<br>- - - - - - - - - - - - - - - - -Yuri Prime- - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: 1500<br>
+Hit Points: 150<br>
+Speed: 6<br>
+Sight Range: 9<br>
+
+<br>===============================================================================<br>
+-------------------------------Tech Buildings----------------------------------<br>
+===============================================================================<br>
+                                   <Sec7><br>
+
+<br>- - - - - - - - - - - - - - - - Tech Outpost - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 2000<br>
+Sight Range: 6<br>
+What it Does: Attacks Air & Land Units and repairs vehicles.<br>
+
+<br>- - - - - - - - - - - - - - - - Tech Airport - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 800<br>
+Sight Range: 6<br>
+What it Does: Allows use of a paradrop. Drops 6 men.<br>
+
+<br>- - - - - - - - - - - - - - - Tech Oil Derrick - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: Engineer<br>
+Hit Points: 1000<br>
+Sight Range: 6<br>
+What it Does: Grants 1000 credits upon capturing and 20 credits every 2  <br>
+seconds.<br>
+
+<br>- - - - - - - - - - - - - Tech Civilian Power Plant - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 800<br>
+Sight Range: 6<br>
+What it Does: +200 power<br>
+
+<br>- - - - - - - - - - - - - - - Tech Machine Shop - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 800<br>
+Sight Range: 6<br>
+What it Does: Grants vehicles auto-repair. Repairs 5% of unit's Hit Points  <br>
+every 3  seconds.<br>
+
+<br>- - - - - - - - - - - - - - - - Tech Hospital - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 800<br>
+Sight Range: 6<br>
+What it Does: Grants Infantry auto-heal. Heals 5% of unit's Hit Points every 3 <br>
+seconds.<br>
+
+<br>- - - - - - - - - - - - - - - -Tech Secret Lab- - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: Engineer<br>
+Hit Points: 1000<br>
+Sight Range: 6<br>
+What it Does: Grants the ability of training/making another countries secret <br>
+unit. <br>
+
+<br>===============================================================================<br>
+--------------------------------Miscellaneous----------------------------------<br>
+===============================================================================<br>
+                                   <Sec8><br>
+
+<br>- - - - - - - - - - - - - - - - - - Cow - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 150<br>
+Speed: 4<br>
+Sight Range: 4<br>
+
+<br>- - - - - - - - - - - - - - - - -Alligator- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 200<br>
+Speed: 4<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - - - - Polar Bear - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 200<br>
+Speed: 4<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - - - - -Monkey- - - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: N/A<br>
+Hit Points: 200<br>
+Speed: 6<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - - - - -Camel- - - - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 200<br>
+Speed: 6<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - -Tyrannosaurus Rex- - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 300<br>
+Speed: 8<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - -Brontosaurus- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A<br>
+Hit Points: 200<br>
+Speed: 8<br>
+Sight Range: 5<br>
+
+<br>- - - - - - - - - - - - - - - -Civilian- - - - - - - - - - - - - - - - - - - - <br>
+
+<br>Cost: N/A<br>
+Hit Points: 50<br>
+Speed: 4<br>
+Sight Range: 2<br>
+
+<br>- - - - - - - - - - - - - - - -Cargo Plane- - - - - - - - - - - - - - - - - - -<br>
+
+<br>Cost: N/A American secret weapon or if you capture a Tech Airport.<br>
+Hit Points: 400<br>
+Speed: 15<br>
+Sight Range: 0<br>
+
+<br>===============================================================================<br>
+----------------------------- Author: CpuBot561 -------------------------------<br>
+===============================================================================<br>
+                              <br>
+
+<br>
+</body>
+
+
+{% endblock %}

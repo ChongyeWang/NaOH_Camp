@@ -34,8 +34,17 @@
 		#all_author {
 			width: 900px;
 			margin: 0 auto;
-			background: lightyellow;
+			
+			border-color: black;
+			border:double;
+			
 		}
+
+		#all_author h5 {
+			font-weight: bold;
+		}
+
+
 
 
 		</style>
@@ -53,7 +62,10 @@
 			<img class="me" align="left" src="{% static "img/me.jpg" %}">
 			<br>
 			<h5>
-			烧碱：烧碱集团创始人，本站作者。原版1.006幻影战队队员，尤里复仇RT战队队员。
+			烧碱：烧碱集团创始人，本站作者。原版1.006幻影战队队员，尤里复仇RT战队队员
+			。
+			<br><br>
+			<a href="{% url 'info_index' %}#aboutme" style="color: blue;">更多关于我</a>
 			</h5>
 			</div>
 
@@ -65,7 +77,7 @@
 
 			<div id = "thanks" class="row">
 			<h4 style="font-weight: bold;">
-			特别鸣谢：
+			特别感谢：
 			</h4>
 			<br>
 			<br>
@@ -80,14 +92,6 @@
 			</div>
 			<hr>
 
-			<div class="row">
-			<img class="hanma" align="left" src="{% static "img/hanma.jpg" %}">
-			</br>
-			<h5>
-			韩妈：烧碱集团圣姑，红色警戒知名高手，顶尖地图制作人Mod制作人，其设计的无数地图都被玩家们奉为经典。
-			</h5>
-			</div>
-			<hr>
 
 			<div class="row">
 			<img class="bob" align="left" src="{% static "img/bob.jpg" %}">
@@ -103,6 +107,15 @@
 			</br>
 			<h5>
 			Sy：尤里复仇顶尖高手，实战经验丰富，精通各种地图的打法，RT战队队内赛冠军，曾在半决赛时击败了当时不可一世的冠军大热无敌紫源，从此被部分玩家们称为尤里复仇第一人的有力竞争者。
+			</h5>
+			</div>
+			<hr>
+
+			<div class="row">
+			<img class="hanma" align="left" src="{% static "img/hanma.jpg" %}">
+			</br>
+			<h5>
+			韩妈：烧碱集团圣姑，红色警戒知名高手，顶尖地图制作人Mod制作人，其设计的无数地图都被玩家们奉为经典。
 			</h5>
 			</div>
 			<hr>
@@ -205,7 +218,7 @@
 			<img class="shaobing" align="left" src="{% static "img/shaobing.jpg" %}">
 			</br>
 			<h5>
-			烧饼：红色警戒知名女装大佬，地图制作人，红色警戒理论大师，曾在苏军任务第八关首都之辱中创下了1分41秒的通关纪录。
+			烧饼：红色警戒地图制作人，Mod制作人，理论大师，曾在苏军任务第八关首都之辱中创下了1分41秒的通关纪录。
 			</h5>
 			</div>
 			<hr>
@@ -259,6 +272,16 @@
 
 
 			<div class="row">
+			<img class="jingling" align="left" src="{% static "img/rthexie.jpg" %}">
+			</br>
+			<h5>
+			和谐：红色警戒尤里复仇玩家，地图制作人，对地图设计有很深的研究。警吧庆生人，为无数吧友庆生。
+			</h5>
+			</div>
+			<hr>
+
+
+			<div class="row">
 			<img class="A126" align="left" src="{% static "img/A126.jpg" %}">
 			</br>
 			<h5>
@@ -275,7 +298,6 @@
 			</h5>
 			</div>
 			<hr>
-
 
 			<div class="row">
 			<img class="letme96" align="left" src="{% static "img/96.jpg" %}">
@@ -338,7 +360,7 @@
 			<img class="moyu" align="left" src="{% static "img/moyu.jpg" %}">
 			</br>
 			<h5>
-			摸鱼：尤里复仇知名高手，RT战队元老，精通3线操作，强大的分兵能力经常令对手难以应对。
+			摸鱼：尤里复仇知名高手，RT战队资深队员，精通3线操作，强大的分兵能力经常令对手难以应对。
 			</h5>
 			</div>
 			<hr>
@@ -354,14 +376,6 @@
 			</div>
 			<hr>
 
-			<div class="row">
-			<img class="jingling" align="left" src="{% static "img/rthexie.jpg" %}">
-			</br>
-			<h5>
-			和谐：红色警戒尤里复仇玩家，地图制作人，对于地图的设计有很深的研究。
-			</h5>
-			</div>
-			<hr>
 
 			<div class="row">
 			<img class="suli" align="left" src="{% static "img/suli.jpg" %}">
@@ -372,14 +386,6 @@
 			</div>
 			<hr>
 
-			<div class="row">
-			<img class="yehen" align="left" src="{% static "img/yehen.jpg" %}">
-			</br>
-			<h5>
-			夜痕：尤里复仇玩家，擅长尤里的使用，尤里复仇全能王4强，3v3配合顶尖。
-			</h5>
-			</div>
-			<hr>
 
 			<div class="row">
 			<img class="yubanqiu" align="left" src="{% static "img/yubanqiu.jpg" %}">
@@ -400,6 +406,15 @@
 			<hr>
 
 			<div class="row">
+			<img class="yehen" align="left" src="{% static "img/yehen.jpg" %}">
+			</br>
+			<h5>
+			夜痕：尤里复仇玩家，擅长尤里的使用，尤里复仇全能王4强，3v3配合顶尖。
+			</h5>
+			</div>
+			<hr>
+
+			<div class="row">
 			<img class="caibi" align="left" src="{% static "img/caibi.jpg" %}">
 			</br>
 			<h5>
@@ -410,19 +425,19 @@
 
 
 			<div class="row">
-			<img class="jingling" align="left" src="{% static "img/jingling.jpg" %}">
+			<img class="jingling" align="left" src="{% static "img/wuxian.jpg" %}">
 			</br>
 			<h5>
-			精灵：烧碱集团内阁，精通YR大型混战地图，埃及之旅尤里内战独树一帜。
+			无弦之琴：B站红色警戒主播，专治各种电脑，对于红色警戒单机战术有很深的研究，对战中非常擅长心理战，听说巅峰时期连AI的心理都可以预测。
 			</h5>
 			</div>
 			<hr>
 
 			<div class="row">
-			<img class="jingling" align="left" src="{% static "img/wuxian.jpg" %}">
+			<img class="ZV" align="left" src="{% static "img/ZV.jpg" %}">
 			</br>
 			<h5>
-			无弦之琴：B站红色警戒主播，专治各种电脑，对于红色警戒单机战术有很深的研究，对战中非常擅长心理战，听说巅峰时期连AI的心理都可以预测。
+			ZV：烧碱集团内阁，尤里复仇玩家，精通使用红色警戒开源库OpenRa，以强抱闻名。
 			</h5>
 			</div>
 			<hr>
@@ -446,6 +461,15 @@
 			<hr>
 
 			<div class="row">
+			<img class="jingling" align="left" src="{% static "img/jingling.jpg" %}">
+			</br>
+			<h5>
+			精灵：精通尤里复仇大型混战地图，埃及之旅尤里内战独树一帜。
+			</h5>
+			</div>
+			<hr>
+
+			<div class="row">
 			<img class="muday" align="left" src="{% static "img/muday.jpg" %}">
 			</br>
 			<h5>
@@ -455,14 +479,7 @@
 			<hr>
 
 
-			<div class="row">
-			<img class="ZV" align="left" src="{% static "img/ZV.jpg" %}">
-			</br>
-			<h5>
-			ZV：烧碱集团内阁，尤里复仇玩家，精通使用红色警戒开源库OpenRa，以强抱闻名。
-			</h5>
-			</div>
-			<hr>
+			
 
 			<div class="row">
 			<img class="rmlx" align="left" src="{% static "img/rmlx.jpg" %}">
@@ -475,20 +492,10 @@
 
 
 			<div class="row">
-			<img class="bairen" align="left" src="{% static "img/bairen.jpg" %}">
-			</br>
-			<h5>
-			白人：尤里复仇玩家，白色战队队长，利比亚选手，精通自爆卡车的各种使用方式，经常放话要一统红警界。
-			</h5>
-			</div>
-			<hr>
-
-
-			<div class="row">
 			<img class="bhjk" align="left" src="{% static "img/bhjk.jpg" %}">
 			</br>
 			<h5>
-			BHJK：尤里复仇玩家，擅长各种偷家战术，偷袭过多位高手，曾战胜白色战队队长白人，一战成名。
+			BHJK：尤里复仇玩家，擅长各种偷家战术，曾偷袭过多位高手，尤里复仇月球巡礼顶尖高手。
 			</h5>
 			</div>
 			<hr>

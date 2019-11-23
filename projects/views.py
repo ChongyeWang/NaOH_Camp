@@ -5,15 +5,8 @@ from essays.models import Post as Column
 from videos.models import Post as Video
 from videos.models import Videos
 
+from .utils import select_language
 
-def select_language(request):
-    language = 'English'
-    if request.user.is_authenticated:
-        if request.session.get(request.user.username, None) == None:
-            request.session[request.user.username] = 'Chinese'
-        language = request.session[request.user.username]
-
-    return language
 
 
 def home(request):
@@ -256,3 +249,79 @@ def timeline(request):
     return render(request, 'timeline.html', context)
 
 
+def quotes(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'quotes.html', context)
+
+
+def manual1(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'manual1.html', context)
+
+
+def manual2(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'manual2.html', context)
+
+
+
+def stat(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'stat.html', context)
+
+
+def time(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'time.html', context)
+
+
+def special(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'special.html', context)
+
+
+def yuri(request):
+
+    language = select_language(request)
+        
+    context = {
+        'language': language
+    }
+
+    return render(request, 'yuri.html', context)

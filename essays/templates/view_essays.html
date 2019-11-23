@@ -11,10 +11,15 @@
     }
 
     .pagination .active  {
-      background-color: lightgreen;
+      background-color: lightgray;
       padding: 1px 16px;
       color: white;
 
+    }
+
+    #page h3 {
+      margin-top: 6px;
+      
     }
 
     
@@ -22,7 +27,6 @@
 </style>
 
 
-<br>
 
 <div style="width: 800px; margin: 0 auto;">
 
@@ -31,7 +35,7 @@
 
   {% if language == "Chinese" %}
       <div class="row">
-        <h1 style="margin-left: 350px; margin-right: 270px;">专栏</h1>
+        <h1 style="margin-left: 333px; margin-right: 270px;font-weight: bold;">专栏</h1>
 
         {% if user.is_authenticated %}
             <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_essay' %}">新建文章</a>
@@ -44,7 +48,7 @@
 
   {% else %}
       <div class="row">
-        <h1 style="margin-left: 350px; margin-right: 160px;">Columns</h1>
+        <h1 style="margin-left: 333px; margin-right: 160px; font-weight: bold;">Columns</h1>
 
         {% if user.is_authenticated %}
             <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_essay' %}">New Column</a>
@@ -60,7 +64,7 @@
 {% else %}
 
     <div class="row">
-        <h1 style="margin-left: 350px; margin-right: 160px;">Columns</h1>
+        <h1 style="margin-left: 333px; margin-right: 160px;font-weight: bold;">Columns</h1>
 
         {% if user.is_authenticated %}
             <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_essay' %}">New Column</a>
@@ -75,9 +79,8 @@
 
 </div>
 
-<hr>
 
-<div style="background: lightyellow;">
+<div style="border-style: groove; border-color: black;">
 
 <br>
 {% for post in posts %}
@@ -101,16 +104,17 @@
 
 </div>
 
-
 <br>
 
-<div style="width: 800px; margin: 0 auto;">
+
+
+<div id="page" style="width: 800px; margin: 0 auto; ">
 {% if posts.has_other_pages %}
   <ul class="pagination" style="margin-left: 35px;">
     {% if posts.has_previous %}
-     <h3> <li><a href="?page={{ posts.previous_page_number }}">&laquo;</a></li></h3>
+     <h3> <li><a href="?page={{ posts.previous_page_number }}">Prev</a></li></h3>
     {% else %}
-      <h3><li class="disabled"><span>&laquo;</span></li></h3>
+      <h3><li class="disabled"><span>Prev&nbsp;</span></li></h3>
     {% endif %}
 
 
@@ -120,7 +124,7 @@
 
     {% for i in posts.paginator.page_range %}
         {% if posts.number == i %}
-            <h3><li class="active"><span>{{ i }}</span></li></h3>
+            <h3 style="border-style: groove; border-color: black;"><li class="active"><span>{{ i }}</span></li></h3>
         {% elif i > posts.number|add:'-5' and i < posts.number|add:'5' %}
             <h3><li><a href="?page={{ i }}">{{ i }}</a></li></h3>
         {% endif %}
@@ -132,9 +136,9 @@
 
 
     {% if posts.has_next %}
-       <h3><li><a href="?page={{ posts.next_page_number }}">&raquo;</a></li></h3>
+       <h3><li><a href="?page={{ posts.next_page_number }}">Next</a></li></h3>
     {% else %}
-       <h3><li class="disabled"><span>&raquo;</span></li></h3>
+       <h3><li class="disabled"><span>&nbsp;Next</span></li></h3>
     {% endif %}
   </ul>
 {% endif %}

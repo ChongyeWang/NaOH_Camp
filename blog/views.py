@@ -181,7 +181,6 @@ def create_blog(request, category):
 def blog_search(request):
 
     search_result = request.GET['search_result']
-    print(search_result)
 
     empty = False
     if not search_result:

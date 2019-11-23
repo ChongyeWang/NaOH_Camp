@@ -66,3 +66,4 @@ def all_users(request):
 		'users': users
 	}
 	return render(request, 'all_users.html', context)
+

@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+   <head>
+     <meta charset="utf-8" />
+     
+     <link href="{% static "css/shop_base.css" %}" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   </head>
+
+     <div id="header">
+       
+     </div>
+     <div id="subheader">
+       <div class="cart">
+           {% with total_items=cart|length %}
+             {% if cart|length > 0 %}
+               Your cart:
+               <a href="{% url "cart_detail" %}">
+                 {{ total_items }} item{{ total_items|pluralize }},
+                 ${{ cart.get_total_price }}
+               </a>
+             {% else %}
+               Your cart is empty.
+             {% endif %}
+             <a href="{% url "cart_detail" %}">
+                 <i class="fa fa-shopping-cart" style="font-size:26px"></i>
+               </a>
+             
+           {% endwith %}
+        </div>
+      </div>
+
+     
+
+
+<div class="row" id="all_product">
+  <div id="sidebar">
+      <h3>Categories</h3>
+      <ul>
+      	 <li {% if not category %}class="selected"{% endif %}>
+             <a href="{% url 'product_list' %}">All</a>
+           </li>
+           {% for c in categories %}
+  		 <li {% if category.slug == c.slug %}class="selected"{% endif %}>
+  		  <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
+  		 </li>
+  		 
+  		 {% endfor %}
+  	</ul>
+  </div>
+
+  <div id="main" class="product-list">
+   <h1>{% if category %}{{ category.name }}{% else %}Products{% endif %}</h1>
+   {% for product in products %}
+     <div class="item">
+       <a href="{{ product.get_absolute_url }}">
+         <img src="{% if product.image %}{{ product.image.url }}{% else %}
+          {% static "img/na.jpg" %}{% endif %}">
+       </a>
+       <a href="{{ product.get_absolute_url }}">{{ product.name }}</a><br>
+       ${{ product.price }}
+     </div>
+   {% endfor %}
+  </div>
+
+</div>
+
+{% endblock %}

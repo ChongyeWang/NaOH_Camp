@@ -29,3 +29,4 @@ def info_team(request):
 		'language': language
 	}
 	return render(request, "info_team.html", context);
+

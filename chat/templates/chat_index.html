@@ -32,27 +32,7 @@
             background-color: lightyellow;
         }
 
-        button {
-         display:inline-block;
-         padding:0.46em 1.6em;
-         border:0.1em solid #000000;
-         margin:0 0.2em 0.2em 0;
-         border-radius:0.12em;
-         box-sizing: border-box;
-         text-decoration:none;
-         font-family:'Roboto',sans-serif;
-         font-weight:300;
-         color:#000000;
-         text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
-         background-color:#FFFFFF;
-         text-align:center;
-         transition: all 0.15s;
-        }
-        button {
-         text-shadow: 0 0 2em rgba(255,255,255,1);
-         color:#FFFFFF;
-         border-color:#FFFFFF;
-        }
+
         
     </style>
 </head>
@@ -69,7 +49,7 @@
     
     <div class="row" id="main_chat" style="margin-top: 10px;">
         <div class="column">
-            <textarea id="chat-log" >报告指挥官：听说韭菜割了会变得更粗更大，胡子刮了也会变得更粗更长，所以现在我有一个很大胆的想法。。。&#13;&#10;</textarea><br/>
+            <textarea id="chat-log" >Successfully connected...&#13;&#10;</textarea><br/>
             <input id="chat-message-input" type="text" size="100" style="width: 508px; height: 50px;" placeholder="我有一个大胆的想法.."/><br/>
             <div class="row" style="margin-left: -1px;">
             <a onclick="e1()" style="font-size: 30px;">😀</a>
@@ -105,8 +85,8 @@
 
             <table>
                 <tr>
-                    <td><a onclick='f1()'><img src="{% static "img/mutator.png" %}" style="width:100px; height: 100px;"></a></td>
-                    <td><a onclick='f2()'><img src="{% static "img/weather_control.jpg" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f1()'><img src="{% static "img/weather_control.jpg" %}" style="width:100px; height: 100px;"></a></td>
+                    <td><a onclick='f2()'><img src="{% static "img/mutator.png" %}" style="width:100px; height: 100px;"></a></td>
                     <td><a onclick='f3()'><img src="{% static "img/mo_square.png" %}" style="width:100px;"></a></td>
                 </tr>
                 <tr style="color: black;">
@@ -129,7 +109,7 @@
             
 
             <h4 style="margin-top: 10px;">Create A New Room</h4>
-            <input id="room-name-input1" type="text" size="100"/><br/>
+            <input id="room-name-input1" type="text" size="100" placeholder="Enter your room name..." /><br/>
             <input style="background-color: lightgreen;" id="room-name-submit1" type="button" value="Create"/>
 
             <br>
@@ -308,8 +288,23 @@ function e17()
 
     document.querySelector('#room-name-submit1').onclick = function(e) {
         var roomName = document.querySelector('#room-name-input1').value;
-        if (roomName.length != 0){
+        var valid = true;
+        var code, i, len;
+
+        for (i = 0, len = roomName.length; i < len; i++) {
+          code = roomName.charCodeAt(i);
+          if (!(code > 47 && code < 58) && // numeric (0-9)
+              !(code > 64 && code < 91) && // upper alpha (A-Z)
+              !(code > 96 && code < 123)) { // lower alpha (a-z)
+            valid = false;
+          }
+        }
+
+        if (roomName.length != 0 && valid == true){
             window.location.pathname = '/chat/' + roomName + '/';
+        }
+        else{
+            alert("Room name can only contain numbers and letters.");
         }
         
     };

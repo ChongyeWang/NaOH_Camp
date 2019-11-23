@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+
+<br>
+{% for ns in news %}
+
+
+    <div class="container" style="border:solid; border-color: lightgray;border-radius: 15px;">
+
+    <h2><a href={{ns.link}} style="color: black; margin-top: 8px;">{{ns.title}}</a></h2>
+    <small style="margin-left: 4px;">{{ns.date}}</small>
+    <br><br>
+    </div>
+    <br>
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block page_content %}
+<style type="text/css">
+    #p_1 {
+        margin-left: 15px;
+        margin-right: 15px;
+
+    }
+
+    #base2, .row {
+        margin-left: 100px;
+
+        width: 950px;
+        margin: 0 auto;
+    }
+
+
+    
+
+</style>
+
+
+<br>
+{% ifequal empty True %}
+	<h1>无搜索结果</h1>
+{% else %}
+
+<div id="base" >
+<div id="base2" class="row" style="width: 840px; margin: 0 auto;">
+
+    {% for item in posts %}
+
+    <div id = "p_1">
+        
+        <video width="250" height="210" playsinline controls="true">
+          <source src="{{item.1.video.url}}" >
+          
+        </video>
+        <div style="width:250px;" align="center">
+            <h5>{{ item.0.title }} </h5>
+        </div>
+
+        <div align="center" >
+            <h6>{{ item.0.user }} |&nbsp;{{ item.0.created_on.date }}</h6>
+        </div>
+    </div>
+    <br>
+      
+    {% endfor %}
+
+</div>
+</div>
+
+
+<br><br>
+
+
+
+{% endifequal %}
+
+    <h2 align="center"><a style="font-weight: bold; font-size: 25px; color: blue;" href="{% url 'view_videos' %}">
+            Return
+        </a></h2>
+    <br>
+
+{% endblock %}

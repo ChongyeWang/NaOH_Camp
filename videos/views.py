@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponseRedirect
 from .forms import PostForm, VideoForm
 from .models import Post, Videos
+from django.core.paginator import Paginator
 
 
 def select_language(request):
@@ -57,6 +58,12 @@ def view_videos(request):
         result.append((post, videos))
 
     language = select_language(request)
+
+
+    paginator = Paginator(result, 12)
+
+    page = request.GET.get('page')
+    result = paginator.get_page(page)
     
     context = {
         "posts": result,
@@ -65,5 +72,41 @@ def view_videos(request):
 
     return render(request, "view_videos.html", context)
 
+
+
+def video_search(request):
+
+    search_result = request.GET['search_result']
+    print(search_result)
+
+    empty = False
+    if not search_result:
+        empty = True
+
+    posts = Post.objects.filter(
+        body__contains=search_result
+    ).order_by(
+        '-created_on'
+    )
+
+    result = []
+
+    for post in posts:
+        videos = Videos.objects.filter(post=post).get()
+        result.append((post, videos))
+
+
+    if len(posts) == 0:
+        empty = True
+
+    language = select_language(request)
+
+    context = {
+        "empty": empty,
+        "posts": result,
+        "language": language
+    }
+
+    return render(request, "video_search_result.html", context)
 
 

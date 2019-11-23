@@ -1,0 +1,455 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+
+
+
+<div style="color: black;
+  	width: 700px;
+  	margin: 0 auto;">
+
+<br>
+<div >
+<h3 style="font-weight: bold;" align="center">
+Command & Conquer: Red Alert 2<br>
+<div >Time Study</div><br></h3>
+</div>
+
+<h5 align="center" style="font-weight: bold;">
+Author: PyroFalkon <br>
+Maintainer: Jason Heyes <br>
+
+翻译：烧碱<br> <br> 
+</h5>
+
+
+<div class="row" style="margin-left: 0px;border:groove; padding:10px 50px; border-color: black; font-size: 17px; font-weight: bold;">
+	<div style="width: 300px;">
+		<br>Allies<br>
+		------<br>
+		(Structures)<br>
+		Power Plant ($800) -------- 32<br>
+		Ore Refinery ($2000) ------ 80<br>
+		Barracks ($500) ----------- 20<br>
+		War Factory ($2000) ------- 80<br>
+		Naval Yard ($1000) -------- 40<br>
+		Air Force Command ($1000) - 40<br>
+		Patriot Missile ($1000) --- 40<br>
+		Pill Box ($500) ----------- 20<br>
+		Fortress Wall ($100) ------ 4<br>
+		Prism Tower ($1500) ------- 60<br>
+		Gap Generator ($1000) ----- 40<br>
+		Battle Lab ($2000) -------- 80<br>
+		Service Depot ($800) ------ 32<br>
+		Ore Purifier ($2500) ------ 100<br>
+		Weather Control ($5000) --- 200<br>
+		Chronosphere ($2500) ------ 100<br>
+		Spy Satellite ($1500) ----- 60<br>
+
+		<br>(Infantry)<br>
+		G.I. ($200) --------------- 8<br>
+		Engineer ($500) ----------- 20<br>
+		Rocketeer ($600) ---------- 24<br>
+		Spy ($1000) --------------- 40<br>
+		Tanya ($1000) ------------- 40<br>
+		Attack Dog ($200) --------- 8<br>
+
+		<br>(Vehicles)<br>
+		Grizzly Tank ($700) ------- 28<br>
+		IFV ($600) ---------------- 24<br>
+		Harrier ($1200) ----------- 48<br>
+		Mirage Tank ($1000) ------- 40<br>
+		Night Hawk ($1000) -------- 40<br>
+		Prism Tank ($1200) -------- 48<br>
+		MCV ($3000) --------------- 120<br>
+		Chrono Miner ($1400) ------ 56<br>
+		Amphibious Transport ($900) 36<br>
+		Destroyer ($1000) --------- 40<br>
+		Aegis Cruiser ($1200) ----- 48<br>
+		Aircraft Carrier ($2000) -- 80<br>
+		Dolphin ($500) ------------ 20<br>
+
+		<br>
+		<br>Soviets<br>
+		-------<br>
+		(Structures)<br>
+		Tesla Reactor ($600) ------ 24<br>
+		Ore Refinery ($2000) ------ 80<br>
+		Barracks ($500) ----------- 20<br>
+		War Factory ($2000) ------- 80<br>
+		Naval Yard ($1000) -------- 40<br>
+		Radar Tower ($1000) ------- 40<br>
+		Flak Cannon ($1000) ------- 40<br>
+		Sentry Gun ($500) --------- 20<br>
+		Fortress Wall ($100) ------ 4<br>
+		Tesla Coil ($1500) -------- 60<br>
+		Psychic Sensor ($1000) ---- 40<br>
+		Battle Lab ($2000) -------- 80<br>
+		Service Depot ($800) ------ 32<br>
+		Cloning Vats ($2500) ------ 100<br>
+		Nuclear Silo ($5000) ------ 200<br>
+		Iron Curtain ($2500) ------ 100<br>
+		Nuclear Reactor ($1000) --- 60<br>
+
+		<br>(Infantry)<br>
+		Conscript ($100) ---------- 4<br>
+		Engineer  ($500) ---------- 20<br>
+		Attack Dog ($200) --------- 8<br>
+		Tesla Trooper ($500) ------ 20<br>
+		Crazy Ivan ($600) --------- 24<br>
+		Flak Trooper ($300) ------- 12<br>
+		Yuri ($1200) -------------- 48<br>
+
+		<br>(Vehicles)<br>
+		Rhino Tank ($900) --------- 36<br>
+		Flak Track ($500) --------- 20<br>
+		V3 Rocket Laun. ($800) ---- 32<br>
+		Kirov Airship ($2000) ----- 80<br>
+		Terror Drone ($500) ------- 20<br>
+		Apocalypse Tank ($1750) --- 70<br>
+		MCV ($3000) --------------- 120<br>
+		War Miner ($1400) --------- 56<br>
+		Amphibious Transport ($900) 36<br>
+		Attack Sub ($1000) -------- 40<br>
+		Dreadnought ($2000) ------- 80<br>
+		Sea Scorpion ($600) ------- 24<br>
+		Giant Squid ($1000) ------- 40<br>
+
+		<br>
+		<br>Special<br>
+		-------<br>
+		American Paratroopers ------- 240<br>
+		British Snipers ($600) ------ 24<br>
+		Cuban Terrorists ($200) ----- 8<br>
+		French Grand Cannons  ($2000) 80<br>
+		German Tank Destroyers ($900) 36<br>
+		Iraqi Desolators ($600) ----- 24<br>
+		Korean Black Eagles ($1200) - 48<br>
+		Libyan Demo Trucks ($1500) -- 60<br>
+		Russian Tesla Tanks ($1200) - 48<br>
+		</div>
+		<div style="width: 300px;">
+					<br>盟军<br>
+		------<br>
+		（建筑）<br>
+		发电厂（$800）-------- 32<br>
+		矿石精炼厂（$2000）------ 80<br>
+		兵营（$500）----------- 20<br>
+		战争工厂（$2000）------- 80<br>
+		船厂（$1000）-------- 40<br>
+		空指部（$1000）-40<br>
+		爱国者（$1000）-40<br>
+		碉堡（$500）----------- 20<br>
+		围墙（$100）------ 4<br>
+		光棱塔（$1500）------- 60<br>
+		裂缝（$1000）----- 40<br>
+		作战实验室（$2000）-------- 80<br>
+		维修厂（$ 800）------ 32<br>
+		矿石精炼器（$2500）------ 100<br>
+		天气控制系统（$5000）-200<br>
+		超时空（$500）------ 100<br>
+		间谍卫星（$1500）----- 60<br>
+
+<br>		（步兵）<br>
+		G.I. （$200）--------------- 8<br>
+		工程师（$500）----------- 20<br>
+		火箭飞行兵（$600）---------- 24<br>
+		间谍（$1000）--------------- 40<br>
+		谭雅（$1000）------------- 40<br>
+		狗（$200）--------- 8<br>
+
+<br>		（车辆）<br>
+		灰熊坦克（$700）------- 28<br>
+		IFV（$600）---------------- 24<br>
+		入侵者（$1200）----------- 48<br>
+		幻影坦克（$1000）------- 40<br>
+		夜鹰直升机（$1000）-------- 40<br>
+		光棱坦克（$1200）-------- 48<br>
+		MCV（$3000）--------------- 120<br>
+		超时空采矿车（$1400）------ 56<br>
+		运输船（$900）36<br>
+		驱逐舰（$1000）--------- 40<br>
+		巡洋舰（$1200）----- 48<br>
+		航空母舰（$2000）-80<br>
+		海豚（$500）------------ 20<br>
+
+<br>
+<br>		苏军<br>
+		-------<br>
+		（建筑）<br>
+		磁能反应堆（$600）------ 24<br>
+		矿石精炼厂（$2000）------ 80<br>
+		兵营（$500）----------- 20<br>
+		战争工厂（$2000）------- 80<br>
+		船厂（$1000）-------- 40<br>
+		雷达（$1000）------- 40<br>
+		防空炮（$1000）------- 40<br>
+		哨兵炮（$500）--------- 20<br>
+		围墙（$100）------ 4<br>
+		磁暴线圈（$1500）-------- 60<br>
+		心灵感应器（$1000）---- 40<br>
+		作战实验室（$2000）-------- 80<br>
+		维修厂（$800）------ 32<br>
+		复制中心（$2500）------ 100<br>
+		核弹发射井（$5000）------ 200<br>
+		铁幕装置（$2500）------ 100<br>
+		核反应堆（$1000）-60<br>
+
+<br>		（步兵）<br>
+		动员兵（$100）---------- 4<br>
+		工程师（$500）---------- 20<br>
+		狗（$200）--------- 8<br>
+		磁暴步兵（$500）------ 20<br>
+		疯狂译文（$600）--------- 24<br>
+		防空步兵（$300）------- 12<br>
+		尤里（$1200）-------------- 48<br>
+
+<br>		（车辆）<br>
+		犀牛坦克（$900）--------- 36<br>
+		防空履带车（$500）--------- 20<br>
+		V3火箭 （$800）---- 32<br>
+		基洛夫飞艇（$2000）----- 80<br>
+		恐怖机器人（$500）------- 20<br>
+		天启坦克（$1750）--- 70<br>
+		MCV（$3000）--------------- 120<br>
+		武装矿车（$1400）--------- 56<br>
+		运输船（$900）36<br>
+		潜艇（$1000）-------- 40<br>
+		无畏（$2000）------- 80<br>
+		海蝎（$600）------- 24<br>
+		巨型乌贼（$1000）------- 40<br>
+
+<br>
+<br>		特殊单位<br>
+		-------<br>
+		美国伞兵------- 240<br>
+		英国狙击手（$600）------ 24<br>
+		古巴恐怖分子（$200）----- 8<br>
+		法国巨炮（$2000）80<br>
+		德国坦克杀手（$900）36<br>
+		伊拉克辐射工兵（$600）----- 24<br>
+		韩国黑鹰战机（$1200）-48<br>
+		利比亚自爆卡车（$1500）-60<br>
+		俄罗斯磁能坦克（$1200）-48<br>
+		</div>
+</div>
+
+<br><br>
+Version 2.0b<br>
+Last Update: 1 November 2002<br>
+
+
+<br>+-----------------+<br>
+|+---------------+|<br>
+||VERSION HISTORY||<br>
+|+---------------+|<br>
++-----------------+<br>
+
+<br>v2.0b (1 November 2003)<br>
+It's been nearly a year, but unfortunately PyroFalkon's site is down for the <br>
+count. Luckily, IGN has decided to host my FAQs too, so it's all good. A new <br>
+copyright notice is the only change.<br>
+
+<br>v2.0a (28 December 2002)<br>
+No new information, but I've changed the look of my FAQ, as well as my legal<br>
+info. I'm now carrying my guide on my own website; you can find the URL at the<br>
+bottom of the document.<br>
+
+<br>v2.0 (10 November 2001)<br>
+Second release under a new writer.<br>
+
+<br>v1.0 (03 November 2000)<br>
+First release.<br>
+
+<br>
+<br>
+<br>+---------------------+<br>
+|+-------------------+|<br>
+||INTRO BY PYROFALKON||<br>
+|+-------------------+|<br>
++---------------------+<br>
+
+<br>I've written two semi-popular time studies already (one on Age of Empires II,<br>
+and one on its expansion pack). To continue the tradition, I've decided to make<br>
+one for my newest love, Red Alert 2.<br>
+
+<br>This FAQ has little fat, and a lot of meat. There's no review, no fluff talk<br>
+aside from this section and my disclaimer. I give you the info you need, and<br>
+that's that.<br>
+
+<br>I assure you that this time study can't and won't help you if you're a newbie.<br>
+Check out NVarkovsky's fantastic FAQ for detailed info on missions and units if<br>
+you're starting out. This FAQ is for the vets, especially those who frequently<br>
+ally. Using this, you can accurately give your allies information on how long<br>
+it'll take before you ready your army, or navy, or whatever.<br>
+
+<br>I won't go into the tech tree or what the units do. I'm going to assume you<br>
+know the game well enough that you don't need to question "what's this?" every<br>
+line.<br>
+
+<br>
+<br>
+<br>+----------------+<br>
+|+--------------+|<br>
+||THE NEW WRITER||<br>
+|+--------------+|<br>
++----------------+<br>
+
+<br>I'm not as interested in Red Alert 2, or PC games as a whole, as I once was.<br>
+This FAQ was never updated in over a full year, which is simply something that<br>
+should not happen. As such, I'm turning the FAQ over to Jason Heyes. You'll<br>
+still be able to get it from my website and any other website that you've been<br>
+able to get it from before; I simply won't be updating it or answering<br>
+questions on it. Everything from the end of this section are his words and<br>
+timings, not mine.<br>
+
+<br>My thanks go to everyone who wrote me an e-mail complementing or condemning me<br>
+for writing this; and my thanks go to everyone who read it, whether they wrote<br>
+me or not.<br>
+
+<br>Okay, enough talk. Take it, Jason.<br>
+
+<br>
+<br>
+<br>+----------------+<br>
+|+--------------+|<br>
+||INTRO BY JASON||<br>
+|+--------------+|<br>
++----------------+<br>
+
+<br>The following study is intended for the elite class of commanders. To the<br>
+average novice the information presented here will have little bearing. The<br>
+purpose of the study is to help experienced commanders broaden their strategic<br>
+vocabulary so as to give them an edge, a slight advantage over their human<br>
+opponents.<br>
+
+<br>
+<br>
+<br>+---------------------------+<br>
+|Time as a Strategic Element|<br>
++---------------------------+<br>
+
+<br>Just as all commanders must work within the limits of the battle arena they<br>
+must also work within the restrictions of time. Most commanders take the notion<br>
+of time for granted. Few go further.<br>
+
+<br>To better appreciate the importance of time we should consider two very<br>
+different types of commanders: offensive and defensive.<br>
+
+<br>Offensive commanders are those who employ "rush" based tactics. They appreciate<br>
+the importance of time because they waste none. The best of these commanders<br>
+don't act prematurely though, they act when the time is right.<br>
+
+<br>Defensive commanders are also aware of time but their appreciation is different<br>
+to that of the offensive commander. Some prefer to draw a game out to one final<br>
+battle which determines success or failure. And others prefer to gradually<br>
+weaken their enemy over time.<br>
+
+<br>In both cases time is the fundamental strategic element at play.<br>
+
+<br>+------------------------+<br>
+|Taking Advantage of Time|<br>
++------------------------+<br>
+
+<br>Having the answers to questions like:<br>
+
+<br>* How long does it take to build an allied ore refinery?<br>
+* How long does it take a war miner to harvest $1000 worth?<br>
+* How long does it take to train a spy?<br>
+* How long does it take for my night hawk chopper to get to my enemy?<br>
+
+<br>can give the commander an edge over his/her opponent.<br>
+
+<br>The answers to all questions like these can be found from the methods and<br>
+information detailed in this study.<br>
+
+<br>+-----------------------+<br>
+|Red Alert 2 Build-Times|<br>
++-----------------------+<br>
+
+
+
+<br>---<br>
+
+<br>Note: The build-time of a unit decreases by 25% for every additional building<br>
+constructing that unit. The same applies for structures when you have multiple<br>
+construction yards.<br>
+
+<br>Interesting Note: The build-time of any unit or structure is proportional to<br>
+its cost by a factor of 25. That means you can find the build-time by dividing<br>
+the cost by 25. So to find the build time for an Ore Refinery we can divide its<br>
+cost ($2000) by 25 and the result is 80 seconds. This works for every other<br>
+unit and structure. Just divide its cost by 25 and you have its build-time.<br>
+
+<br>Important Note: The times listed above are measured in game seconds, not real<br>
+seconds. To understand the difference please read the next section.<br>
+
+<br>+--------------------------------------------+<br>
+|The Nature of Time in Red Alert 2 (Optional)|<br>
++--------------------------------------------+<br>
+
+<br>The game speed option in RA2 allows us to change how fast things build and how<br>
+fast the game runs. When you change the game speed you are altering the "speed<br>
+of time" in the game. If you put the game speed on fastest (value of 6)<br>
+everything happens in fast forward like time were sped up. While if you put the<br>
+game speed on slowest (value of 0) everything happens in slow motion as if time<br>
+were slowed down. However if you put the game speed somewhere in between,<br>
+things will move around more normally. So how fast time goes by depends on the<br>
+chosen game speed.<br>
+
+<br>Another way to see how time in RA2 can speed up and slow down is by watching a<br>
+superweapon countdown which appears on the lower right of the battle viewport.<br>
+We can see from watching the countdown that time speeds up and slows down as we<br>
+increase or decrease the game speed setting. If you compare your watch with the<br>
+countdown you will notice that they are usually not synchronised (they will not<br>
+be ticking at the same speed). The important thing to realise here is that your<br>
+watch indicates real seconds while the countdown in RA2 indicates game seconds.<br>
+Both are generally different in length.<br>
+
+<br>+-------------------------------+<br>
+|Some useful Discoveries on Time|<br>
++-------------------------------+<br>
+
+<br>The superweapon countdown is like an in-game timer which we can use to time<br>
+events in RA2. Through using this timer I have come up with some useful<br>
+discoveries which might be helpful.<br>
+
+<br>1. It takes about 100 seconds on average for harvesters to mine $1000 worth of<br>
+credits from yellow ore and about 50 seconds on average for harvesters to mine<br>
+$1000 worth of credits from multicoloured ore. (We assume at least one refinery<br>
+built directly adjacent the ore)<br>
+
+<br>2. It takes one minute (60 seconds) for an oil derrick (tech building) to<br>
+produce $200 worth of credits.<br>
+
+<br>3. Money is spent at the rate of 25 credits/sec on every unit or structure<br>
+being built at any one time. That rate increases by 25% for every additional<br>
+structure building the same thing.<br>
+
+<br>4. To spend out of one category continuously throughout battle (eg. on tanks)<br>
+without falling into economic recession you need 3 harvesters mining yellow ore<br>
+or 2 harvesters mining multicoloured ore. When there is one extra structure<br>
+building out of that category you need 4 harvesters mining yellow ore or 2<br>
+harvesters mining multicoloured ore.<br>
+
+<br>5. It takes 3 oil derricks to produce the same amount of credits as one<br>
+harvester does mining yellow ore and 6 oil derricks to produce the same amount<br>
+of credits as one harvester does mining multicoloured ore.<br>
+
+<br>6. The cost ratio between any two units or structures tells us how many we can<br>
+buy of each for the same price.<br>
+
+<br>Examples:<br>
+a) tesla tank : rhino tank = $1200 : $900 = 4 : 3<br>
+So we can build 3 tesla tanks for the price of 4 rhino tanks.<br>
+
+<br>b) grizzly tank : mirage tank = $700 : $1000 = 7 : 10<br>
+So we can build 7 mirage tanks for the price of 10 grizzly tanks.<br>
+
+<br>c) conscript : apocalypse tank = $100 : $1750 = 2 : 35<br>
+So we can build 35 conscripts for the price of 2 apocalypse tanks.<br>
+
+</div>
+<br><br>
+{% endblock %}

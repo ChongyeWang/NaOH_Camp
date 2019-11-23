@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+<style type="text/css">
+.order-info {
+  float:right;
+  width:300px;
+  background:#efefef;
+  padding:10px 20px;
+  color:#333;
+  border-bottom:4px solid #5993bb;
+  margin-right: 150px;
+  margin-top: 30px;
+}
+
+.order-info h3 {
+    color:#5993bb;
+}
+
+.order-info ul li {
+    margin:0;
+    padding:0;
+    font-size:14px;
+}
+
+.order-info p {
+    font-weight:bold;
+    float:right;
+}
+
+.order-info span {
+    float:right;
+}
+</style>
+
+<head>
+     <meta charset="utf-8" />
+     
+     <link href="{% static "css/shop_base.css" %}" rel="stylesheet">
+</head>
+
+<body>
+
+<h2 style="margin-left: 150px; margin-top: 10px;font-weight: bold; margin-bottom: 20px;" >Thanks for Choosing Us!</h2>
+
+<div class="order-info">
+ <h3 style="color: black; font-weight: bold;">Order Summary</h3>
+ <ul>
+   {% for item in cart %}
+     <li>
+       {{ item.quantity }} x {{ item.product.name }}
+       <span>${{ item.total_price }}</span>
+     </li>
+   {% endfor %}
+ </ul>
+ <p>Total: ${{ cart.get_total_price }}</p>
+ <img src="https://www.merchantequip.com/images/logos/visa-mastercard-211x65.gif" width="200" height="62"
+      alt="Merchant Equipment Store Credit Card Logos" style="margin-left: 30px;" />
+                              
+</div>
+
+<form action="." method="post" class="order-form" style="margin-left: 150px;">
+ {{ form.as_p }}
+ <p><input type="submit" value="Place order"></p>
+ {% csrf_token %}
+</form>
+
+</body>
+
+
+{% endblock %}

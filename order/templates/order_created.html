@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+
+<head>
+     <meta charset="utf-8" />
+     
+     <link href="{% static "css/shop_base.css" %}" rel="stylesheet">
+</head>
+
+<body>
+<div align="center"><span style="font-size: 140px; color: lightgreen;" >&#10004;</span></div>
+<h1 style="font-weight: bold;" align="center">Congratulations! Your order has been placed!</h1>
+<p align="center">Your order has been successfully completed. Your order number is
+<strong>{{ order.id }}</strong>.</p>
+
+<div align="center"><a href="{% url "product_list" %}" class="button" >
+      Return
+    </a></div>
+
+</body>
+
+
+{% endblock %}

@@ -7,7 +7,7 @@ class PostForm(forms.ModelForm):
     body = forms.CharField(widget=forms.Textarea(
         attrs={
             "class": "form-control",
-            "placeholder": "内容"
+            "placeholder": "Content"
         })
     )
 

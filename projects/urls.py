@@ -22,5 +22,12 @@ urlpatterns = [
     path("resource/story", views.story, name="story"),
     path("resource/super_weapon", views.super_weapon, name="super_weapon"),
     path("resource/tech_building", views.tech_building, name="tech_building"),
-    path("resource/timeline", views.timeline, name="timeline")
+    path("resource/timeline", views.timeline, name="timeline"),
+    path("resource/quotes", views.quotes, name="quotes"),
+    path("resource/manual1", views.manual1, name="manual1"),
+    path("resource/manual2", views.manual2, name="manual2"),
+    path("resource/stat", views.stat, name="stat"),
+    path("resource/time", views.time, name="time"),
+    path("resource/special", views.special, name="special"),
+    path("resource/yuri", views.yuri, name="yuri")
 ]

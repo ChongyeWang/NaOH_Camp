@@ -63,7 +63,7 @@ def view_essays(request):
 
 
     post_list = Post.objects.all()
-    paginator = Paginator(post_list, 5) # Show 25 contacts per page
+    paginator = Paginator(post_list, 5)
 
     page = request.GET.get('page')
     posts = paginator.get_page(page)
