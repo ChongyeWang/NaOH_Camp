@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+{% load mathfilters %}
+
+<style type="text/css">
+
+    .pagination a  {
+      
+      color: black;
+      padding: 6px 16px;
+    }
+
+    .pagination .active  {
+      background-color: lightgray;
+      padding: 1px 16px;
+      color: white;
+
+    }
+
+    #page h3 {
+      margin-top: 6px;
+      
+    }
+
+    * {
+  box-sizing: border-box;
+}
+
+
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 67%;
+}
+
+
+
+/* The bar container */
+.bar-container {
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {
+  height: 18px; background-color: #4CAF50;
+  background: lightblue;
+  border-radius: 10px;
+  padding: 1px;
+  box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+}
+
+</style>
+
+
+
+<div style="width: 800px; margin: 0 auto; margin-top: 10px;" >
+
+<div>
+
+
+<br>
+<div style="border-style: groove; border-color: black; border-radius: 20px;">
+
+<br>
+{% for rating in ratings %}
+    <h2 style="width: 700px;word-wrap: break-word;
+    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}">{{ rating.name }}</a>
+
+
+    <a style="color: #00008B; float: right;" href="{% url 'rating_details' rating.pk%}">Rating : {{ rating.rate }} / 5.0</a>
+
+
+    <br>
+    <div class="middle">
+    <div class="bar-container">
+     <div class="bar-5" style="width:{{ rating.rate |mul:20 }}%;"></div>
+    </div>
+    </div>
+
+    
+
+    </h2>
+    <small style="margin-left: 25px; margin-right: 25px;">
+
+        Rating Count: {{ rating.rate_num }} &nbsp;|&nbsp;
+        {% ifequal rating.rate 0 %}
+        Rating: None
+        {% else %}
+        Rating: {{ rating.rate }} / 5.0
+        {% endifequal %}
+    </small>
+    <hr>
+    
+{% endfor %}
+
+</div>
+
+</div>
+
+<br>
+
+
+
+
+
+<h1 align="center"><a style="color: #00008B;" class="navbar-brand" href="{% url 'post_ranking' %}">Add New Player</a><h1>
+
+<br>
+
+{% endblock %}
+
+

@@ -63,7 +63,7 @@ def view_essays(request):
 
 
     post_list = Post.objects.all()
-    paginator = Paginator(post_list, 5)
+    paginator = Paginator(post_list, 10)
 
     page = request.GET.get('page')
     posts = paginator.get_page(page)

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block page_content %}
+
+<style type="text/css">
+    img {
+        width: 100%;
+    }
+
+    .btn-group button {
+      background-color: #EDF5E1; /* Green background */
+
+      color: black; 
+      padding: 3px 8px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+
+    .btn-group button:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+
+    /* Clear floats (clearfix hack) */
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #3e8e41;
+    }
+
+    .rate a {
+        background-color: #EDF5E1;
+        color: black; 
+        padding: 3px 8px;
+    }
+</style>
+
+<div class="col-md-8 offset-md-2">
+
+  
+    <div align="center">
+        
+        <br>
+        <h1 style="font-weight: bold;">{{rating.name}}</h1>
+
+        <h3>{{rating.body}}</h3>
+        <br><br><br><br>
+
+        <h3 style="font-weight: bold;">Rate this Player</h3>
+        <br>
+        <div class="rate">
+            <a href="{% url 'r_one_star' rating.pk%}" class="btn btn-default">&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'r_two_star' rating.pk%}" class="btn btn-default">&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'r_three_star' rating.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'r_four_star' rating.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;&#9734;</a>&nbsp;&nbsp;
+            <a href="{% url 'r_five_star' rating.pk%}" class="btn btn-default">&#9734;&#9734;&#9734;&#9734;&#9734;</a>
+          
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+</div>
+
+
+
+{% endblock %}

@@ -2,7 +2,7 @@ from django import forms
 from .models import Post, Images
 
 class PostForm(forms.ModelForm):
-    title = forms.CharField(max_length=128)
+    title = forms.CharField(max_length=50)
 
     body = forms.CharField(widget=forms.Textarea(
         attrs={

@@ -4,6 +4,9 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
 from projects.models import Personal_info
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+
 # Create your views here.
 
 
@@ -33,3 +36,22 @@ def register_request(request):
 def logout_request(request):
      logout(request)
      return redirect('home')
+
+
+def reset(request):
+	if request.user.is_authenticated:
+	    if request.method == 'POST':
+	        form = PasswordChangeForm(request.user, request.POST)
+	        if form.is_valid():
+	            user = form.save()
+	            update_session_auth_hash(request, user)
+	            return redirect('home')
+	        
+	    else:
+	        form = PasswordChangeForm(request.user)
+	    return render(request, 'reset.html', {
+	        'form': form
+	    })
+	else:
+		
+		return register_request(request)

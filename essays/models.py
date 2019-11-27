@@ -4,8 +4,8 @@ from django.template.defaultfilters import slugify
 
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    title = models.CharField(max_length=128)
-    body = models.CharField(max_length=4000)
+    title = models.CharField(max_length=50)
+    body = models.CharField(max_length=10000)
     created_on = models.DateTimeField(auto_now_add=True)
     count = models.IntegerField(default=0)
     rate = models.FloatField(default=0)

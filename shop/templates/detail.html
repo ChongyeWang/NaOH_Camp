@@ -7,9 +7,20 @@
      <meta charset="utf-8" />
      
      <link href="{% static "css/shop_base.css" %}" rel="stylesheet">
+
+     <style type="text/css">
+       input[type=submit] {
+            
+            
+            text-align: center;
+            background:black; 
+            color: #7FFFD4;
+            border-radius: 5px; 
+        }
+     </style>
 </head>
 
-<div id="subheader">
+<!-- <div id="subheader">
  <div class="cart">
      {% with total_items=cart|length %}
        {% if cart|length > 0 %}
@@ -23,20 +34,24 @@
        {% endif %}
      {% endwith %}
   </div>
-</div>
+</div> -->
+<br>
 
 <div class="product-detail">
        <img src="{% if product.image %}{{ product.image.url }}{% else %}
-   {% static "img/na.jpg" %}{% endif %}">
-       <h1>{{ product.name }}</h1>
-       <h2><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
-       <p class="price">${{ product.price }}</p>
-         {{ product.description|linebreaks }}
-		<form action="{% url 'cart_add' product.id %}" method="post">
-		     {{ cart_product_form }}
-		     {% csrf_token %}
-		     <input type="submit" value="Add to cart">
-		</form>
+   {% static "img/na.jpg" %}{% endif %}" style="width:250px;height: 250px;margin-bottom:8px;object-fit: cover;">
+       <h1 style="font-weight: bold;">{{ product.name }}</h1>
+       <h2 style="font-weight: bold;">Category: <a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h2>
+       <p class="price">Price: ${{ product.price }}</p>
+       <form action="{% url 'cart_add' product.id %}" method="post">
+         {{ cart_product_form }}
+         {% csrf_token %}
+         <input type="submit" value="Add to cart" style="margin-left: 10px;">
+        </form>
+        <br>
+        <p style="color: black;">Description: </p>
+        <p style="color: black;">{{ product.description|linebreaks }}</p>
+		
     </div>
 
 {% endblock %}

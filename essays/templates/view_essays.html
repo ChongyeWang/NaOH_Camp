@@ -28,14 +28,14 @@
 
 
 
-<div style="width: 800px; margin: 0 auto;">
+<div style="width: 800px; margin: 0 auto; margin-top: 10px;" >
 
 <div>
 {% if user.is_authenticated %}
 
   {% if language == "Chinese" %}
       <div class="row">
-        <h1 style="margin-left: 333px; margin-right: 270px;font-weight: bold;">专栏</h1>
+        <h1 style="margin-left: 360px; margin-right: 270px;font-weight: bold;">专栏</h1>
 
         {% if user.is_authenticated %}
             <a style="color: #00008B;" class="navbar-brand" href="{% url 'post_essay' %}">新建文章</a>

@@ -33,13 +33,6 @@ a.button.light {
     background:#ededed;
 }
 
-.text-left {
-    text-align:left;
-}
-
-.text-right {
-    text-align:right;
-}
 
 table {
     width:100%;
@@ -76,9 +69,6 @@ table.cart img {
     width:180px;
 }
 
-tbody td.num {
-    text-align:right;
-}
 
 td input[type="submit"] {
     font-size:12px;

@@ -69,7 +69,7 @@
 input[type=submit] {
     border-radius: 5px;
     border: 0;
-    width: 60px;
+    width: 80px;
     height: 32px;
     font-family: Tahoma;
     background: #f4f4f4;
@@ -90,12 +90,76 @@ input[type=submit] {
     /* IE6-9 */
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 300px;
+  
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
 </style>
 
 <body>
 <br>
+
+<div class="row" style="width: 700px; margin: 0 auto;">
+<div class="card" style="margin-right: 100px;">
+  <img src="{% static 'img/sketch/a0.png' %}" style="width: 300px;">
+  <h1>{{user.username}}</h1>
+
+  {% if language == "English" %}
+
+  <p class="title">Level：{{level}}</p>
+  <p>Experience：{{experience}}</p>
+
+  {% else %}
+
+  <p class="title">等级：{{level}}</p>
+  <p>经验：{{experience}}</p>
+
+  {% endif %}
+
+  
+  <a href="#"><i class="fa fa-dribbble"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  
+</div>
+
+
+<div style="width: 300px;" >
+
 {% if language == "English" %}
-<h3>Current : English</h3>
+<h3>Langauge : English</h3>
 <br>
 <form action="" method="post">
 	{% csrf_token %}
@@ -109,24 +173,21 @@ input[type=submit] {
 </form>
 
 <br>
-<h3>Level：{{level}}</h3>
-<br>
-<h3>Experience：{{experience}}</h3>
-<br>
+
+
 
 <h3><a style="color: #00008B;" href="{% url 'my_post' %}">My Post</a></h3>
 
-<br>
 
 <h3><a style="color: #00008B;" href="{% url 'my_column' %}">My Column</a></h3>
 
-<br>
 
 <h3><a style="color: #00008B;" href="{% url 'my_video' %}">My Video</a></h3>
 
+<h3><a style="color: #00008B;" href="{% url 'reset' %}">Reset Password</a></h3>
 
 {% else %}
-<h3>当前语言 : 简体中文</h3>
+<h3>语言设置 : 简体中文</h3>
 <br>
 <form action="" method="post">
 	{% csrf_token %}
@@ -138,22 +199,26 @@ input[type=submit] {
 </form>
 
 <br>
-<h3>当前等级：{{level}}</h3>
-<br>
-<h3>当前经验：{{experience}}</h3>
-<br>
+
+
 
 <h3><a style="color: #00008B;" href="{% url 'my_post' %}">我的帖子</a></h3>
 
-<br>
 
 <h3><a style="color: #00008B;" href="{% url 'my_column' %}">我的专栏</a></h3>
 
-<br>
 
 <h3><a style="color: #00008B;" href="{% url 'my_video' %}">我的投稿</a></h3>
 
+<h3><a style="color: #00008B;" href="{% url 'reset' %}">更改密码</a></h3>
+
 {% endif %}
+
+
+</div>
+
+</div>
+
 
 </body>
 

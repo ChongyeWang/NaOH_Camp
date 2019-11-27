@@ -4,10 +4,10 @@
 
 <br>
 
-<div class="col-md-8 offset-md-2">
+<div class="col-md-8 offset-md-2" style="text-overflow:  ellipsis;">
 
 {% for post in posts %}
-    <h2><a style="color: #00008B;" href="{% url 'essay_details' post.pk%}">{{ post.title }}</a></h2>
+    <h2 style="text-overflow: ellipsis;"><a style="color: #00008B;" href="{% url 'essay_details' post.pk%}">{{ post.title }}</a></h2>
     <small>
         {{ post.user }} |&nbsp;
         {{ post.created_on.date }}
