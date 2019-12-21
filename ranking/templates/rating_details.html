@@ -38,7 +38,7 @@
     }
 </style>
 
-<div class="col-md-8 offset-md-2">
+<div style="width: 800px; margin: 0 auto;">
 
   
     <div align="center">
@@ -46,8 +46,8 @@
         <br>
         <h1 style="font-weight: bold;">{{rating.name}}</h1>
 
-        <h3>{{rating.body}}</h3>
-        <br><br><br><br>
+        <h3 id="body_des">{{rating.body}}</h3>
+        <br><br><br>
 
         <h3 style="font-weight: bold;">Rate this Player</h3>
         <br>
@@ -60,11 +60,61 @@
           
         </div>
 
+
+
     </div>
 
-    <br><br><br>
+    <br><br>
 
 </div>
+
+<div style="width: 800px; margin: 0 auto;">
+{% ifequal finished False %}
+
+{% else %}
+<div align="center"><a style="font-weight: bold; font-size: 25px;" href="{% url 'ranking' %}">
+        Return
+    </a></div>
+
+{% endifequal %}
+
+<br><br><br>
+<h3 style="font-weight: bold;">评论:</h3>
+{% for comment in comments %}
+<p>
+    On {{ comment.created_on.date }}&nbsp;
+    <b>{{ comment.author }}</b>
+</p>
+<p style="color: black;">{{ comment.body }}</p>
+<hr>
+{% endfor %}
+
+<h3>发表评论:</h3>
+<form action="/ranking/{{ rating.pk }}/" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.body }}
+    </div>
+    <button type="submit" class="btn btn-primary">提交</button>
+</form>
+
+</div> 
+
+<script type="text/javascript">
+  function urlify(text) {
+    var urlRegex = /(https?:\/\/[^\s]+)/g;
+    return text.replace(urlRegex, function(url) {
+        return '<a href="' + url + '">' + url + '</a>';
+    })
+    // or alternatively
+    // return text.replace(urlRegex, '<a href="$1">$1</a>')
+  }
+  var des = document.getElementById("body_des");
+  var urlRegex = /(https?:\/\/[^\s]+)/g;
+  des.innerHTML = des.innerHTML.replace(urlRegex, function(url) {
+      return '<a href="' + url + '">' + url + '</a>';
+  })
+</script>
 
 
 

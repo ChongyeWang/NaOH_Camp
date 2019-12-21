@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% load static %}
+
 {% block page_content %}
 
 <style type="text/css">
@@ -40,13 +42,20 @@
 
 <div class="col-md-8 offset-md-2">
 
-    <h1>{{ post.title }}</h1>
+    <br>
+
+    <h1 style="font-weight: bold;">{{ post.title }}</h1>
 
     <small>
+        <img src="{% if face %}{{ face.image.url }}{% else %}
+          {% static "img/sketch/a0.png" %}{% endif %}" style="width: 30px; height: 30px; object-fit: cover; margin-right: 10px;">
         {{ post.user }} |&nbsp;
         {{ post.created_on.date }}
     </small>
-    <p>{{ post.body | linebreaks }}</p>
+
+    <br><br>
+
+    <p style="color: black;">{{ post.body | linebreaks }}</p>
 
 
     {% for image in images %}

@@ -1,11 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.template.defaultfilters import slugify
+from django.core.validators import MinLengthValidator
 
 class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=50)
-    body = models.CharField(max_length=10000)
+    body = models.CharField(max_length=10000, validators=[MinLengthValidator(150)])
     created_on = models.DateTimeField(auto_now_add=True)
     count = models.IntegerField(default=0)
     rate = models.FloatField(default=0)

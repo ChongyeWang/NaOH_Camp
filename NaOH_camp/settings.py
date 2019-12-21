@@ -60,7 +60,10 @@ INSTALLED_APPS = [
     'cart',
     'order',
     'ranking',
-    'mathfilters'
+    'mathfilters',
+    'face',
+    'links',
+    'face_auth'
 ]
 
 SITE_ID = 5

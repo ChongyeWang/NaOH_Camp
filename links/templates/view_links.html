@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+<style type="text/css">
+
+    a {
+        color: black;
+    }
+
+    #col1 {
+        margin-left: 20px;
+        width: 400px;
+        margin-right: 20px;
+    }
+    #col2 {
+        margin-left: 20px;
+        width: 400px;
+        margin-right: 20px;
+    }
+</style>
+
+
+</body>
+<br>
+
+<div class="row" style="width: 900px; margin: 0 auto; border: groove;border-color: black;">
+
+
+    <div id="col1" style="margin-top: 10px; margin-bottom: 10px;">
+  
+    {% for link in links1 %}
+
+    <a href="{{link.link}}" style="font-size: 25px;">{{link.name}}</a>
+    <br>
+
+    {% endfor %}
+    
+    </div>
+
+    <div id="col2" style="margin-top: 10px; margin-bottom: 10px;">
+
+    {% for link in links2 %}
+
+    <a href="{{link.link}}" style="font-size: 25px;">{{link.name}}</a>
+    <br>
+
+    {% endfor %}
+
+
+    </div>
+    
+</div>
+
+
+</body>
+
+{% endblock %}
+
+

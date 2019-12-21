@@ -159,9 +159,6 @@ p {
 
 <body>
 
-
-
-  <!-- ***** Hero Area Start ***** -->
     <div class="background">
       <img  src="{% static "img/final_background.jpg" %}" style="width:100%; ">
       <div class="layer">
@@ -170,8 +167,8 @@ p {
                 <div class="col-12">
                     <div id="final_bg" class="fancy-hero-content text-center">
                         <!-- Video Overview -->
-                        <h1 style="font-weight: bold; font-size: 80px;">NaOH Group</h1>
-                        <h1 style="font-weight: bold; font-size: 45px;">It Is All About Red Alert</h1>
+                        <h1 style="font-weight: bold; font-size: 75px;">NaOH Group</h1>
+                        <h2 style="font-weight: bold; font-size: 40px;">It Is All About Red Alert</h2>
                         
                         <br>
                         <h1><a href="{% url 'register' %}">Join Us Today</a></h1>
@@ -184,7 +181,7 @@ p {
         
     </div>
 
-    <br>
+    <br><br><br>
 
     <section class="ftco-section ftco-no-pt ftco-no-pb ftco-volunteer">
       <div class="container-fluid px-md-0">
@@ -752,18 +749,23 @@ p {
           <div class="col-md">
             <br>
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">NaOH Group</h2>
-              <p align="justify">We dedicate to promoting the spread of Red Alert all over the world. We love Red Alert and we are people with dreams!</p>
+              <h2 class="ftco-heading-2" style="font-weight: bold;">NaOH Group</h2>
+              <p align="justify" style="width: 230px;">Founded in 2019, NaOH Group is an organization dedicating to providing a platform for Red Alert players all over the world to communicate with each other and promoting the spread of Red Alert culture. Meanwhile, we apply digital business transformation to the game, providing customer solutions for various users. We are all composed of Red Alert players and are welcome more players to join us! We love Red Alert and we are people with dreams!</p>
               
             </div>
           </div>
           <div class="col-md">
             <br>
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Information</h2>
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2" style="font-weight: bold;">Information</h2>
               <ul class="list-unstyled">
                 <li><a href="{% url 'info_index' %}" style="color: #05386B">NaOH Group</a></li>
-                <li><a href="{% url 'author_index' %}" style="color: #05386B">About us</a></li>
+                <li><a href="{% url 'info_team' %}" style="color: #05386B">Teams</a></li>
+                <li><a href="{% url 'map' %}" style="color: #05386B">Official Maps</a></li>
+                <li><a href="{% url 'mod' %}" style="color: #05386B">Mod</a></li>
+                <li><a href="{% url 'author_index' %}" style="color: #05386B">About Us</a></li>
+                <li><a href="{% url 'about_me' %}" style="color: #05386B">About the Author</a></li>
+                <li><a href="{% url 'history' %}" style="color: #05386B">Command & Conquer</a></li>
                 
               </ul>
             </div>
@@ -771,23 +773,27 @@ p {
           <div class="col-md">
             <br>
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Links</h2>
+              <h2 class="ftco-heading-2" style="font-weight: bold;">Links</h2>
               <ul class="list-unstyled">
                 <li><a href="{% url 'home' %}" style="color: #05386B">Home</a></li>
                 <li><a href="{% url 'blog_index' %}" style="color: #05386B">Blog</a></li>
-                <li><a href="{% url 'view_videos' %}" style="color: #05386B">Video</a></li>
+                <li><a href="{% url 'product_list' %}" style="color: #05386B">Shop</a></li>
+                <li><a href="{% url 'data_predict' %}" style="color: #05386B">Assessment</a></li>
+                <li><a href="{% url 'project_index' %}" style="color: #05386B">Archive</a></li>
+                <li><a href="{% url 'ranking' %}" style="color: #05386B">Ranking</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <br>
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Contact</h2>
+              <h2 class="ftco-heading-2" style="font-weight: bold;">Contact</h2>
               <div class="block-23 mb-3">
                 <ul>
                   <p><span class="icon icon-map-marker"></span><span > San Francisco, California, USA</span></p>
                   <p><span class="icon icon-phone"></span><span > +1 217-979-2989</span></p>
                   <p><span class="icon icon-envelope"></span><span > naohgroup225@gmail.com</span></p>
+                  <img src="{% static "img/erweima.png" %}" style="width:180px;">
                 </ul>
               </div>
             </div>

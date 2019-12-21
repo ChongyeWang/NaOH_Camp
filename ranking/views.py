@@ -1,18 +1,8 @@
 from django.shortcuts import render
-from .models import Rating
-from .forms import RankingForm
+from .models import Rating, Comment
+from .forms import RankingForm, CommentForm
 from django.http import HttpResponseRedirect
-
-
-def select_language(request):
-    language = 'English'
-    if request.user.is_authenticated:
-        if request.session.get(request.user.username, None) == None:
-            request.session[request.user.username] = 'Chinese'
-        language = request.session[request.user.username]
-
-    return language
-
+from .utils import select_language
 
 
 def ranking(request):
@@ -30,11 +20,33 @@ def ranking(request):
 def ranking_details(request, pk):
     rating = Rating.objects.get(pk=pk)
 
-    language = select_language(request)
-    context = {
+    form = CommentForm()
 
-       'rating': rating,
-       'language': language
+    finished = False
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = Comment(
+                author = request.user,
+                body = form.cleaned_data["body"],
+                rating = rating
+            )
+            comment.save()
+            form = CommentForm()
+
+            finished = True
+
+    comments = Comment.objects.filter(rating=rating)
+
+    language = select_language(request)
+
+    context = {
+        "comments": comments,
+        "form": form,
+        "language": language,
+        "finished": finished,
+        'rating': rating,
     }
 
     return render(request, "rating_details.html", context)
@@ -55,7 +67,12 @@ def post_ranking(request):
 
             name = rankingForm.cleaned_data["name"]
 
-            if Rating.objects.get(name=name) == None:
+            try:
+            	rating = Rating.objects.get(name=name)
+            except:
+            	rating = None
+
+            if rating == None:
             
 	            rating = Rating(
 	                name = rankingForm.cleaned_data["name"],
@@ -64,7 +81,7 @@ def post_ranking(request):
 	            rating.save()
 
             else:
-                rating = Rating.objects.get(name=name)
+                
                 c_punc = ' 。， ？《》，！@#¥%……'
                 e_punc = '!#$%&()*+, -./:;<=>?@[]^_`{|}~'
 
@@ -74,7 +91,7 @@ def post_ranking(request):
                 	rating.body += rankingForm.cleaned_data["body"]
                 else:
                 	rating.body += (' ' + rankingForm.cleaned_data["body"])
-                	
+
                 rating.save()
 
             return HttpResponseRedirect("/ranking/")

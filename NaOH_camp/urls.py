@@ -35,8 +35,10 @@ urlpatterns = [
     path("cart/", include("cart.urls")),
     path("order/", include("order.urls")),
     path("ranking/", include("ranking.urls")),
+    path("photo/", include("face.urls")),
+    path("auth/", include("face_auth.urls")),
+    path("links/", include("links.urls")),
     path("", include('social_django.urls', namespace='social')),
-
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -6,6 +6,7 @@ from django.http import HttpResponseRedirect
 from .forms import ImageForm, PostForm
 from .models import Post, Images
 from django.core.paginator import Paginator
+from face.models import Face
 
 
 def select_language(request):
@@ -59,10 +60,8 @@ def essays(request):
 
 def view_essays(request):
     language = select_language(request)
-    posts = Post.objects.all()
 
-
-    post_list = Post.objects.all()
+    post_list = Post.objects.all()[::-1]
     paginator = Paginator(post_list, 10)
 
     page = request.GET.get('page')
@@ -85,11 +84,17 @@ def essay_details(request, pk):
     post.count += 1
     post.save()
 
+    try:
+        face = Face.objects.get(name=post.user.username)
+    except:
+        face = None
+
     language = select_language(request)
     context = {
        'post': post,
        'images': images,
-       'language': language
+       'language': language,
+       'face': face
     }
 
     return render(request, "essay_details.html", context)

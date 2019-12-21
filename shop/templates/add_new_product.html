@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+
+
+<body>
+
+<br>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  {{ form.as_p }}
+
+
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+
+{% endblock %}

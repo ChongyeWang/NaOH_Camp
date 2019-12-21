@@ -87,12 +87,13 @@
 
 <br>
 {% for rating in ratings %}
-    <h2 style="width: 700px;word-wrap: break-word;
-    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}">{{ rating.name }}</a>
 
+    {% if forloop.counter == 1 %}
+
+    <h2 style="width: 700px;font-weight: bold; word-wrap: break-word;
+    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}"><span style=" color: #FFD700;">No.{{ forloop.counter }}</span> {{ rating.name }}</a>
 
     <a style="color: #00008B; float: right;" href="{% url 'rating_details' rating.pk%}">Rating : {{ rating.rate }} / 5.0</a>
-
 
     <br>
     <div class="middle">
@@ -100,8 +101,6 @@
      <div class="bar-5" style="width:{{ rating.rate |mul:20 }}%;"></div>
     </div>
     </div>
-
-    
 
     </h2>
     <small style="margin-left: 25px; margin-right: 25px;">
@@ -114,6 +113,87 @@
         {% endifequal %}
     </small>
     <hr>
+
+    {% elif forloop.counter == 2 %}
+
+    <h2 style="width: 700px;font-weight: bold; word-wrap: break-word;
+    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}"><span style=" color: gray;">No.{{ forloop.counter }}</span> {{ rating.name }}</a>
+
+    <a style="color: #00008B; float: right;" href="{% url 'rating_details' rating.pk%}">Rating : {{ rating.rate }} / 5.0</a>
+
+    <br>
+    <div class="middle">
+    <div class="bar-container">
+     <div class="bar-5" style="width:{{ rating.rate |mul:20 }}%;"></div>
+    </div>
+    </div>
+
+    </h2>
+    <small style="margin-left: 25px; margin-right: 25px;">
+
+        Rating Count: {{ rating.rate_num }} &nbsp;|&nbsp;
+        {% ifequal rating.rate 0 %}
+        Rating: None
+        {% else %}
+        Rating: {{ rating.rate }} / 5.0
+        {% endifequal %}
+    </small>
+    <hr>
+
+    {% elif forloop.counter == 3 %}
+
+    <h2 style="width: 700px;font-weight: bold; word-wrap: break-word;
+    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}"><span style=" color: #b87333;">No.{{ forloop.counter }}</span> {{ rating.name }}</a>
+
+    <a style="color: #00008B; float: right;" href="{% url 'rating_details' rating.pk%}">Rating : {{ rating.rate }} / 5.0</a>
+
+    <br>
+    <div class="middle">
+    <div class="bar-container">
+     <div class="bar-5" style="width:{{ rating.rate |mul:20 }}%;"></div>
+    </div>
+    </div>
+
+    </h2>
+    <small style="margin-left: 25px; margin-right: 25px;">
+
+        Rating Count: {{ rating.rate_num }} &nbsp;|&nbsp;
+        {% ifequal rating.rate 0 %}
+        Rating: None
+        {% else %}
+        Rating: {{ rating.rate }} / 5.0
+        {% endifequal %}
+    </small>
+    <hr>
+   
+ 
+    {% else %}
+
+    <h2 style="width: 700px;font-weight: bold; word-wrap: break-word;
+    white-space: normal;margin-left: 25px; margin-right: 25px;" ><a style="color: #00008B;" href="{% url 'rating_details' rating.pk%}"><span style=" color: black;">No.{{ forloop.counter }}</span> {{ rating.name }}</a>
+
+    <a style="color: #00008B; float: right;" href="{% url 'rating_details' rating.pk%}">Rating : {{ rating.rate }} / 5.0</a>
+
+    <br>
+    <div class="middle">
+    <div class="bar-container">
+     <div class="bar-5" style="width:{{ rating.rate |mul:20 }}%;"></div>
+    </div>
+    </div>
+
+    </h2>
+    <small style="margin-left: 25px; margin-right: 25px;">
+
+        Rating Count: {{ rating.rate_num }} &nbsp;|&nbsp;
+        {% ifequal rating.rate 0 %}
+        Rating: None
+        {% else %}
+        Rating: {{ rating.rate }} / 5.0
+        {% endifequal %}
+    </small>
+    <hr>
+
+    {% endif %}
     
 {% endfor %}
 

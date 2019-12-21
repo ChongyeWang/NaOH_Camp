@@ -132,7 +132,14 @@ button:hover, a:hover {
 
 <div class="row" style="width: 700px; margin: 0 auto;">
 <div class="card" style="margin-right: 100px;">
-  <img src="{% static 'img/sketch/a0.png' %}" style="width: 300px;">
+  <!-- <img src="{% static 'img/sketch/a0.png' %}" style="width: 300px;">
+   -->
+
+<img src="{% if face %}{{ face.image.url }}{% else %}
+          {% static "img/sketch/a0.png" %}{% endif %}" style="width: 300px; height: 300px; object-fit: cover;">
+
+
+
   <h1>{{user.username}}</h1>
 
   {% if language == "English" %}
@@ -175,7 +182,6 @@ button:hover, a:hover {
 <br>
 
 
-
 <h3><a style="color: #00008B;" href="{% url 'my_post' %}">My Post</a></h3>
 
 
@@ -186,7 +192,11 @@ button:hover, a:hover {
 
 <h3><a style="color: #00008B;" href="{% url 'reset' %}">Reset Password</a></h3>
 
+<h3><a style="color: #00008B;" href="{% url 'face_upload' %}">Change Profile Photo</a></h3>
+
+
 {% else %}
+
 <h3>语言设置 : 简体中文</h3>
 <br>
 <form action="" method="post">
@@ -201,7 +211,6 @@ button:hover, a:hover {
 <br>
 
 
-
 <h3><a style="color: #00008B;" href="{% url 'my_post' %}">我的帖子</a></h3>
 
 
@@ -211,6 +220,8 @@ button:hover, a:hover {
 <h3><a style="color: #00008B;" href="{% url 'my_video' %}">我的投稿</a></h3>
 
 <h3><a style="color: #00008B;" href="{% url 'reset' %}">更改密码</a></h3>
+
+<h3><a style="color: #00008B;" href="{% url 'face_upload' %}">更换头像</a></h3>
 
 {% endif %}
 

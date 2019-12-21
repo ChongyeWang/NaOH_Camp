@@ -13,11 +13,16 @@
        
      </div>
      <div id="subheader" style="border:groove; border-color: black; border-radius: 15px;">
-       <div class="cart" >
+       <a href="{% url "add_new_product" %}" style="color: black; margin-right: 50px;">
+             <i  style="font-size:26px; font-weight: bold;" >Add New Product to Sell</i>
+           </a>
+      
+       <div class="cart" align="center" style="color: black;">
+        
            {% with total_items=cart|length %}
              {% if cart|length > 0 %}
-               Your cart:
-               <a href="{% url "cart_detail" %}">
+               <span style="color: black;">Cart:</span>
+               <a href="{% url "cart_detail" %}" style="color: black;">
                  {{ total_items }} item{{ total_items|pluralize }},
                  ${{ cart.get_total_price }}
                </a>
@@ -25,7 +30,7 @@
                Your cart is empty.
              {% endif %}
              <a href="{% url "cart_detail" %}">
-                 <i class="fa fa-shopping-cart" style="font-size:26px"></i>
+                 <i class="fa fa-shopping-cart" style="font-size:30px; color: black;"></i>
                </a>
              
            {% endwith %}

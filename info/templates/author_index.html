@@ -9,7 +9,7 @@
 
 		<style>
 
-		.me, .doge, .han, .bob, .sy, .bancheng, .ziyuan, .shehuizhu, .weisuo, .jihexue, .A126, .rmlx, .ZV, .shayu, .muday, .wuyu, .star, .yehen, .bairen, .yubanqiu, .xiaochunjie, .dagezi, .caibi, .mushi, .shuidongle, .suli, .qie, .zochary, .bhjk, .canglong, .jingling, .moyu, .yanmie, .youlun, .shaobing, .laer, .wanghun, .letme96, .zhuyan, .hk007, .zuomu, .yuba, .wuxian, .hexie, .qiuqiu, .huaji, .hanma
+		.me, .doge, .han, .bob, .sy, .bancheng, .ziyuan, .shehuizhu, .weisuo, .jihexue, .A126, .rmlx, .ZV, .shayu, .muday, .wuyu, .star, .yehen, .bairen, .yubanqiu, .xiaochunjie, .dagezi, .caibi, .mushi, .shuidongle, .suli, .qie, .zochary, .bhjk, .canglong, .jingling, .moyu, .yanmie, .youlun, .shaobing, .laer, .wanghun, .letme96, .zhuyan, .hk007, .zuomu, .yuba, .wuxian, .hexie, .qiuqiu, .huaji, .hanma, .uueoh
 		{
 		    width: 120px;
 		    height: 120px;
@@ -63,15 +63,41 @@
 			<img class="me" align="left" src="{% static "img/me.jpg" %}">
 			<br>
 			<h5>
-			烧碱：烧碱集团创始人，本站作者。原版1.006幻影战队队员，尤里复仇RT战队队员
-			。
+			烧碱：烧碱集团创始人，本站作者。
 			<br><br>
-			<a href="{% url 'info_index' %}#aboutme" style="color: blue;">更多关于我</a>
+			
 			</h5>
 			</div>
-
 			<hr>
 
+			<div class="row">
+			<img class="han" align="left" src="{% static "img/han.png" %}">
+			<br>
+			<h5>
+			憨批：尤里复仇知名高手，烧碱集团创始人之一，现任烧碱集团教皇。
+			</h5>
+			</div>
+			<hr>
+
+
+			<div class="row">
+			<img class="doge" align="left" src="{% static "img/doge.jpg" %}">
+			<br>
+			<h5>
+			Doge：红色警戒知名高手及资深玩家，烧碱集团创始人之一，现任烧碱集团教主。
+			</h5>
+			</div>
+			<hr>
+
+
+			<div class="row">
+			<img class="weisuo" align="left" src="{% static "img/weisuo.jpg" %}">
+			<br>
+			<h5>
+			猥琐：尤里复仇顶尖高手。烧碱集团创始人之一，现任烧碱集团护教法王及宣传大使。
+			</h5>
+			</div>
+			<hr>
 
 
 			<br>
@@ -113,6 +139,18 @@
 			<hr>
 
 			<div class="row">
+		    <a href="{% url 'ziyuan' %}">
+            <img class="ziyuan" align="left" src="{% static "img/ziyuan.jpg" %}">
+    		</a>
+			
+			</br>
+			<h5>
+			紫源：红色警戒顶尖高手，操作无与伦比，观看其比赛是一种享受，巅峰时期曾和红色警戒全国第一高手黑鹰月亮3可以一战。
+			</h5>
+			</div>
+			<hr>
+
+			<div class="row">
 			<img class="hanma" align="left" src="{% static "img/hanma.jpg" %}">
 			</br>
 			<h5>
@@ -143,47 +181,19 @@
 
 
 			<div class="row">
-			<img class="doge" align="left" src="{% static "img/doge.jpg" %}">
-			<br>
-			<h5>
-			Doge：烧碱集团教主，烧碱集团早起创始人之一。红色警戒知名高手及资深玩家，地图制作人。在原版1.006及尤里复仇均有很深的造诣。
-			</h5>
-			</div>
-			<hr>
-
-			<div class="row">
-			<img class="youlun" align="left" src="{% static "img/youlun.jpg" %}">
-			</br>
-			<h5>
-			东约特兰：红色警戒知名地图制作人，江湖人称船姐姐，曾为红色警戒非官方地图池贡献多个地图，其地图风格在国内独树一帜，国内地图制作人的代表性人物。
-			</h5>
-			</div>
-			<hr>
-
-
-			<div class="row">
-			<img class="han" align="left" src="{% static "img/han.png" %}">
-			<br>
-			<h5>
-			憨批：烧碱集团教皇，尤里复仇知名高手，烧碱集团早起创始人之一，烧碱集团大本营的建立者。
-			</h5>
-			</div>
-			<hr>
-
-			<div class="row">
-			<img class="ziyuan" align="left" src="{% static "img/ziyuan.jpg" %}">
-			</br>
-			<h5>
-			紫源：红色警戒顶尖高手，操作无与伦比，观看其比赛是一种享受，巅峰时期曾和红色警戒全国第一高手黑鹰月亮3可以一战。
-			</h5>
-			</div>
-			<hr>
-
-			<div class="row">
 			<img class="star" align="left" src="{% static "img/star.jpg" %}">
 			</br>
 			<h5>
 			星星：尤里复仇顶尖高手，红色警戒MOD制作人，对尤里复仇的发展作出巨大贡献，尤里的使用徒步天下，RT战队队内赛亚军。
+			</h5>
+			</div>
+			<hr>
+
+			<div class="row">
+			<img class="wuyu" align="left" src="{% static "img/wuyu.jpg" %}">
+			</br>
+			<h5>
+			无语：红色警戒1.006知名高手，黑鹰战队前队长，为人低调，实力强大，热衷复读。
 			</h5>
 			</div>
 			<hr>
@@ -207,14 +217,6 @@
 			</div>
 			<hr>
 
-			<div class="row">
-			<img class="weisuo" align="left" src="{% static "img/weisuo.jpg" %}">
-			<br>
-			<h5>
-			猥琐：烧碱集团护教法王，烧碱集团早期创始人之一，烧碱集团宣传大使。尤里复仇顶尖高手，埃及之旅苏内大师。
-			</h5>
-			</div>
-			<hr>
 
 			<div class="row">
 			<img class="qie" align="left" src="{% static "img/qie.jpg" %}">
@@ -244,13 +246,11 @@
 			</div>
 			<hr>
 
-
-
 			<div class="row">
-			<img class="wuyu" align="left" src="{% static "img/wuyu.jpg" %}">
+			<img class="youlun" align="left" src="{% static "img/youlun.jpg" %}">
 			</br>
 			<h5>
-			无语：红色警戒1.006知名高手，黑鹰战队前队长，为人低调，实力强大，热衷复读。
+			东约特兰：红色警戒知名地图制作人，江湖人称船姐姐，曾为红色警戒非官方地图池贡献多个地图，其地图风格在国内独树一帜，国内地图制作人的代表性人物。
 			</h5>
 			</div>
 			<hr>
@@ -303,6 +303,16 @@
 			</div>
 			<hr>
 
+
+			<div class="row">
+			<img class="laer" align="left" src="{% static "img/laer.jpg" %}">
+			</br>
+			<h5>
+			拉尔：红色警戒知名高手，CR战队顶尖战力，操作极其强大，曾吊打过各路知名高手。
+			</h5>
+			</div>
+			<hr>
+
 			<div class="row">
 			<img class="letme96" align="left" src="{% static "img/96.jpg" %}">
 			</br>
@@ -317,15 +327,6 @@
 			</br>
 			<h5>
 			主演：红色警戒1.006资深玩家，幻影战队元老，操作强大，进攻犀利，冰天雪地造诣极深。
-			</h5>
-			</div>
-			<hr>
-
-			<div class="row">
-			<img class="laer" align="left" src="{% static "img/laer.jpg" %}">
-			</br>
-			<h5>
-			拉尔：红色警戒知名高手，CR战队顶尖战力，操作极其强大，曾吊打过各路知名高手。
 			</h5>
 			</div>
 			<hr>
@@ -370,7 +371,6 @@
 			<hr>
 
 
-
 			<div class="row">
 			<img class="shayu" align="left" src="{% static "img/shayu.jpg" %}">
 			</br>
@@ -386,6 +386,16 @@
 			</br>
 			<h5>
 			酥梨：烧碱集团内阁，尤里复仇玩家，擅长盟军快攻，盟军骚扰。
+			</h5>
+			</div>
+			<hr>
+
+
+			<div class="row">
+			<img class="uueoh" align="left" src="{% static "img/uueoh.jpg" %}">
+			</br>
+			<h5>
+			UUeOH：尤里复仇资深玩家，RT战队元老，战术多样，经验丰富。
 			</h5>
 			</div>
 			<hr>

@@ -7,6 +7,7 @@ from videos.models import Videos
 
 from .utils import select_language
 
+from face.models import Face
 
 
 def home(request):
@@ -41,11 +42,16 @@ def setting(request):
     level = user.level
     experience = user.experience
 
+    try:
+        face = Face.objects.get(name=request.user.username)
+    except:
+        face = None
 
     context = {
         'language': request.session[request.user.username],
         'level': level,
-        'experience': experience
+        'experience': experience,
+        'face': face
     }
 
     return render(request, 'setting.html', context)

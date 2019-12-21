@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block page_content %}
+{% load static %}
+{% csrf_token %}
+
+<style type="text/css">
+  input[type=submit] {
+        box-shadow:inset 0px 1px 3px 0px #91b8b3;
+        background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+        background-color:#768d87;
+        border-radius:5px;
+        border:1px solid #566963;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:15px;
+        font-weight:bold;
+        padding:3px 17px;
+        text-decoration:none;
+        text-shadow:0px -1px 0px #2b665e;
+  }
+  input[type=submit]:hover {
+      background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+      background-color:#6c7c7c;
+  }
+  input[type=submit]:active {
+      position:relative;
+      top:1px;
+  }
+  
+</style>
+
+<div align="center">
+<br>
+
+<img src="{% if face %}{{ face.image.url }}{% else %}
+          {% static "img/sketch/a0.png" %}{% endif %}" style="width: 300px; height: 300px; object-fit: cover;">
+
+<form method="post" enctype="multipart/form-data">
+
+<br />
+
+{% csrf_token %}
+
+<div  style="margin-left: 100px;">
+    {{ image_form.as_p }} 
+</div>
+
+<input type="submit" name="submit" value="提交" />
+</form>
+
+</div>
+
+{% endblock %}
