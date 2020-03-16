@@ -55,3 +55,33 @@ def reset(request):
 	else:
 		
 		return register_request(request)
+
+
+def add_admin(request):
+	if request.user.is_superuser:
+		if request.method == 'POST':
+			form = UserCreationForm(request.POST)
+			if form.is_valid():
+				form.save()
+				username = form.cleaned_data.get('username')
+				raw_password = form.cleaned_data.get('password1')
+				user = authenticate(username=username, password=raw_password)
+				user.is_staff = True
+				user.save()
+
+				login(request, user)
+
+				person = Personal_info(
+					name = request.user.username,
+					level = 0,
+					experience = 0
+				)
+				person.save()
+
+				return redirect('home')
+		else:
+			form = UserCreationForm()
+		return render(request, 'add_admin.html', {'form': form})
+	else:
+		return redirect('home')
+

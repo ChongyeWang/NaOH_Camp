@@ -20,33 +20,37 @@ def select_language(request):
 
 @login_required
 def videos(request):
+    if request.user.is_staff:
 
-    language = select_language(request)
+        language = select_language(request)
 
-    if request.method == 'POST':
+        if request.method == 'POST':
 
-        postForm = PostForm(request.POST)
-        videoForm = VideoForm(request.POST, request.FILES)
+            postForm = PostForm(request.POST)
+            videoForm = VideoForm(request.POST, request.FILES)
 
-        if postForm.is_valid() and videoForm.is_valid():
-            post_form = postForm.save(commit=False)
-            post_form.user = request.user
-            post_form.save()
+            if postForm.is_valid() and videoForm.is_valid():
+                post_form = postForm.save(commit=False)
+                post_form.user = request.user
+                post_form.save()
 
-            videos = videoForm.cleaned_data['video']
-            video = Videos(post=post_form, video=videos)
-            video.save()
+                videos = videoForm.cleaned_data['video']
+                video = Videos(post=post_form, video=videos)
+                video.save()
 
-            messages.success(request,
-                             "Success!")
-            return HttpResponseRedirect("/videos/view")
+                messages.success(request,
+                                 "Success!")
+                return HttpResponseRedirect("/videos/view")
+            else:
+                messages.error(request, 'Maximum Word Limit Exceeded')
         else:
-            messages.error(request, 'Maximum Word Limit Exceeded')
+            postForm = PostForm()
+            videoForm = VideoForm()
+        return render(request, 'videos.html',
+                      {'postForm': postForm, 'videoForm': videoForm, 'language': language})
+
     else:
-        postForm = PostForm()
-        videoForm = VideoForm()
-    return render(request, 'videos.html',
-                  {'postForm': postForm, 'videoForm': videoForm, 'language': language})
+        return HttpResponseRedirect("/videos/view")
 
 
 def view_videos(request):
