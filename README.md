@@ -1,6 +1,6 @@
 # NaOH Group
 
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo1.png" width="80%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/1.png" width="80%">
 
 
 # Author
