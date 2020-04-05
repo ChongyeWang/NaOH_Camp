@@ -20,8 +20,10 @@ Chongye Wang
 
 • Integrate multiple game records for users to search.
 
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo2.png" width="40%">
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo3.png" width="40%">
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo4.png" width="40%">
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo5.png" width="40%">
-<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/demo6.png" width="40%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/1.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/2.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/3.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/4.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/5.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/6.png" width="60%">
+<img src="https://github.com/ChongyeWang/NaOH_Camp/blob/master/7.png" width="60%">
