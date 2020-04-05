@@ -167,10 +167,7 @@ CHANNEL_LAYERS = {
 
 STATIC_URL = '/static/'
 
-LANGUAGES = (
-    ('zh-cn', u'简体中文'), # instead of 'zh-CN'
-    ('zh-tw', u'繁體中文'), # instead of 'zh-TW'
-)
+
 
 LOGIN_REDIRECT_URL = '/'
 
